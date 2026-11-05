@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Ejecuta AWS CLI con las tres variables exportadas desde CloudShell.
+# Ignora cualquier línea adicional del archivo privado sin ejecutarla.
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+SESSION_FILE="$SCRIPT_DIR/../privado/academy-session.env"
+if [[ ! -f "$SESSION_FILE" ]]; then
+  printf 'Falta aws/privado/academy-session.env\n' >&2
+  exit 2
+fi
+
+AWS_ACCESS_KEY_ID=''
+AWS_SECRET_ACCESS_KEY=''
+AWS_SESSION_TOKEN=''
+while IFS= read -r line || [[ -n "$line" ]]; do
+  case "$line" in
+    [eE][xX][pP][oO][rR][tT]\ [aA][wW][sS]_[aA][cC][cC][eE][sS][sS]_[kK][eE][yY]_[iI][dD]=*|[aA][wW][sS]_[aA][cC][cC][eE][sS][sS]_[kK][eE][yY]_[iI][dD]=*)
+      AWS_ACCESS_KEY_ID=${line#*=}
+      ;;
+    [eE][xX][pP][oO][rR][tT]\ [aA][wW][sS]_[sS][eE][cC][rR][eE][tT]_[aA][cC][cC][eE][sS][sS]_[kK][eE][yY]=*|[aA][wW][sS]_[sS][eE][cC][rR][eE][tT]_[aA][cC][cC][eE][sS][sS]_[kK][eE][yY]=*)
+      AWS_SECRET_ACCESS_KEY=${line#*=}
+      ;;
+    [eE][xX][pP][oO][rR][tT]\ [aA][wW][sS]_[sS][eE][sS][sS][iI][oO][nN]_[tT][oO][kK][eE][nN]=*|[aA][wW][sS]_[sS][eE][sS][sS][iI][oO][nN]_[tT][oO][kK][eE][nN]=*)
+      AWS_SESSION_TOKEN=${line#*=}
+      ;;
+  esac
+done < "$SESSION_FILE"
+
+strip_quotes() {
+  local value="$1"
+  value=${value%$'\r'}
+  if [[ "$value" == \"*\" || "$value" == \'*\' ]]; then
+    value=${value:1:${#value}-2}
+  fi
+  printf '%s' "$value"
+}
+AWS_ACCESS_KEY_ID=$(strip_quotes "$AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY=$(strip_quotes "$AWS_SECRET_ACCESS_KEY")
+AWS_SESSION_TOKEN=$(strip_quotes "$AWS_SESSION_TOKEN")
+if [[ -z "$AWS_ACCESS_KEY_ID" || -z "$AWS_SECRET_ACCESS_KEY" || -z "$AWS_SESSION_TOKEN" ]]; then
+  printf 'Faltan variables AWS válidas en el archivo privado\n' >&2
+  exit 2
+fi
+
+unset AWS_PROFILE
+export AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN
+export AWS_DEFAULT_REGION=us-east-1 AWS_PAGER=''
+exec aws "$@"

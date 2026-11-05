@@ -1,0 +1,16 @@
+{
+  "utc": "2026-11-05T05:15:28.540781+00:00",
+  "objeto": "supabase/20261105T050030Z.tgz",
+  "bytes": 181945,
+  "sha256": {
+    "aws": "780ce8325800afa017c76037518e482ce1d7ee8f3992519aca9ba5af6b74976e",
+    "azure": "780ce8325800afa017c76037518e482ce1d7ee8f3992519aca9ba5af6b74976e",
+    "gcp": "780ce8325800afa017c76037518e482ce1d7ee8f3992519aca9ba5af6b74976e"
+  },
+  "coinciden": true,
+  "mecanismo": "S3 API; Azure Blob HTTPS y Google Cloud Storage HTTPS autenticados; sin VPN para objetos",
+  "azure_autenticacion": "Microsoft Entra ID/RBAC --auth-mode login; sin claves de almacenamiento",
+  "ejecutor": "equipo local; requiere equipo encendido y credenciales vigentes",
+  "generacion_solicitada": false,
+  "restauracion": "se acredita por separado"
+}

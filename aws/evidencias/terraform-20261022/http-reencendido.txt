@@ -1,0 +1,1 @@
+HTTP 200 y contenido NexoAndes comprobados mediante curl. URL: http://nexoandes-alb-1279079370.us-east-1.elb.amazonaws.com

@@ -1,0 +1,32 @@
+{
+  "terraform": "1.17.0",
+  "proveedores": {
+    "aws": "6.70.0",
+    "azurerm": "5.10.0",
+    "oci": "9.11.0"
+  },
+  "validacion": {
+    "aws": true,
+    "azure": true,
+    "oci": true
+  },
+  "terraform_test": {
+    "aws": {
+      "planes_mock": 2,
+      "applies_reales": 0
+    },
+    "azure": {
+      "pruebas_mock": 2,
+      "applies_reales": 0
+    },
+    "oci": {
+      "pruebas_mock": 2,
+      "applies_reales": 0
+    }
+  },
+  "unittest_control": {
+    "total": 11,
+    "resultado": "correcto"
+  },
+  "limite": "Las pruebas mock y la validación de esquema no sustituyen despliegues y pruebas reales."
+}

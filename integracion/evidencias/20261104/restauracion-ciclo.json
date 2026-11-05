@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-04T19:13:00.060982+00:00",
+  "pruebas": [
+    {
+      "fuente": "azure",
+      "destino": "BD temporal AWS, aislada de la BD de aplicación",
+      "resultado": "7|39",
+      "objeto": "postgresql/20261104T191151Z.dump",
+      "bytes": 4922
+    },
+    {
+      "fuente": "gcp",
+      "destino": "BD temporal AWS, aislada de la BD de aplicación",
+      "resultado": "7|39",
+      "objeto": "postgresql/20261104T191151Z.dump",
+      "bytes": 4922
+    }
+  ],
+  "filas": 7,
+  "correcto": true,
+  "nota": "GCP volvió a standby y permanece de solo lectura; la restauración previa en GCP primario está en failover.json."
+}

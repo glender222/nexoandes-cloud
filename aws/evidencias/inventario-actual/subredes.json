@@ -1,0 +1,37 @@
+[
+    {
+        "Id": "subnet-0531e22c018004601",
+        "Cidr": "10.10.1.0/24",
+        "AZ": "us-east-1a",
+        "PublicIP": true,
+        "Name": "AWsAcademy-Public-A"
+    },
+    {
+        "Id": "subnet-0bbbde4bc4faebf5a",
+        "Cidr": "10.10.20.0/24",
+        "AZ": "us-east-1a",
+        "PublicIP": false,
+        "Name": "AWsAcademy-PrivateDB"
+    },
+    {
+        "Id": "subnet-0d1771756ad8bbb5a",
+        "Cidr": "10.10.2.0/24",
+        "AZ": "us-east-1b",
+        "PublicIP": true,
+        "Name": "AWsAcademy-Public-B"
+    },
+    {
+        "Id": "subnet-05b5cc3955fb40df9",
+        "Cidr": "10.10.12.0/24",
+        "AZ": "us-east-1b",
+        "PublicIP": false,
+        "Name": "AWsAcademy-PrivateApp-B"
+    },
+    {
+        "Id": "subnet-09855fbfb1cee5431",
+        "Cidr": "10.10.11.0/24",
+        "AZ": "us-east-1a",
+        "PublicIP": false,
+        "Name": "AWsAcademy-PrivateApp-A"
+    }
+]

@@ -1,0 +1,11 @@
+{
+  "utc": "2026-11-05T01:52:02.727577+00:00",
+  "solo_lectura": true,
+  "cuenta_esperada": "849533029543",
+  "region": "us-east-1",
+  "sts": "ExpiredToken",
+  "directory_service": "No consultado: identidad actual no confirmada por sesión caducada",
+  "revision_local": "No se encontraron recursos Directory Service ni configuración de controlador de dominio AD en las plantillas y scripts de NexoAndes revisados.",
+  "core_diseno": "AWS: portal, balanceador y PostgreSQL primario; GCP: contingencia; Azure: respaldos",
+  "cambios_nube": false
+}

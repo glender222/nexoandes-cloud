@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-05T04:32:32.945154+00:00",
+  "cuenta": "849533029543",
+  "region": "us-east-1",
+  "cambios": [
+    {
+      "recurso": "aws_lb_listener.supabase_studio[0]",
+      "acciones": [
+        "create"
+      ]
+    },
+    {
+      "recurso": "aws_lb_listener_rule.supabase_studio_internal_paths[0]",
+      "acciones": [
+        "create"
+      ]
+    },
+    {
+      "recurso": "aws_security_group.alb",
+      "acciones": [
+        "update"
+      ]
+    }
+  ],
+  "studio": "https://nexoandes-alb-409538740.us-east-1.elb.amazonaws.com:8443",
+  "vm_sin_reemplazo": true,
+  "disco_conservado": true,
+  "otras_nubes_modificadas": false
+}

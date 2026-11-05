@@ -1,0 +1,27 @@
+{
+  "utc": "2026-11-05T05:14:49.604648+00:00",
+  "scope": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/resourceGroups/nexoandes-lab/providers/Microsoft.Storage/storageAccounts/nxa1db87b28407f/blobServices/default/containers/postgresql",
+  "asignaciones": [
+    {
+      "id": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/providers/Microsoft.Authorization/roleAssignments/2def627f-1ec0-44ef-a8c1-5eb5d31f35f4",
+      "nombre": "Owner",
+      "principal": "3dea043f-f19f-4575-aa57-93db1f8ec20f",
+      "scope": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c",
+      "tipo": "User"
+    },
+    {
+      "id": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/providers/Microsoft.Authorization/roleAssignments/448c9355-30e9-4186-b8d1-85ddd1afd154",
+      "nombre": "Owner",
+      "principal": "3dea043f-f19f-4575-aa57-93db1f8ec20f",
+      "scope": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c",
+      "tipo": "User"
+    },
+    {
+      "id": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/resourceGroups/nexoandes-lab/providers/Microsoft.Storage/storageAccounts/nxa1db87b28407f/blobServices/default/containers/postgresql/providers/Microsoft.Authorization/roleAssignments/3857e91a-5847-457f-fe52-4d071ce8495e",
+      "nombre": "Storage Blob Data Contributor",
+      "principal": "3dea043f-f19f-4575-aa57-93db1f8ec20f",
+      "scope": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/resourceGroups/nexoandes-lab/providers/Microsoft.Storage/storageAccounts/nxa1db87b28407f/blobServices/default/containers/postgresql",
+      "tipo": "User"
+    }
+  ]
+}

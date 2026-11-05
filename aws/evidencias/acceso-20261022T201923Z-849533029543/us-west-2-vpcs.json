@@ -1,0 +1,9 @@
+[
+  {
+    "Id": "vpc-0494b73364252bfda",
+    "Cidr": "172.31.0.0/16",
+    "Default": true,
+    "State": "available",
+    "Name": null
+  }
+]

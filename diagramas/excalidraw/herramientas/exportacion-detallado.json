@@ -1,0 +1,15 @@
+{
+  "width": 2750,
+  "height": 1880,
+  "elements": 224,
+  "files": 35,
+  "types": [
+    "rectangle",
+    "text",
+    "image",
+    "line",
+    "arrow",
+    "ellipse"
+  ],
+  "js_errors": []
+}

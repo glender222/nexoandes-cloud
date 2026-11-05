@@ -1,0 +1,28 @@
+{
+  "fecha_local": "04/11/2026 21:55",
+  "estado": "Supabase implementado, activo y probado",
+  "aws_cuenta": "849533029543",
+  "region": "us-east-1",
+  "instance": "i-0ceea48d268d2cb83",
+  "disco_datos": "vol-01e8a5e9f98ce1bac",
+  "sin_ip_publica": true,
+  "servicios_saludables": 6,
+  "login": "https://nexoandes-alb-409538740.us-east-1.elb.amazonaws.com/acceso/",
+  "studio_local_temporal": "http://127.0.0.1:8800",
+  "postgresql_principal": "Instancia/volumen existentes conservados, sin migracion a Supabase",
+  "gcp_vm": "TERMINATED; no se arranco para este despliegue",
+  "azure": "Solo copias de backup, sin nuevo computo",
+  "unit_tests": 15,
+  "terraform_mock_tests": 9,
+  "copias_sha256_iguales": true,
+  "restauracion": "Selectiva de auth.users; no integral de la pila",
+  "alcance": "Prototipo de autenticacion; no SaaS comercial completo ni HA de identidad",
+  "plan_final_aws": "0 cambios; infraestructura real coincide con Terraform",
+  "studio_externo": {
+    "url": "https://nexoandes-alb-409538740.us-east-1.elb.amazonaws.com:8443/",
+    "fecha_local": "04/11/2026 23:33",
+    "autenticacion": "Usuario y contraseña dashboard, distintos de Auth portal",
+    "pruebas": "Sin credenciales/incorrectas 401; panel 200; meta/MCP 403; navegador sin errores JS",
+    "vm_sin_ip_publica": true
+  }
+}

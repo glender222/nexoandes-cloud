@@ -1,0 +1,16 @@
+{
+  "utc": "2026-11-05T05:16:18.038171+00:00",
+  "titulos_E1_preservados": 20,
+  "titulos_E2_cuerpo": 19,
+  "enlaces_locales_correctos": true,
+  "python_sintaxis": true,
+  "terraform_azure_validate": "pass",
+  "terraform_mock_ciclo": "2 passed, 0 failed; permiso persiste al apagar y scope contenedor",
+  "terraform_plan_post_aplicar": [],
+  "pruebas_copias": [
+    "postgresql: hash S3/Azure/GCP coincide",
+    "supabase: hash S3/Azure/GCP coincide"
+  ],
+  "cloud_modificado": "Azure: una asignación RBAC; cómputo sin modificaciones",
+  "MFA": "no verificado"
+}

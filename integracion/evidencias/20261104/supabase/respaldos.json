@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-05T02:38:51.594160+00:00",
+  "objeto": "supabase/20261105T023835Z.tgz",
+  "bytes": 181291,
+  "sha256": {
+    "aws": "e2b19365510a055008fd6ee58e8faee4d70a08167611bb6af59998f1f3236e79",
+    "azure": "e2b19365510a055008fd6ee58e8faee4d70a08167611bb6af59998f1f3236e79",
+    "gcp": "e2b19365510a055008fd6ee58e8faee4d70a08167611bb6af59998f1f3236e79"
+  },
+  "coinciden": true,
+  "mecanismo": "S3 API; Azure Blob HTTPS y Google Cloud Storage HTTPS autenticados; sin VPN para objetos",
+  "ejecutor": "equipo local; requiere equipo encendido y credenciales vigentes",
+  "generacion_solicitada": true,
+  "restauracion": "se acredita por separado"
+}

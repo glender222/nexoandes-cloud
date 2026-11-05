@@ -1,0 +1,69 @@
+{
+  "fecha_fuentes": "2026-11-04",
+  "moneda": "USD",
+  "tarifas": {
+    "t3_micro_h": "0.0104",
+    "t3_medium_h": "0.0418",
+    "alb_h": "0.0225",
+    "lcu_h": "0.008",
+    "nat_h": "0.045",
+    "ipv4_h": "0.005",
+    "gp3_gb_mes": "0.08"
+  },
+  "fuentes": {
+    "t3": "https://aws.amazon.com/ec2/instance-types/t3/",
+    "alb": "https://aws.amazon.com/elasticloadbalancing/pricing/",
+    "nat_ipv4": "https://aws.amazon.com/vpc/pricing/",
+    "gp3": "https://aws.amazon.com/ebs/pricing/",
+    "azure": "https://azure.microsoft.com/en-us/pricing/details/storage/blobs/",
+    "gcp_disco": "https://cloud.google.com/compute/disks-image-pricing",
+    "gcp_objetos": "https://cloud.google.com/storage/pricing"
+  },
+  "supuestos": [
+    "Mes normalizado de 730 h; escenarios hipoteticos de 20 y 730 h, no consumo medido.",
+    "AWS Linux us-east-1; tarifa T3 publicada en la pagina oficial (t3.medium 0.0418). gp3 usa el ejemplo publico 0.08/GB-mes, no una cotizacion de la cuenta.",
+    "4 t3.micro: dos web, PostgreSQL y strongSwan; 1 t3.medium Supabase.",
+    "80 GB persistentes: raiz DB 8 + datos DB 20 + raiz Supabase 12 + datos Supabase 40.",
+    "24 GB temporales: dos raices web 8 GB + raiz gateway 8 GB; prorrateo simplificado por horas.",
+    "4 IPv4: supuesto minimo ALB dos zonas + NAT + gateway, sujeto a IP reales del balanceador.",
+    "1 LCU/h es un supuesto de costo, no una medicion de trafico.",
+    "NAT 0.045/h procede del ejemplo publico AWS Ohio; cotizacion exacta us-east-1 pendiente, igual que gp3 del ejemplo publico."
+  ],
+  "exclusiones": [
+    "S3, CloudWatch, trafico/NAT por GB, transferencias, impuestos y recursos ajenos.",
+    "Azure Blob y GCP Compute/Storage/discos/IP; deben sumarse segun region, horas, GB, operaciones y beneficios efectivamente aplicables.",
+    "Creditos, descuentos y Free Tier; no se asume costo cero ni saldo comprobado."
+  ],
+  "escenarios": [
+    {
+      "horas": 20,
+      "filas": {
+        "EC2: 4 t3.micro": "0.83",
+        "EC2: 1 t3.medium (Supabase)": "0.84",
+        "ALB: cargo horario": "0.45",
+        "ALB: supuesto 1 LCU/h": "0.16",
+        "NAT: cargo horario": "0.90",
+        "IPv4: supuesto 4 direcciones": "0.40",
+        "EBS persistente: 80 GB todo el mes": "6.40",
+        "EBS temporal: 24 GB prorrateados": "0.05"
+      },
+      "subtotal_aws": "10.03",
+      "subtotal_calculado_sin_redondear": "10.03060273972602739726027397"
+    },
+    {
+      "horas": 730,
+      "filas": {
+        "EC2: 4 t3.micro": "30.37",
+        "EC2: 1 t3.medium (Supabase)": "30.51",
+        "ALB: cargo horario": "16.43",
+        "ALB: supuesto 1 LCU/h": "5.84",
+        "NAT: cargo horario": "32.85",
+        "IPv4: supuesto 4 direcciones": "14.60",
+        "EBS persistente: 80 GB todo el mes": "6.40",
+        "EBS temporal: 24 GB prorrateados": "1.92"
+      },
+      "subtotal_aws": "138.92",
+      "subtotal_calculado_sin_redondear": "138.9170"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-05T02:55:16.376Z",
+  "login": true,
+  "endpoint_privado": true,
+  "logout": true,
+  "movil_sin_desbordamiento": true,
+  "tls": "Excepción acotada al pin SPKI del certificado académico; validación nombre/CA acreditada por prueba HTTP separada",
+  "capturas": [
+    "login.png",
+    "sesion-validada.png",
+    "login-movil.png"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "utc": "2026-11-04T16:42:57.010308+00:00",
+  "aws": [
+    {
+      "id": 1,
+      "etiqueta": "preparacion-20261104"
+    },
+    {
+      "id": 2,
+      "etiqueta": "preparacion-20261104"
+    },
+    {
+      "id": 3,
+      "etiqueta": "preparacion-20261104"
+    },
+    {
+      "id": 4,
+      "etiqueta": "antes-failover-20261104"
+    },
+    {
+      "id": 37,
+      "etiqueta": "escrito-en-gcp-20261104"
+    }
+  ],
+  "gcp": [
+    {
+      "id": 1,
+      "etiqueta": "preparacion-20261104"
+    },
+    {
+      "id": 2,
+      "etiqueta": "preparacion-20261104"
+    },
+    {
+      "id": 3,
+      "etiqueta": "preparacion-20261104"
+    },
+    {
+      "id": 4,
+      "etiqueta": "antes-failover-20261104"
+    },
+    {
+      "id": 37,
+      "etiqueta": "escrito-en-gcp-20261104"
+    }
+  ],
+  "coinciden": true,
+  "filas": 5,
+  "contiene_marcador_de_gcp": true,
+  "nota": "IDs de secuencia pueden saltar tras promoción; no equivalen a cantidad de registros."
+}

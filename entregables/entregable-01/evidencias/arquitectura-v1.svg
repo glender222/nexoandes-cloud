@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="850" viewBox="0 0 1280 850" role="img" aria-labelledby="title desc">
+  <title id="title">Arquitectura Cloud V1 de NexoAndes en AWS Academy</title>
+  <desc id="desc">Usuarios acceden por HTTP al balanceador público. Un Target Group distribuye tráfico a dos servidores Apache privados en zonas distintas. PostgreSQL está en una subred privada de una zona. La conectividad técnica al puerto 5432 se probó, pero la aplicación no usa aún la base de datos. El respaldo a S3 está pendiente.</desc>
+  <defs>
+    <marker id="blue-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#1766a8"/></marker>
+    <marker id="gray-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#667688"/></marker>
+    <marker id="orange-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#bd6b13"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #19324a; }
+      .title { font-size: 28px; font-weight: 700; }
+      .subtitle { font-size: 15px; fill: #4b6074; }
+      .section { font-size: 18px; font-weight: 700; }
+      .node { font-size: 18px; font-weight: 700; }
+      .detail { font-size: 14px; fill: #496176; }
+      .small { font-size: 13px; fill: #506579; }
+      .flow { fill: none; stroke: #1766a8; stroke-width: 3; marker-end: url(#blue-arrow); }
+      .technical { fill: none; stroke: #667688; stroke-width: 2.5; stroke-dasharray: 8 6; marker-end: url(#gray-arrow); }
+      .pending { fill: none; stroke: #bd6b13; stroke-width: 2.5; stroke-dasharray: 8 6; marker-end: url(#orange-arrow); }
+    </style>
+  </defs>
+  <rect width="1280" height="850" fill="#ffffff"/>
+  <text class="title" x="40" y="43">NexoAndes · Arquitectura Cloud V1</text>
+  <text class="subtitle" x="40" y="70">AWS Academy · verificada parcialmente el 30/09/2026 · us-east-1</text>
+
+  <rect x="35" y="138" width="245" height="105" rx="15" fill="#e8f2fb" stroke="#6da2cd" stroke-width="2"/>
+  <text class="node" x="60" y="177">Usuarios e Internet</text>
+  <text class="detail" x="60" y="204">Lima, Arequipa y clientes</text>
+  <text class="detail" x="60" y="224">Acceso público HTTP 80</text>
+
+  <rect x="310" y="105" width="930" height="600" rx="20" fill="#f8fbfe" stroke="#28689a" stroke-width="3"/>
+  <text class="section" x="340" y="135">VPC AWS · 10.10.0.0/16</text>
+
+  <rect x="340" y="154" width="870" height="130" rx="12" fill="#e5f3ff" stroke="#9bc4e5" stroke-width="2"/>
+  <text class="section" x="360" y="179">Subredes públicas A/B · 10.10.1.0/24 y 10.10.2.0/24</text>
+  <rect x="490" y="194" width="335" height="67" rx="12" fill="#ffffff" stroke="#1766a8" stroke-width="2.5"/>
+  <text class="node" x="513" y="222">Application Load Balancer</text>
+  <text class="detail" x="513" y="245">Listener HTTP 80 · Internet Gateway</text>
+  <rect x="886" y="194" width="294" height="67" rx="12" fill="#ffffff" stroke="#6c9aba" stroke-width="2"/>
+  <text class="node" x="907" y="222">NAT Gateway</text>
+  <text class="detail" x="907" y="245">Salida de subredes privadas</text>
+
+  <rect x="583" y="319" width="275" height="67" rx="12" fill="#edf6fd" stroke="#1766a8" stroke-width="2.5"/>
+  <text class="node" x="610" y="347">Target Group</text>
+  <text class="detail" x="610" y="370">2 destinos healthy</text>
+
+  <rect x="340" y="419" width="385" height="143" rx="12" fill="#eff8f3" stroke="#87b99b" stroke-width="2"/>
+  <text class="section" x="360" y="446">Aplicación privada A · us-east-1a</text>
+  <text class="detail" x="360" y="467">10.10.11.0/24</text>
+  <rect x="365" y="484" width="335" height="62" rx="10" fill="#ffffff" stroke="#38805a" stroke-width="2"/>
+  <text class="node" x="387" y="511">EC2 Apache A</text>
+  <text class="detail" x="387" y="532">Portal informativo NexoAndes</text>
+
+  <rect x="825" y="419" width="385" height="143" rx="12" fill="#eff8f3" stroke="#87b99b" stroke-width="2"/>
+  <text class="section" x="845" y="446">Aplicación privada B · us-east-1b</text>
+  <text class="detail" x="845" y="467">10.10.12.0/24</text>
+  <rect x="850" y="484" width="335" height="62" rx="10" fill="#ffffff" stroke="#38805a" stroke-width="2"/>
+  <text class="node" x="872" y="511">EC2 Apache B</text>
+  <text class="detail" x="872" y="532">Portal informativo NexoAndes</text>
+
+  <rect x="595" y="606" width="360" height="76" rx="12" fill="#f5f0fb" stroke="#9c7dc0" stroke-width="2"/>
+  <text class="node" x="619" y="635">EC2 PostgreSQL</text>
+  <text class="detail" x="619" y="658">Subred privada BD · 10.10.20.0/24 · 1 AZ</text>
+
+  <path class="flow" d="M280 190 H480"/>
+  <path class="flow" d="M660 261 V307"/>
+  <path class="flow" d="M620 386 L525 474"/>
+  <path class="flow" d="M820 386 L1010 474"/>
+  <path class="technical" d="M550 562 L690 598"/>
+  <path class="technical" d="M1015 562 L860 598"/>
+  <rect x="459" y="569" width="637" height="24" fill="#f8fbfe"/>
+  <text class="small" x="469" y="586">TCP 5432 probado desde A; el portal todavía no consulta la base de datos</text>
+
+  <rect x="338" y="739" width="355" height="81" rx="12" fill="#fff8ed" stroke="#d59b58" stroke-width="2"/>
+  <text class="node" x="360" y="768">Bucket S3 · 0 objetos</text>
+  <text class="detail" x="360" y="793">Respaldo y restauración pendientes</text>
+  <path class="pending" d="M680 682 L590 728"/>
+
+  <rect x="832" y="739" width="355" height="81" rx="12" fill="#f1f4f7" stroke="#a4b2bf" stroke-width="2"/>
+  <text class="node" x="854" y="768">CloudWatch</text>
+  <text class="detail" x="854" y="793">2 alarmas; disparo no probado</text>
+
+  <text class="small" x="35" y="836">Azul: flujo web verificado · Gris punteado: conectividad técnica · Naranja punteado: función pendiente</text>
+</svg>

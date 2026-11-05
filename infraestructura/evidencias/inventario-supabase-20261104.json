@@ -1,0 +1,1143 @@
+{
+  "utc": "2026-11-05T02:55:12.872807+00:00",
+  "solo_lectura": true,
+  "nubes": {
+    "gcp": {
+      "identidad": {
+        "proyecto": "gen-lang-client-0623826791",
+        "cuenta_servicio": "gen-lang-client-0623826791@gen-lang-client-0623826791.iam.gserviceaccount.com"
+      },
+      "region": "us-central1",
+      "instancias": {
+        "ok": true,
+        "http": 200,
+        "datos": [
+          {
+            "id": "2724455023399856729",
+            "name": "nexoandes-gcp-standby",
+            "status": "TERMINATED",
+            "zone": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/zones/us-central1-a",
+            "machineType": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/zones/us-central1-a/machineTypes/e2-micro",
+            "networkInterfaces": [
+              {
+                "kind": "compute#networkInterface",
+                "network": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/networks/nexoandes-gcp-vpc",
+                "subnetwork": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/us-central1/subnetworks/nexoandes-gcp-subnet",
+                "networkIP": "10.30.1.10",
+                "name": "nic0",
+                "accessConfigs": [
+                  {
+                    "kind": "compute#accessConfig",
+                    "type": "ONE_TO_ONE_NAT",
+                    "name": "external-nat",
+                    "networkTier": "PREMIUM"
+                  }
+                ],
+                "fingerprint": "FuBEHwUC5Vg=",
+                "stackType": "IPV4_ONLY"
+              }
+            ],
+            "disks": [
+              {
+                "kind": "compute#attachedDisk",
+                "type": "PERSISTENT",
+                "mode": "READ_WRITE",
+                "source": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/zones/us-central1-a/disks/nexoandes-gcp-standby",
+                "deviceName": "persistent-disk-0",
+                "index": 0,
+                "boot": true,
+                "autoDelete": true,
+                "licenses": [
+                  "https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-12-bookworm"
+                ],
+                "interface": "SCSI",
+                "guestOsFeatures": [
+                  {
+                    "type": "UEFI_COMPATIBLE"
+                  },
+                  {
+                    "type": "VIRTIO_SCSI_MULTIQUEUE"
+                  },
+                  {
+                    "type": "GVNIC"
+                  },
+                  {
+                    "type": "SEV_CAPABLE"
+                  },
+                  {
+                    "type": "SEV_LIVE_MIGRATABLE_V2"
+                  },
+                  {
+                    "type": "SUSPEND_SAFE_FPR"
+                  }
+                ],
+                "diskSizeGb": "10",
+                "architecture": "X86_64"
+              },
+              {
+                "kind": "compute#attachedDisk",
+                "type": "PERSISTENT",
+                "mode": "READ_WRITE",
+                "source": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/zones/us-central1-a/disks/nexoandes-gcp-postgresql",
+                "deviceName": "nexoandes-data",
+                "index": 1,
+                "boot": false,
+                "autoDelete": false,
+                "interface": "SCSI",
+                "diskSizeGb": "20"
+              }
+            ]
+          }
+        ]
+      },
+      "discos": {
+        "ok": true,
+        "http": 200,
+        "datos": [
+          {
+            "id": "4142628206354557535",
+            "name": "nexoandes-gcp-postgresql",
+            "status": "READY",
+            "zone": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/zones/us-central1-a",
+            "sizeGb": "20",
+            "type": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/zones/us-central1-a/diskTypes/pd-standard",
+            "users": [
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/zones/us-central1-a/instances/nexoandes-gcp-standby"
+            ]
+          },
+          {
+            "id": "6889337204637100633",
+            "name": "nexoandes-gcp-standby",
+            "status": "READY",
+            "zone": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/zones/us-central1-a",
+            "sizeGb": "10",
+            "type": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/zones/us-central1-a/diskTypes/pd-standard",
+            "users": [
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/zones/us-central1-a/instances/nexoandes-gcp-standby"
+            ]
+          }
+        ]
+      },
+      "redes": {
+        "ok": true,
+        "http": 200,
+        "datos": [
+          {
+            "name": "default",
+            "routingConfig": {
+              "routingMode": "REGIONAL",
+              "bgpBestPathSelectionMode": "LEGACY"
+            },
+            "subnetworks": [
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/asia-northeast2/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/europe-west10/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/europe-west3/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/asia-south1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/us-east4/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/europe-west8/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/northamerica-northeast2/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/us-east5/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/europe-west6/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/europe-west2/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/us-central1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/northamerica-northeast1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/northamerica-south1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/europe-southwest1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/asia-southeast1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/asia-southeast2/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/us-west2/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/europe-north2/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/australia-southeast1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/asia-northeast1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/europe-north1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/me-west1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/us-west3/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/europe-central2/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/me-central1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/australia-southeast2/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/us-east1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/europe-west9/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/southamerica-west1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/asia-east1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/asia-southeast3/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/europe-west12/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/asia-south2/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/africa-south1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/europe-west4/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/asia-northeast3/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/us-south1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/us-west1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/europe-west1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/southamerica-east1/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/asia-east2/subnetworks/default",
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/us-west4/subnetworks/default"
+            ],
+            "autoCreateSubnetworks": true,
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/networks/default"
+          },
+          {
+            "name": "nexoandes-gcp-vpc",
+            "routingConfig": {
+              "routingMode": "REGIONAL",
+              "bgpBestPathSelectionMode": "LEGACY"
+            },
+            "subnetworks": [
+              "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/regions/us-central1/subnetworks/nexoandes-gcp-subnet"
+            ],
+            "autoCreateSubnetworks": false,
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/networks/nexoandes-gcp-vpc"
+          }
+        ]
+      },
+      "firewalls": {
+        "ok": true,
+        "http": 200,
+        "datos": [
+          {
+            "name": "default-allow-icmp",
+            "network": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/networks/default",
+            "sourceRanges": [
+              "0.0.0.0/0"
+            ],
+            "allowed": [
+              {
+                "IPProtocol": "icmp"
+              }
+            ],
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/firewalls/default-allow-icmp",
+            "direction": "INGRESS"
+          },
+          {
+            "name": "default-allow-internal",
+            "network": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/networks/default",
+            "sourceRanges": [
+              "10.128.0.0/9"
+            ],
+            "allowed": [
+              {
+                "IPProtocol": "tcp",
+                "ports": [
+                  "0-65535"
+                ]
+              },
+              {
+                "IPProtocol": "udp",
+                "ports": [
+                  "0-65535"
+                ]
+              },
+              {
+                "IPProtocol": "icmp"
+              }
+            ],
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/firewalls/default-allow-internal",
+            "direction": "INGRESS"
+          },
+          {
+            "name": "default-allow-rdp",
+            "network": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/networks/default",
+            "sourceRanges": [
+              "0.0.0.0/0"
+            ],
+            "allowed": [
+              {
+                "IPProtocol": "tcp",
+                "ports": [
+                  "3389"
+                ]
+              }
+            ],
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/firewalls/default-allow-rdp",
+            "direction": "INGRESS"
+          },
+          {
+            "name": "default-allow-ssh",
+            "network": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/networks/default",
+            "sourceRanges": [
+              "0.0.0.0/0"
+            ],
+            "allowed": [
+              {
+                "IPProtocol": "tcp",
+                "ports": [
+                  "22"
+                ]
+              }
+            ],
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/firewalls/default-allow-ssh",
+            "direction": "INGRESS"
+          },
+          {
+            "name": "nexoandes-gcp-allow-ssh",
+            "network": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/networks/nexoandes-gcp-vpc",
+            "sourceRanges": [
+              "38.225.34.117/32",
+              "38.225.34.112/32",
+              "3.227.230.171/32"
+            ],
+            "allowed": [
+              {
+                "IPProtocol": "icmp"
+              },
+              {
+                "IPProtocol": "tcp",
+                "ports": [
+                  "22"
+                ]
+              }
+            ],
+            "targetTags": [
+              "nexoandes"
+            ],
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/firewalls/nexoandes-gcp-allow-ssh",
+            "direction": "INGRESS"
+          },
+          {
+            "name": "nexoandes-gcp-ipsec",
+            "network": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/networks/nexoandes-gcp-vpc",
+            "sourceRanges": [
+              "3.227.230.171/32"
+            ],
+            "allowed": [
+              {
+                "IPProtocol": "udp",
+                "ports": [
+                  "500",
+                  "4500"
+                ]
+              }
+            ],
+            "targetTags": [
+              "standby"
+            ],
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/firewalls/nexoandes-gcp-ipsec",
+            "direction": "INGRESS"
+          },
+          {
+            "name": "nexoandes-gcp-web",
+            "network": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/networks/nexoandes-gcp-vpc",
+            "sourceRanges": [
+              "0.0.0.0/0"
+            ],
+            "allowed": [
+              {
+                "IPProtocol": "tcp",
+                "ports": [
+                  "80"
+                ]
+              }
+            ],
+            "targetTags": [
+              "standby"
+            ],
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/gen-lang-client-0623826791/global/firewalls/nexoandes-gcp-web",
+            "direction": "INGRESS"
+          }
+        ]
+      },
+      "buckets": {
+        "ok": true,
+        "http": 200,
+        "datos": {
+          "items": [
+            {
+              "name": "nexoandes-backup-gen-lang-client-0623826791",
+              "location": "US-CENTRAL1",
+              "versioning": {
+                "enabled": true
+              },
+              "lifecycle": {
+                "rule": [
+                  {
+                    "action": {
+                      "type": "Delete"
+                    },
+                    "condition": {
+                      "age": 14
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "objetos": {
+        "ok": true,
+        "http": 200,
+        "datos": {
+          "items": [
+            {
+              "name": "20261029T162807Z.dump",
+              "size": "1868",
+              "updated": "2026-10-29T17:49:57.138Z"
+            },
+            {
+              "name": "postgresql/20261104T161054Z.dump",
+              "size": "4848",
+              "updated": "2026-11-04T16:11:05.642Z"
+            },
+            {
+              "name": "postgresql/20261104T164203Z.dump",
+              "size": "4897",
+              "updated": "2026-11-04T16:42:13.080Z"
+            },
+            {
+              "name": "postgresql/20261104T164815Z.dump",
+              "size": "4897",
+              "updated": "2026-11-04T17:01:33.103Z"
+            },
+            {
+              "name": "postgresql/20261104T170730Z.dump",
+              "size": "4897",
+              "updated": "2026-11-04T17:07:55.616Z"
+            },
+            {
+              "name": "postgresql/20261104T181348Z.dump",
+              "size": "4910",
+              "updated": "2026-11-04T19:01:42.711Z"
+            },
+            {
+              "name": "postgresql/20261104T191003Z.dump",
+              "size": "4910",
+              "updated": "2026-11-04T19:10:39.131Z"
+            },
+            {
+              "name": "postgresql/20261104T191151Z.dump",
+              "size": "4922",
+              "updated": "2026-11-04T19:12:06.255Z"
+            },
+            {
+              "name": "supabase/20261105T023835Z.tgz",
+              "size": "181291",
+              "updated": "2026-11-05T02:38:50.616Z"
+            }
+          ]
+        }
+      },
+      "facturacion": {
+        "ok": false,
+        "http": 403,
+        "error": "Cloud Billing API has not been used in project 816654945610 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudbilling.googleapis.com/overview?project=816654945610 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+      }
+    },
+    "aws": {
+      "identidad": {
+        "ok": true,
+        "datos": {
+          "Account": "849533029543",
+          "Arn": "arn:aws:sts::849533029543:assumed-role/voclabs/user5367530=Glender_Vargas"
+        }
+      },
+      "region": "us-east-1",
+      "vpcs": {
+        "ok": true,
+        "datos": [
+          {
+            "id": "vpc-0e549a023b818b322",
+            "cidr": "10.20.0.0/16",
+            "estado": "available",
+            "nombre": "EXAMEN-GLENDERVARGAS-VPC"
+          },
+          {
+            "id": "vpc-0ab83bf4a2b225c41",
+            "cidr": "10.10.0.0/16",
+            "estado": "available",
+            "nombre": "nexoandes-vpc"
+          },
+          {
+            "id": "vpc-00fd8836e93e2030f",
+            "cidr": "172.31.0.0/16",
+            "estado": "available",
+            "nombre": null
+          }
+        ]
+      },
+      "subnets": {
+        "ok": true,
+        "datos": [
+          {
+            "id": "subnet-0616fff3044311066",
+            "vpc": "vpc-00fd8836e93e2030f",
+            "cidr": "172.31.0.0/20",
+            "az": "us-east-1a"
+          },
+          {
+            "id": "subnet-0c069c56a94cab4b4",
+            "vpc": "vpc-00fd8836e93e2030f",
+            "cidr": "172.31.48.0/20",
+            "az": "us-east-1e"
+          },
+          {
+            "id": "subnet-014a9dbd887c9b93b",
+            "vpc": "vpc-00fd8836e93e2030f",
+            "cidr": "172.31.64.0/20",
+            "az": "us-east-1f"
+          },
+          {
+            "id": "subnet-0898792c332ea8e87",
+            "vpc": "vpc-0ab83bf4a2b225c41",
+            "cidr": "10.10.2.0/24",
+            "az": "us-east-1b"
+          },
+          {
+            "id": "subnet-05364d8ae36d54547",
+            "vpc": "vpc-00fd8836e93e2030f",
+            "cidr": "172.31.16.0/20",
+            "az": "us-east-1c"
+          },
+          {
+            "id": "subnet-0f0be773e6366628f",
+            "vpc": "vpc-0ab83bf4a2b225c41",
+            "cidr": "10.10.11.0/24",
+            "az": "us-east-1a"
+          },
+          {
+            "id": "subnet-0c4b2f6299647e3df",
+            "vpc": "vpc-0ab83bf4a2b225c41",
+            "cidr": "10.10.12.0/24",
+            "az": "us-east-1b"
+          },
+          {
+            "id": "subnet-0d4b5ad045ac91b41",
+            "vpc": "vpc-0e549a023b818b322",
+            "cidr": "10.20.10.0/24",
+            "az": "us-east-1a"
+          },
+          {
+            "id": "subnet-09d10407b333625ad",
+            "vpc": "vpc-0ab83bf4a2b225c41",
+            "cidr": "10.10.20.0/24",
+            "az": "us-east-1a"
+          },
+          {
+            "id": "subnet-0013cc175fb7510ea",
+            "vpc": "vpc-00fd8836e93e2030f",
+            "cidr": "172.31.32.0/20",
+            "az": "us-east-1d"
+          },
+          {
+            "id": "subnet-07345849ea32bca7f",
+            "vpc": "vpc-00fd8836e93e2030f",
+            "cidr": "172.31.80.0/20",
+            "az": "us-east-1b"
+          },
+          {
+            "id": "subnet-02555963c70a2b933",
+            "vpc": "vpc-0ab83bf4a2b225c41",
+            "cidr": "10.10.1.0/24",
+            "az": "us-east-1a"
+          }
+        ]
+      },
+      "volumenes": {
+        "ok": true,
+        "datos": [
+          {
+            "id": "vol-01a21bccc1f3ec363",
+            "estado": "in-use",
+            "az": "us-east-1b",
+            "gb": 8,
+            "cifrado": true,
+            "attachments": [
+              "i-0e91e65928d2f3596"
+            ]
+          },
+          {
+            "id": "vol-0641bf3d4c25b6b34",
+            "estado": "in-use",
+            "az": "us-east-1a",
+            "gb": 20,
+            "cifrado": true,
+            "attachments": [
+              "i-01ae7353f82b8daa5"
+            ]
+          },
+          {
+            "id": "vol-04aa95f74f5f98727",
+            "estado": "in-use",
+            "az": "us-east-1a",
+            "gb": 8,
+            "cifrado": false,
+            "attachments": [
+              "i-00dcab0a251d51e69"
+            ]
+          },
+          {
+            "id": "vol-0f8aa7db385f6d1f8",
+            "estado": "in-use",
+            "az": "us-east-1a",
+            "gb": 8,
+            "cifrado": true,
+            "attachments": [
+              "i-01ae7353f82b8daa5"
+            ]
+          },
+          {
+            "id": "vol-0823953f20341285d",
+            "estado": "in-use",
+            "az": "us-east-1b",
+            "gb": 12,
+            "cifrado": true,
+            "attachments": [
+              "i-0ceea48d268d2cb83"
+            ]
+          },
+          {
+            "id": "vol-00ba8c92ac3b2e89e",
+            "estado": "in-use",
+            "az": "us-east-1a",
+            "gb": 8,
+            "cifrado": true,
+            "attachments": [
+              "i-0afbfc0f2766af28c"
+            ]
+          },
+          {
+            "id": "vol-01e8a5e9f98ce1bac",
+            "estado": "in-use",
+            "az": "us-east-1b",
+            "gb": 40,
+            "cifrado": true,
+            "attachments": [
+              "i-0ceea48d268d2cb83"
+            ]
+          },
+          {
+            "id": "vol-0a58f8072069b3d6e",
+            "estado": "in-use",
+            "az": "us-east-1a",
+            "gb": 8,
+            "cifrado": true,
+            "attachments": [
+              "i-0f1495429ee5f8459"
+            ]
+          }
+        ]
+      },
+      "instancias": {
+        "ok": true,
+        "datos": [
+          {
+            "id": "i-00dcab0a251d51e69",
+            "estado": "running",
+            "tipo": "t3.micro",
+            "az": "us-east-1a",
+            "ip_privada": "10.20.10.6",
+            "ip_publica": "44.214.179.83",
+            "vpc": "vpc-0e549a023b818b322",
+            "subnet": "subnet-0d4b5ad045ac91b41",
+            "nombre": "EXAMEN-GLENDERVARGAS-WEB"
+          },
+          {
+            "id": "i-01ae7353f82b8daa5",
+            "estado": "running",
+            "tipo": "t3.micro",
+            "az": "us-east-1a",
+            "ip_privada": "10.10.20.35",
+            "ip_publica": null,
+            "vpc": "vpc-0ab83bf4a2b225c41",
+            "subnet": "subnet-09d10407b333625ad",
+            "nombre": "nexoandes-postgresql"
+          },
+          {
+            "id": "i-0e3ad90fdf9a1340b",
+            "estado": "terminated",
+            "tipo": "t3.micro",
+            "az": "us-east-1a",
+            "ip_privada": null,
+            "ip_publica": null,
+            "vpc": null,
+            "subnet": null,
+            "nombre": "nexoandes-web"
+          },
+          {
+            "id": "i-0ceea48d268d2cb83",
+            "estado": "running",
+            "tipo": "t3.medium",
+            "az": "us-east-1b",
+            "ip_privada": "10.10.12.238",
+            "ip_publica": null,
+            "vpc": "vpc-0ab83bf4a2b225c41",
+            "subnet": "subnet-0c4b2f6299647e3df",
+            "nombre": "nexoandes-supabase"
+          },
+          {
+            "id": "i-0e91e65928d2f3596",
+            "estado": "running",
+            "tipo": "t3.micro",
+            "az": "us-east-1b",
+            "ip_privada": "10.10.12.174",
+            "ip_publica": null,
+            "vpc": "vpc-0ab83bf4a2b225c41",
+            "subnet": "subnet-0c4b2f6299647e3df",
+            "nombre": "nexoandes-web"
+          },
+          {
+            "id": "i-0f1495429ee5f8459",
+            "estado": "running",
+            "tipo": "t3.micro",
+            "az": "us-east-1a",
+            "ip_privada": "10.10.11.217",
+            "ip_publica": null,
+            "vpc": "vpc-0ab83bf4a2b225c41",
+            "subnet": "subnet-0f0be773e6366628f",
+            "nombre": "nexoandes-web"
+          },
+          {
+            "id": "i-0afbfc0f2766af28c",
+            "estado": "running",
+            "tipo": "t3.micro",
+            "az": "us-east-1a",
+            "ip_privada": "10.10.1.121",
+            "ip_publica": "44.203.10.120",
+            "vpc": "vpc-0ab83bf4a2b225c41",
+            "subnet": "subnet-02555963c70a2b933",
+            "nombre": "nexoandes-ipsec"
+          }
+        ]
+      },
+      "alb": {
+        "ok": true,
+        "datos": [
+          {
+            "nombre": "nexoandes-alb",
+            "arn": "arn:aws:elasticloadbalancing:us-east-1:849533029543:loadbalancer/app/nexoandes-alb/7b09327f53be89d3",
+            "dns": "nexoandes-alb-409538740.us-east-1.elb.amazonaws.com",
+            "estado": "active",
+            "az": [
+              "us-east-1a",
+              "us-east-1b"
+            ]
+          }
+        ]
+      },
+      "asg": {
+        "ok": true,
+        "datos": [
+          {
+            "nombre": "nexoandes-web",
+            "min": 2,
+            "max": 4,
+            "deseado": 2,
+            "health": "ELB",
+            "instancias": [
+              {
+                "id": "i-0e91e65928d2f3596",
+                "estado": "Healthy",
+                "az": "us-east-1b"
+              },
+              {
+                "id": "i-0f1495429ee5f8459",
+                "estado": "Healthy",
+                "az": "us-east-1a"
+              }
+            ]
+          }
+        ]
+      },
+      "ssm": {
+        "ok": true,
+        "datos": [
+          {
+            "id": "i-0ceea48d268d2cb83",
+            "estado": "Online",
+            "plataforma": "Ubuntu"
+          },
+          {
+            "id": "i-0e91e65928d2f3596",
+            "estado": "Online",
+            "plataforma": "Amazon Linux"
+          },
+          {
+            "id": "i-01ae7353f82b8daa5",
+            "estado": "Online",
+            "plataforma": "Amazon Linux"
+          },
+          {
+            "id": "i-0afbfc0f2766af28c",
+            "estado": "Online",
+            "plataforma": "Ubuntu"
+          },
+          {
+            "id": "i-0f1495429ee5f8459",
+            "estado": "Online",
+            "plataforma": "Amazon Linux"
+          }
+        ]
+      },
+      "nat": {
+        "ok": true,
+        "datos": [
+          {
+            "id": "nat-0fdf5ee625f95df09",
+            "estado": "available",
+            "subnet": "subnet-02555963c70a2b933"
+          }
+        ]
+      },
+      "alarmas": {
+        "ok": true,
+        "datos": [
+          {
+            "nombre": "TargetTracking-nexoandes-web-AlarmHigh-32230037-cadf-457e-9cc9-7ed456b0748e",
+            "estado": "OK",
+            "metrica": "CPUUtilization",
+            "acciones": [
+              "arn:aws:autoscaling:us-east-1:849533029543:scalingPolicy:1956e873-9afd-4ba4-b2e9-a9d65ba6e2cb:autoScalingGroupName/nexoandes-web:policyName/nexoandes-cpu50"
+            ]
+          },
+          {
+            "nombre": "TargetTracking-nexoandes-web-AlarmHigh-b5266e91-9c25-4a56-92ee-cabe2873dd40",
+            "estado": "OK",
+            "metrica": "RequestCountPerTarget",
+            "acciones": [
+              "arn:aws:autoscaling:us-east-1:849533029543:scalingPolicy:945a1047-b576-4d0d-b6b5-dbec642f6208:autoScalingGroupName/nexoandes-web:policyName/nexoandes-solicitudes"
+            ]
+          },
+          {
+            "nombre": "TargetTracking-nexoandes-web-AlarmLow-2749c29f-23c3-4eb3-8753-6cae785aadd8",
+            "estado": "ALARM",
+            "metrica": "CPUUtilization",
+            "acciones": [
+              "arn:aws:autoscaling:us-east-1:849533029543:scalingPolicy:1956e873-9afd-4ba4-b2e9-a9d65ba6e2cb:autoScalingGroupName/nexoandes-web:policyName/nexoandes-cpu50"
+            ]
+          },
+          {
+            "nombre": "TargetTracking-nexoandes-web-AlarmLow-7d7bac39-904c-42ee-b937-d8c3211253cc",
+            "estado": "ALARM",
+            "metrica": "RequestCountPerTarget",
+            "acciones": [
+              "arn:aws:autoscaling:us-east-1:849533029543:scalingPolicy:945a1047-b576-4d0d-b6b5-dbec642f6208:autoScalingGroupName/nexoandes-web:policyName/nexoandes-solicitudes"
+            ]
+          },
+          {
+            "nombre": "nexoandes-cpu-alta",
+            "estado": "OK",
+            "metrica": "CPUUtilization",
+            "acciones": []
+          },
+          {
+            "nombre": "nexoandes-http5xx",
+            "estado": "OK",
+            "metrica": "HTTPCode_Target_5XX_Count",
+            "acciones": []
+          }
+        ]
+      },
+      "vpn": {
+        "ok": true,
+        "datos": []
+      },
+      "costos": {
+        "ok": true,
+        "datos": [
+          {
+            "periodo": {
+              "Start": "2026-11-01",
+              "End": "2026-11-05"
+            },
+            "total": {
+              "Amount": "-0.0000000018",
+              "Unit": "USD"
+            },
+            "estimado": true
+          }
+        ]
+      },
+      "s3": {
+        "ok": true,
+        "datos": {
+          "cantidad": null,
+          "objetos": [
+            {
+              "clave": "postgresql/20261022T205410Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-22T20:54:24+00:00"
+            },
+            {
+              "clave": "postgresql/20261022T211313Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-22T21:13:15+00:00"
+            },
+            {
+              "clave": "postgresql/20261022T221413Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-22T22:14:14+00:00"
+            },
+            {
+              "clave": "postgresql/20261029T015248Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-29T01:52:50+00:00"
+            },
+            {
+              "clave": "postgresql/20261029T025348Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-29T02:53:49+00:00"
+            },
+            {
+              "clave": "postgresql/20261029T035348Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-29T03:53:49+00:00"
+            },
+            {
+              "clave": "postgresql/20261029T045348Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-29T04:53:49+00:00"
+            },
+            {
+              "clave": "postgresql/20261029T152808Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-29T15:28:10+00:00"
+            },
+            {
+              "clave": "postgresql/20261029T162807Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-29T16:28:09+00:00"
+            },
+            {
+              "clave": "postgresql/20261029T172808Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-29T17:28:09+00:00"
+            },
+            {
+              "clave": "postgresql/20261029T182808Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-29T18:28:09+00:00"
+            },
+            {
+              "clave": "postgresql/20261029T213809Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-29T21:38:11+00:00"
+            },
+            {
+              "clave": "postgresql/20261029T223809Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-29T22:38:11+00:00"
+            },
+            {
+              "clave": "postgresql/20261029T233809Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-29T23:38:11+00:00"
+            },
+            {
+              "clave": "postgresql/20261030T003809Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-10-30T00:38:11+00:00"
+            },
+            {
+              "clave": "postgresql/20261104T154715Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-11-04T15:47:17+00:00"
+            },
+            {
+              "clave": "postgresql/20261104T160353Z.dump",
+              "bytes": 1868,
+              "fecha": "2026-11-04T16:03:55+00:00"
+            },
+            {
+              "clave": "postgresql/20261104T160615Z.dump",
+              "bytes": 4821,
+              "fecha": "2026-11-04T16:06:17+00:00"
+            },
+            {
+              "clave": "postgresql/20261104T160802Z.dump",
+              "bytes": 4836,
+              "fecha": "2026-11-04T16:08:04+00:00"
+            },
+            {
+              "clave": "postgresql/20261104T161054Z.dump",
+              "bytes": 4848,
+              "fecha": "2026-11-04T16:10:56+00:00"
+            },
+            {
+              "clave": "postgresql/20261104T164203Z.dump",
+              "bytes": 4897,
+              "fecha": "2026-11-04T16:42:05+00:00"
+            },
+            {
+              "clave": "postgresql/20261104T164815Z.dump",
+              "bytes": 4897,
+              "fecha": "2026-11-04T16:48:16+00:00"
+            },
+            {
+              "clave": "postgresql/20261104T170730Z.dump",
+              "bytes": 4897,
+              "fecha": "2026-11-04T17:07:32+00:00"
+            },
+            {
+              "clave": "postgresql/20261104T171348Z.dump",
+              "bytes": 4910,
+              "fecha": "2026-11-04T17:13:49+00:00"
+            },
+            {
+              "clave": "postgresql/20261104T181348Z.dump",
+              "bytes": 4910,
+              "fecha": "2026-11-04T18:13:49+00:00"
+            },
+            {
+              "clave": "postgresql/20261104T191003Z.dump",
+              "bytes": 4910,
+              "fecha": "2026-11-04T19:10:05+00:00"
+            },
+            {
+              "clave": "postgresql/20261104T191151Z.dump",
+              "bytes": 4922,
+              "fecha": "2026-11-04T19:11:53+00:00"
+            },
+            {
+              "clave": "postgresql/20261104T191448Z.dump",
+              "bytes": 4922,
+              "fecha": "2026-11-04T19:14:49+00:00"
+            },
+            {
+              "clave": "postgresql/20261105T022346Z.dump",
+              "bytes": 4922,
+              "fecha": "2026-11-05T02:23:48+00:00"
+            },
+            {
+              "clave": "supabase-web/e5667b8105a8a817ef171eb11b4496d5e642e1181fc2d24ce0ff4017c2f40262.tgz",
+              "bytes": 4057,
+              "fecha": "2026-11-05T02:42:03+00:00"
+            },
+            {
+              "clave": "supabase/20261105T023835Z.tgz",
+              "bytes": 181291,
+              "fecha": "2026-11-05T02:38:38+00:00"
+            }
+          ]
+        }
+      }
+    },
+    "azure": {
+      "identidad": {
+        "ok": true,
+        "datos": {
+          "estado": "Enabled",
+          "id": "1db87b28-407f-41d3-b532-41942343157c",
+          "nombre": "Azure for Students"
+        }
+      },
+      "recursos": {
+        "ok": true,
+        "datos": [
+          {
+            "grupo": "nexoandes-lab",
+            "id": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/resourceGroups/nexoandes-lab/providers/Microsoft.Storage/storageAccounts/nxa1db87b28407f",
+            "nombre": "nxa1db87b28407f",
+            "region": "northcentralus",
+            "tipo": "Microsoft.Storage/storageAccounts"
+          },
+          {
+            "grupo": "nexoandes-lab",
+            "id": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/resourceGroups/nexoandes-lab/providers/Microsoft.Network/virtualNetworks/nexoandes-vnet",
+            "nombre": "nexoandes-vnet",
+            "region": "northcentralus",
+            "tipo": "Microsoft.Network/virtualNetworks"
+          },
+          {
+            "grupo": "NetworkWatcherRG",
+            "id": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_northcentralus",
+            "nombre": "NetworkWatcher_northcentralus",
+            "region": "northcentralus",
+            "tipo": "Microsoft.Network/networkWatchers"
+          },
+          {
+            "grupo": "agy-docker-rg",
+            "id": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/resourceGroups/agy-docker-rg/providers/Microsoft.Network/virtualNetworks/agy-docker-vmVNET",
+            "nombre": "agy-docker-vmVNET",
+            "region": "northcentralus",
+            "tipo": "Microsoft.Network/virtualNetworks"
+          },
+          {
+            "grupo": "agy-docker-rg",
+            "id": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/resourceGroups/agy-docker-rg/providers/Microsoft.Network/networkSecurityGroups/agy-docker-vmNSG",
+            "nombre": "agy-docker-vmNSG",
+            "region": "northcentralus",
+            "tipo": "Microsoft.Network/networkSecurityGroups"
+          },
+          {
+            "grupo": "agy-docker-rg",
+            "id": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/resourceGroups/agy-docker-rg/providers/Microsoft.Network/publicIPAddresses/agy-docker-vmPublicIP",
+            "nombre": "agy-docker-vmPublicIP",
+            "region": "northcentralus",
+            "tipo": "Microsoft.Network/publicIPAddresses"
+          },
+          {
+            "grupo": "agy-docker-rg",
+            "id": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/resourceGroups/agy-docker-rg/providers/Microsoft.Network/networkInterfaces/agy-docker-vmVMNic",
+            "nombre": "agy-docker-vmVMNic",
+            "region": "northcentralus",
+            "tipo": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "grupo": "agy-docker-rg",
+            "id": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/resourceGroups/agy-docker-rg/providers/Microsoft.Compute/virtualMachines/agy-docker-vm",
+            "nombre": "agy-docker-vm",
+            "region": "northcentralus",
+            "tipo": "Microsoft.Compute/virtualMachines"
+          },
+          {
+            "grupo": "AGY-DOCKER-RG",
+            "id": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/resourceGroups/AGY-DOCKER-RG/providers/Microsoft.Compute/disks/agy-docker-vm_OsDisk_1_2c42f744f4c343608ea59a3aa0e303a3",
+            "nombre": "agy-docker-vm_OsDisk_1_2c42f744f4c343608ea59a3aa0e303a3",
+            "region": "northcentralus",
+            "tipo": "Microsoft.Compute/disks"
+          }
+        ]
+      },
+      "regiones": {
+        "ok": true,
+        "datos": [
+          {
+            "nombre": "Allowed resource deployment regions",
+            "parametros": {
+              "listOfAllowedLocations": {
+                "value": [
+                  "northcentralus",
+                  "westus3",
+                  "chilecentral",
+                  "brazilsouth",
+                  "westus"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "maquinas": {
+        "ok": true,
+        "datos": [
+          {
+            "estado": "VM running",
+            "grupo": "AGY-DOCKER-RG",
+            "nombre": "agy-docker-vm",
+            "region": "northcentralus",
+            "tipo": "Standard_B2als_v2"
+          }
+        ]
+      },
+      "costos": {
+        "ok": true,
+        "datos": {
+          "columnas": [
+            {
+              "name": "Cost",
+              "type": "Number"
+            },
+            {
+              "name": "Currency",
+              "type": "String"
+            }
+          ],
+          "filas": [
+            [
+              3.17415299617081,
+              "USD"
+            ]
+          ]
+        }
+      }
+    }
+  }
+}

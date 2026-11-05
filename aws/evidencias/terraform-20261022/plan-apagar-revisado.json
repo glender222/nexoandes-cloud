@@ -1,0 +1,78 @@
+{
+  "nube": "aws",
+  "accion": "apagar",
+  "cambios": [
+    {
+      "recurso": "aws_autoscaling_group.web[0]",
+      "acciones": [
+        "delete"
+      ]
+    },
+    {
+      "recurso": "aws_autoscaling_policy.cpu[0]",
+      "acciones": [
+        "delete"
+      ]
+    },
+    {
+      "recurso": "aws_cloudwatch_metric_alarm.cpu[0]",
+      "acciones": [
+        "delete"
+      ]
+    },
+    {
+      "recurso": "aws_cloudwatch_metric_alarm.errors[0]",
+      "acciones": [
+        "delete"
+      ]
+    },
+    {
+      "recurso": "aws_ec2_instance_state.db",
+      "acciones": [
+        "update"
+      ]
+    },
+    {
+      "recurso": "aws_eip.nat[0]",
+      "acciones": [
+        "delete"
+      ]
+    },
+    {
+      "recurso": "aws_launch_template.web[0]",
+      "acciones": [
+        "delete"
+      ]
+    },
+    {
+      "recurso": "aws_lb.web[0]",
+      "acciones": [
+        "delete"
+      ]
+    },
+    {
+      "recurso": "aws_lb_listener.http[0]",
+      "acciones": [
+        "delete"
+      ]
+    },
+    {
+      "recurso": "aws_lb_target_group.web[0]",
+      "acciones": [
+        "delete"
+      ]
+    },
+    {
+      "recurso": "aws_nat_gateway.main[0]",
+      "acciones": [
+        "delete"
+      ]
+    },
+    {
+      "recurso": "aws_route.private[0]",
+      "acciones": [
+        "delete"
+      ]
+    }
+  ]
+}

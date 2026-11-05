@@ -1,0 +1,43 @@
+#!/bin/bash
+set -euo pipefail
+export DEBIAN_FRONTEND=noninteractive
+apt-get update -q
+apt-get install -y docker.io docker-compose-v2 curl jq unzip
+if ! command -v aws >/dev/null; then
+  curl -fsSL https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o /tmp/nexoandes-awscli.zip
+  unzip -q /tmp/nexoandes-awscli.zip -d /tmp/nexoandes-awscli
+  /tmp/nexoandes-awscli/aws/install --update
+  rm -rf /tmp/nexoandes-awscli /tmp/nexoandes-awscli.zip
+fi
+systemctl enable --now docker
+if ! systemctl is-active --quiet snap.amazon-ssm-agent.amazon-ssm-agent.service && ! systemctl is-active --quiet amazon-ssm-agent; then
+  curl -fsSL https://s3.us-east-1.amazonaws.com/amazon-ssm-us-east-1/latest/debian_amd64/amazon-ssm-agent.deb -o /tmp/amazon-ssm-agent.deb
+  dpkg -i /tmp/amazon-ssm-agent.deb
+  systemctl enable --now amazon-ssm-agent
+fi
+DEVICE=""
+for attempt in $(seq 1 120); do
+  for candidate in /sys/block/nvme*n1/device/serial; do
+    if [[ -f "$candidate" ]] && [[ "$(tr -d '[:space:]' < "$candidate")" == "${volume_id}" ]]; then
+      DEVICE="/dev/$(basename "$(dirname "$(dirname "$candidate")")")"
+    fi
+  done
+  [[ -n "$DEVICE" ]] && break
+  sleep 2
+done
+[[ -b "$DEVICE" ]] || { echo 'Disco persistente no disponible'; exit 1; }
+if ! blkid "$DEVICE" >/dev/null; then mkfs.ext4 -L nexoandes-supabase "$DEVICE"; fi
+install -d -m 700 /srv/supabase
+UUID=$(blkid -s UUID -o value "$DEVICE")
+grep -q "UUID=$UUID " /etc/fstab || echo "UUID=$UUID /srv/supabase ext4 defaults,nofail 0 2" >> /etc/fstab
+mountpoint -q /srv/supabase || mount /srv/supabase
+chmod 700 /srv/supabase
+if [[ ! -f /swapfile ]]; then
+  fallocate -l 2G /swapfile
+  chmod 600 /swapfile
+  mkswap /swapfile >/dev/null
+  echo '/swapfile none swap sw 0 0' >> /etc/fstab
+fi
+swapon /swapfile 2>/dev/null || true
+touch /var/lib/nexoandes-supabase-host-ready
+# La pila y secretos se entregan despues por SSM; nunca en user-data/estado.

@@ -1,0 +1,17 @@
+{
+  "utc": "2026-11-05T02:48:15.167530+00:00",
+  "iniciales": [
+    "i-0e3ad90fdf9a1340b",
+    "i-0e91e65928d2f3596"
+  ],
+  "lanzamiento_esperado": {
+    "LaunchTemplateId": "lt-09ddb987a43f24dfa",
+    "LaunchTemplateName": "nexoandes-web-84061f8d0b3a4507509883472b",
+    "Version": "2"
+  },
+  "completo": true,
+  "nueva_web": "i-0f1495429ee5f8459",
+  "segundos": 197.1,
+  "verificacion": "active\nLOGIN_HTTP=200\nSIN_TOKEN_HTTP=401\nCLAVE_PUBLICABLE_CONFIGURADA",
+  "instalacion_manual_en_reemplazo": false
+}

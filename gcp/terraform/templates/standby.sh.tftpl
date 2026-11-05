@@ -1,0 +1,69 @@
+#!/bin/bash
+set -euo pipefail
+rm -f /var/lib/nexoandes-bootstrap-ready
+export DEBIAN_FRONTEND=noninteractive
+apt-get update -q
+apt-get install -y postgresql-15 postgresql-client-15 strongswan iptables python3
+if [[ ! -f /swapfile ]]; then
+  fallocate -l 1G /swapfile
+  chmod 600 /swapfile
+  mkswap /swapfile
+  echo '/swapfile none swap sw 0 0' >> /etc/fstab
+fi
+swapon /swapfile 2>/dev/null || true
+DEVICE=/dev/disk/by-id/google-nexoandes-data
+for attempt in $(seq 1 90); do [[ -b "$DEVICE" ]] && break; sleep 2; done
+[[ -b "$DEVICE" ]]
+if ! blkid "$DEVICE"; then mkfs.ext4 "$DEVICE"; fi
+mkdir -p /srv/postgresql
+UUID=$(blkid -s UUID -o value "$DEVICE")
+grep -q "$UUID" /etc/fstab || echo "UUID=$UUID /srv/postgresql ext4 defaults,nofail 0 2" >> /etc/fstab
+mountpoint -q /srv/postgresql || mount /srv/postgresql
+chown postgres:postgres /srv/postgresql
+if [[ -f /etc/postgresql/15/main/start.conf ]]; then
+  echo manual > /etc/postgresql/15/main/start.conf
+  pg_ctlcluster 15 main stop || true
+fi
+cat > /etc/systemd/system/nexoandes-postgresql.service <<'SERVICE'
+[Unit]
+Description=PostgreSQL de contingencia NexoAndes
+After=network-online.target
+RequiresMountsFor=/srv/postgresql
+ConditionPathExists=/srv/postgresql/data/PG_VERSION
+[Service]
+User=postgres
+Group=postgres
+ExecStart=/usr/lib/postgresql/15/bin/postgres -D /srv/postgresql/data
+ExecReload=/bin/kill -HUP $MAINPID
+KillSignal=SIGINT
+TimeoutStopSec=120
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
+SERVICE
+mkdir -p /opt/nexoandes /etc/nexoandes
+cat > /opt/nexoandes/health_app.py <<'PYTHON'
+${app_code}
+PYTHON
+cat > /etc/systemd/system/nexoandes-app.service <<'SERVICE'
+[Unit]
+Description=Portal y sonda de contingencia NexoAndes
+After=network-online.target nexoandes-postgresql.service
+[Service]
+EnvironmentFile=-/etc/nexoandes/app.env
+Environment=NEXO_BIND=0.0.0.0 NEXO_PORT=80 NEXO_SITE=gcp
+ExecStart=/usr/bin/python3 /opt/nexoandes/health_app.py
+Restart=always
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/tmp
+[Install]
+WantedBy=multi-user.target
+SERVICE
+systemctl daemon-reload
+systemctl enable nexoandes-postgresql nexoandes-app
+systemctl start nexoandes-postgresql || true
+systemctl restart nexoandes-app
+touch /var/lib/nexoandes-bootstrap-ready

@@ -1,0 +1,41 @@
+{
+    "RouteTables": [
+        {
+            "Associations": [
+                {
+                    "Main": false,
+                    "RouteTableAssociationId": "rtbassoc-01004910003425d11",
+                    "RouteTableId": "rtb-09c9e6226272af29b",
+                    "SubnetId": "subnet-0d4b5ad045ac91b41",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "PropagatingVgws": [],
+            "RouteTableId": "rtb-09c9e6226272af29b",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "10.20.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                },
+                {
+                    "DestinationCidrBlock": "0.0.0.0/0",
+                    "GatewayId": "igw-0ef3e59c3749996a8",
+                    "Origin": "CreateRoute",
+                    "State": "active"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "EXAMEN-GLENDERVARGAS-RT"
+                }
+            ],
+            "VpcId": "vpc-0e549a023b818b322",
+            "OwnerId": "849533029543"
+        }
+    ]
+}

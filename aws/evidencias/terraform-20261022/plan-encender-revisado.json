@@ -1,0 +1,66 @@
+{
+  "nube": "aws",
+  "accion": "encender",
+  "cambios": [
+    {
+      "recurso": "aws_autoscaling_group.web[0]",
+      "acciones": [
+        "update"
+      ]
+    },
+    {
+      "recurso": "aws_ec2_instance_state.db",
+      "acciones": [
+        "create"
+      ]
+    },
+    {
+      "recurso": "aws_instance.db",
+      "acciones": [
+        "create"
+      ]
+    },
+    {
+      "recurso": "aws_s3_bucket_lifecycle_configuration.backup",
+      "acciones": [
+        "create"
+      ]
+    },
+    {
+      "recurso": "aws_s3_bucket_ownership_controls.backup",
+      "acciones": [
+        "create"
+      ]
+    },
+    {
+      "recurso": "aws_s3_bucket_public_access_block.backup",
+      "acciones": [
+        "create"
+      ]
+    },
+    {
+      "recurso": "aws_s3_bucket_server_side_encryption_configuration.backup",
+      "acciones": [
+        "create"
+      ]
+    },
+    {
+      "recurso": "aws_s3_bucket_versioning.backup",
+      "acciones": [
+        "create"
+      ]
+    },
+    {
+      "recurso": "aws_volume_attachment.db",
+      "acciones": [
+        "create"
+      ]
+    },
+    {
+      "recurso": "terraform_data.backup",
+      "acciones": [
+        "create"
+      ]
+    }
+  ]
+}

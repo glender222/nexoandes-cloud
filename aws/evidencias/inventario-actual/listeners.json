@@ -1,0 +1,24 @@
+[
+    {
+        "Arn": "arn:aws:elasticloadbalancing:us-east-1:669186512136:listener/app/AWsAcademy-ALB/2ce697bb3f202c98/95450895672ef9cb",
+        "Protocol": "HTTP",
+        "Port": 80,
+        "Actions": [
+            {
+                "Type": "forward",
+                "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:669186512136:targetgroup/AWsAcademy-TG/15789ac3fb56cf76",
+                "ForwardConfig": {
+                    "TargetGroups": [
+                        {
+                            "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:669186512136:targetgroup/AWsAcademy-TG/15789ac3fb56cf76",
+                            "Weight": 1
+                        }
+                    ],
+                    "TargetGroupStickinessConfig": {
+                        "Enabled": false
+                    }
+                }
+            }
+        ]
+    }
+]

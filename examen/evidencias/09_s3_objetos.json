@@ -1,0 +1,39 @@
+{
+    "Contents": [
+        {
+            "Key": "backup/respaldo_configuracion_web.txt",
+            "LastModified": "2026-10-22T21:25:17+00:00",
+            "ETag": "\"f1f9487b783416300e844d687ad5d88f\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 65,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "documentos/politica_seguridad_innovatech.txt",
+            "LastModified": "2026-10-22T21:25:14+00:00",
+            "ETag": "\"b4faf11697b2d2d8c9fd0787b0ed2977\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 62,
+            "StorageClass": "STANDARD"
+        },
+        {
+            "Key": "evidencias/evidencia_despliegue_arquitectura.txt",
+            "LastModified": "2026-10-22T21:25:16+00:00",
+            "ETag": "\"c7b5558dc99a0f00edaccc0a73de800d\"",
+            "ChecksumAlgorithm": [
+                "CRC64NVME"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 55,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "RequestCharged": null,
+    "Prefix": ""
+}

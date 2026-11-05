@@ -1,0 +1,20 @@
+{
+  "utc": "2026-11-04T16:44:59.751920+00:00",
+  "timer": "nexoandes-respaldos.timer",
+  "ejecutor": "equipo local",
+  "periodicidad": "cada hora, retraso aleatorio hasta 5 minutos",
+  "requiere": "sesion de usuario/equipo disponible, red y credenciales vigentes",
+  "no_enciende_recursos": true,
+  "habilitado": "enabled",
+  "estado": "active",
+  "siguiente": "Wed 2026-11-04 12:03:48 -05",
+  "prueba_servicio": {
+    "accion": "systemctl --user start nexoandes-respaldos.service",
+    "resultado": "Result=success\nExecMainStatus=0",
+    "nota": "Ejecución manual del mismo servicio; no se afirma haber esperado una hora."
+  },
+  "comprobacion_final": {
+    "timer": "NextElapseUSecRealtime=Wed 2026-11-04 15:02:00 -05\nLastTriggerUSec=Wed 2026-11-04 14:01:24 -05\nActiveState=active\nUnitFileState=enabled",
+    "servicio": "Result=success\nExecMainExitTimestamp=Wed 2026-11-04 14:01:43 -05\nExecMainStatus=0"
+  }
+}

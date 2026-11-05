@@ -1,0 +1,192 @@
+{
+  "utc": "2026-11-04T16:38:22.532053+00:00",
+  "tipo": "ensayo manual mediante script; sin detector/promotor autónomo",
+  "fases": [
+    {
+      "fase": "sondas_preparadas",
+      "utc": "2026-11-04T16:38:33.949919+00:00",
+      "web": {
+        "i-0f8f7ccd264850f98": {
+          "command_id": "4ef6699b-d9bd-4552-a483-a834cce4b389",
+          "status": "Success",
+          "out": "{\"ok\": true, \"site\": \"aws\", \"database\": {\"recovery\": false, \"probe\": 3}}"
+        },
+        "i-0bccd5a4152b65b03": {
+          "command_id": "039e9cab-e2f5-4a7c-9a10-cb51fcd21316",
+          "status": "Success",
+          "out": "{\"ok\": true, \"site\": \"aws\", \"database\": {\"recovery\": false, \"probe\": 3}}"
+        }
+      }
+    },
+    {
+      "fase": "replica_verificada",
+      "utc": "2026-11-04T16:38:45.108602+00:00",
+      "marcador": 4,
+      "estado": "streaming|00:00:00.030557"
+    },
+    {
+      "fase": "aws_aislado",
+      "utc": "2026-11-04T16:38:47.512755+00:00",
+      "sonda_aws": {
+        "http": 503,
+        "error": "HTTPError"
+      }
+    },
+    {
+      "fase": "gcp_promovido",
+      "utc": "2026-11-04T16:38:52.976584+00:00",
+      "rto_observado_segundos": 7.87,
+      "sonda": {
+        "http": 200,
+        "datos": {
+          "ok": true,
+          "site": "gcp",
+          "database": {
+            "recovery": false,
+            "probe": 4
+          }
+        }
+      },
+      "registros_prueba_perdidos": 0
+    },
+    {
+      "fase": "aplicacion_reconectada",
+      "utc": "2026-11-04T16:39:09.770320+00:00",
+      "web": {
+        "i-0f8f7ccd264850f98": {
+          "command_id": "d5d923b6-6ca7-4234-b447-eab23dc3e6db",
+          "status": "Success",
+          "out": "{\"ok\": true, \"site\": \"aws\", \"database\": {\"recovery\": false, \"probe\": 37}}"
+        },
+        "i-0bccd5a4152b65b03": {
+          "command_id": "acd36afe-b12f-4d7a-8553-892f3e1080d8",
+          "status": "Success",
+          "out": "{\"ok\": true, \"site\": \"aws\", \"database\": {\"recovery\": false, \"probe\": 37}}"
+        }
+      },
+      "sonda_aws": {
+        "http": 200,
+        "datos": {
+          "ok": true,
+          "site": "aws",
+          "database": {
+            "recovery": false,
+            "probe": 37
+          }
+        }
+      },
+      "marcador_gcp": 37
+    },
+    {
+      "fase": "portal_alternativo_sin_web_aws",
+      "utc": "2026-11-04T16:39:17.245043+00:00",
+      "aws": {
+        "http": 502,
+        "error": "HTTPError"
+      },
+      "gcp": {
+        "http": 200,
+        "datos": {
+          "portal_nexoandes": true
+        }
+      },
+      "sonda_gcp": {
+        "http": 200,
+        "datos": {
+          "ok": true,
+          "site": "gcp",
+          "database": {
+            "recovery": false,
+            "probe": 37
+          }
+        }
+      },
+      "alcance": "Se detuvieron procesos web y BD; no se simuló una caída real del proveedor ni del plano de administración"
+    },
+    {
+      "fase": "restauracion_en_gcp",
+      "utc": "2026-11-04T16:39:32.148400+00:00",
+      "pruebas": [
+        {
+          "fuente": "azure",
+          "resultado": "3|3",
+          "bytes": 4848,
+          "objeto": "postgresql/20261104T161054Z.dump"
+        },
+        {
+          "fuente": "gcp",
+          "resultado": "3|3",
+          "bytes": 4848,
+          "objeto": "postgresql/20261104T161054Z.dump"
+        }
+      ]
+    },
+    {
+      "fase": "aws_resembrado_como_replica",
+      "utc": "2026-11-04T16:39:47.740402+00:00",
+      "resultado": {
+        "command_id": "c0989e46-3d73-4b10-8df6-536ad1eb8020",
+        "status": "Success",
+        "out": "RESEED_CONSERVANDO_COPIA_ANTERIOR"
+      }
+    },
+    {
+      "fase": "aws_primario_restablecido",
+      "utc": "2026-11-04T16:40:06.467510+00:00",
+      "datos": "f|37",
+      "web": {
+        "i-0bccd5a4152b65b03": {
+          "command_id": "7492eadf-4a17-4236-ba09-791f169511ad",
+          "status": "Success",
+          "out": "{\"ok\": true, \"site\": \"aws\", \"database\": {\"recovery\": false, \"probe\": 37}}"
+        },
+        "i-0f8f7ccd264850f98": {
+          "command_id": "8db43091-9fe3-480a-b9db-e6f6be478852",
+          "status": "Success",
+          "out": "{\"ok\": true, \"site\": \"aws\", \"database\": {\"recovery\": false, \"probe\": 37}}"
+        }
+      }
+    },
+    {
+      "fase": "gcp_resembrado_como_replica",
+      "utc": "2026-11-04T16:40:11.593044+00:00",
+      "resultado": "RESEED_CONSERVANDO_COPIA_ANTERIOR"
+    },
+    {
+      "fase": "ensayo_y_retorno_completos",
+      "utc": "2026-11-04T16:40:16.593485+00:00"
+    }
+  ],
+  "final": {
+    "aws": {
+      "http": 200,
+      "datos": {
+        "ok": true,
+        "site": "aws",
+        "database": {
+          "recovery": false,
+          "probe": 37
+        }
+      }
+    },
+    "gcp": {
+      "http": 200,
+      "datos": {
+        "ok": true,
+        "site": "gcp",
+        "database": {
+          "recovery": true,
+          "probe": 37
+        }
+      }
+    },
+    "marcador_preservado": 37
+  },
+  "completo": true,
+  "medicion_adicional": {
+    "rto_bd_segundos": 7.87,
+    "rto_aplicacion_segundos": 24.66,
+    "alcance": "medición de ensayo solicitado manualmente; no SLA ni RPO universal",
+    "consistencia": "consistencia-retorno.json"
+  }
+}

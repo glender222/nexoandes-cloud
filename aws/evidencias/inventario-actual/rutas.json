@@ -1,0 +1,60 @@
+[
+    {
+        "Id": "rtb-07a73075461d33dc8",
+        "Routes": [
+            {
+                "Dest": "10.10.0.0/16",
+                "Gateway": "local",
+                "NAT": null,
+                "State": "active"
+            },
+            {
+                "Dest": "0.0.0.0/0",
+                "Gateway": null,
+                "NAT": "nat-0cbe05db5bee351ac",
+                "State": "active"
+            }
+        ],
+        "Subnets": [
+            "subnet-09855fbfb1cee5431",
+            "subnet-05b5cc3955fb40df9",
+            "subnet-0bbbde4bc4faebf5a"
+        ],
+        "Name": "AWsAcademy-PrivateRT"
+    },
+    {
+        "Id": "rtb-01d8ae31a09ee1ff2",
+        "Routes": [
+            {
+                "Dest": "10.10.0.0/16",
+                "Gateway": "local",
+                "NAT": null,
+                "State": "active"
+            },
+            {
+                "Dest": "0.0.0.0/0",
+                "Gateway": "igw-08ca56f943a682da1",
+                "NAT": null,
+                "State": "active"
+            }
+        ],
+        "Subnets": [
+            "subnet-0d1771756ad8bbb5a",
+            "subnet-0531e22c018004601"
+        ],
+        "Name": "AWsAcademy-PublicRT"
+    },
+    {
+        "Id": "rtb-095433876612335df",
+        "Routes": [
+            {
+                "Dest": "10.10.0.0/16",
+                "Gateway": "local",
+                "NAT": null,
+                "State": "active"
+            }
+        ],
+        "Subnets": [],
+        "Name": null
+    }
+]

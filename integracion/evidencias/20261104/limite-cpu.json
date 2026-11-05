@@ -1,0 +1,66 @@
+{
+  "utc": "2026-11-04T16:20:45.357996+00:00",
+  "resultado": "La carga no produjo scale-out antes de retirarse; se agot\u00f3 pr\u00e1cticamente el saldo de cr\u00e9ditos T3 Standard y la CPU volvi\u00f3 a su l\u00ednea base. Se a\u00f1ade prueba HTTP por solicitudes, sin activar Unlimited.",
+  "creditos": {
+    "i-03dd4d3328aa5f1ed": {
+      "Label": "CPUCreditBalance",
+      "Datapoints": [
+        {
+          "Timestamp": "2026-11-04T10:55:00-05:00",
+          "Minimum": 1.5375851333333332,
+          "Unit": "Count"
+        },
+        {
+          "Timestamp": "2026-11-04T11:00:00-05:00",
+          "Minimum": 2.4965359333333335,
+          "Unit": "Count"
+        },
+        {
+          "Timestamp": "2026-11-04T11:05:00-05:00",
+          "Minimum": 3.454234066666667,
+          "Unit": "Count"
+        },
+        {
+          "Timestamp": "2026-11-04T11:10:00-05:00",
+          "Minimum": 4.348047733333333,
+          "Unit": "Count"
+        },
+        {
+          "Timestamp": "2026-11-04T11:15:00-05:00",
+          "Minimum": 0.0284115,
+          "Unit": "Count"
+        }
+      ]
+    },
+    "i-051db10475e595fc3": {
+      "Label": "CPUCreditBalance",
+      "Datapoints": [
+        {
+          "Timestamp": "2026-11-04T10:55:00-05:00",
+          "Minimum": 1.02119865,
+          "Unit": "Count"
+        },
+        {
+          "Timestamp": "2026-11-04T11:00:00-05:00",
+          "Minimum": 1.9823982666666666,
+          "Unit": "Count"
+        },
+        {
+          "Timestamp": "2026-11-04T11:05:00-05:00",
+          "Minimum": 2.937191716666667,
+          "Unit": "Count"
+        },
+        {
+          "Timestamp": "2026-11-04T11:10:00-05:00",
+          "Minimum": 3.826932183333333,
+          "Unit": "Count"
+        },
+        {
+          "Timestamp": "2026-11-04T11:15:00-05:00",
+          "Minimum": 8.863333333333334e-05,
+          "Unit": "Count"
+        }
+      ]
+    }
+  }
+}

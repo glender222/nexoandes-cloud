@@ -1,0 +1,10 @@
+{
+  "container": "postgresql",
+  "encendido": false,
+  "resource_group": "nexoandes-lab",
+  "storage": "nxa1db87b28407f",
+  "suscripcion": "1db87b28-407f-41d3-b532-41942343157c",
+  "tenant": "cfbd88b4-94bc-4fba-98bd-64d0726394a3",
+  "vpn_configurada": false,
+  "vpn_ip": null
+}

@@ -1,0 +1,30 @@
+{
+  "pagina": "https://learn.microsoft.com/en-us/azure/architecture/icons/",
+  "descarga": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "version": "24",
+  "fecha": "2026-11-04",
+  "autor": "Microsoft",
+  "licencia": "Condiciones de uso de Microsoft Azure Architecture Icons; no MIT",
+  "iconos": {
+    "Storage-Accounts": {
+      "archivo": "10086-icon-service-Storage-Accounts.svg",
+      "ruta_paquete": "Azure_Public_Service_Icons/Icons/storage/10086-icon-service-Storage-Accounts.svg",
+      "sha256": "7190d3bb14ce30ce74bd0af873915830fe821e8c5f6ef6f3149e6f7cfb2aa4f7"
+    },
+    "Virtual-Networks": {
+      "archivo": "10061-icon-service-Virtual-Networks.svg",
+      "ruta_paquete": "Azure_Public_Service_Icons/Icons/networking/10061-icon-service-Virtual-Networks.svg",
+      "sha256": "64a5e75ecef2f9f69067faa2eb131266cb8f2858706f8ab74bfea5ad0d98b14d"
+    },
+    "Resource-Groups": {
+      "archivo": "10007-icon-service-Resource-Groups.svg",
+      "ruta_paquete": "Azure_Public_Service_Icons/Icons/general/10007-icon-service-Resource-Groups.svg",
+      "sha256": "4d2b2eacb37735849d2e556074ac8564f92fada70672b40985c77ea666e82977"
+    },
+    "Blob-Block": {
+      "archivo": "10780-icon-service-Blob-Block.svg",
+      "ruta_paquete": "Azure_Public_Service_Icons/Icons/general/10780-icon-service-Blob-Block.svg",
+      "sha256": "649cdb593d0c7f56a227e4c28df40a3e5c489e303867d32502af2ee4b4865ea3"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+[
+    {
+        "Id": "vpc-02ce46dbb9aa3e25e",
+        "Cidr": "10.10.0.0/16",
+        "State": "available"
+    }
+]

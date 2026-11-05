@@ -1,0 +1,157 @@
+[
+    {
+        "Id": "sg-023d4b4332c2b142d",
+        "Name": "default",
+        "Ingress": [
+            {
+                "IpProtocol": "-1",
+                "UserIdGroupPairs": [
+                    {
+                        "UserId": "669186512136",
+                        "GroupId": "sg-023d4b4332c2b142d"
+                    }
+                ],
+                "IpRanges": [],
+                "Ipv6Ranges": [],
+                "PrefixListIds": []
+            }
+        ],
+        "Egress": [
+            {
+                "IpProtocol": "-1",
+                "UserIdGroupPairs": [],
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": []
+            }
+        ]
+    },
+    {
+        "Id": "sg-0ddb1f893793d43c2",
+        "Name": "AWsAcademy-App-SG",
+        "Ingress": [
+            {
+                "IpProtocol": "tcp",
+                "FromPort": 80,
+                "ToPort": 80,
+                "UserIdGroupPairs": [
+                    {
+                        "UserId": "669186512136",
+                        "GroupId": "sg-0e8fa6cda3a29e39d"
+                    }
+                ],
+                "IpRanges": [],
+                "Ipv6Ranges": [],
+                "PrefixListIds": []
+            },
+            {
+                "IpProtocol": "tcp",
+                "FromPort": 22,
+                "ToPort": 22,
+                "UserIdGroupPairs": [],
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": []
+            }
+        ],
+        "Egress": [
+            {
+                "IpProtocol": "-1",
+                "UserIdGroupPairs": [],
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": []
+            }
+        ]
+    },
+    {
+        "Id": "sg-0e8fa6cda3a29e39d",
+        "Name": "AWsAcademy-ALB-SG",
+        "Ingress": [
+            {
+                "IpProtocol": "tcp",
+                "FromPort": 80,
+                "ToPort": 80,
+                "UserIdGroupPairs": [],
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": []
+            },
+            {
+                "IpProtocol": "tcp",
+                "FromPort": 443,
+                "ToPort": 443,
+                "UserIdGroupPairs": [],
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": []
+            }
+        ],
+        "Egress": [
+            {
+                "IpProtocol": "-1",
+                "UserIdGroupPairs": [],
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": []
+            }
+        ]
+    },
+    {
+        "Id": "sg-08782804aa36c65ff",
+        "Name": "AWsAcademy-DB-SG",
+        "Ingress": [
+            {
+                "IpProtocol": "tcp",
+                "FromPort": 5432,
+                "ToPort": 5432,
+                "UserIdGroupPairs": [
+                    {
+                        "UserId": "669186512136",
+                        "GroupId": "sg-0ddb1f893793d43c2"
+                    }
+                ],
+                "IpRanges": [],
+                "Ipv6Ranges": [],
+                "PrefixListIds": []
+            }
+        ],
+        "Egress": [
+            {
+                "IpProtocol": "-1",
+                "UserIdGroupPairs": [],
+                "IpRanges": [
+                    {
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ],
+                "Ipv6Ranges": [],
+                "PrefixListIds": []
+            }
+        ]
+    }
+]

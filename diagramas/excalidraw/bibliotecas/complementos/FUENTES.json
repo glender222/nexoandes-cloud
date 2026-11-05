@@ -1,0 +1,162 @@
+{
+  "fecha": "2026-11-04",
+  "commits": {
+    "lucide": "91a1359b5ea235f620ba3a9682015ab8d6ada3af",
+    "simple-icons": "4bfa9da744e2c06928047314ce30dc5c8d1ad759"
+  },
+  "iconos": {
+    "2001": {
+      "archivo": "lucide-shield-check.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/shield-check.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "8d4fcdbde5bba4abb1a2f6fe53e37ceb6343a1d5449a9d88f6f97c1971d26c4e",
+      "color": "#52667a"
+    },
+    "2002": {
+      "archivo": "lucide-lock-keyhole.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/lock-keyhole.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "fc0b8b7590d1d9e9bb0112c5c2e15a78ade0bfeca6d6f8c79fbbe149236d74be",
+      "color": "#52667a"
+    },
+    "2003": {
+      "archivo": "lucide-key-round.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/key-round.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "f8cdea843754ed360e36b04bf6aa2c2b3610935dd39ffc685a36c4d0a05be248",
+      "color": "#52667a"
+    },
+    "2004": {
+      "archivo": "lucide-braces.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/braces.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "4180c1c93504e1220e60a53411f7d7d2cdda5361f68f5210202a0380eb011431",
+      "color": "#52667a"
+    },
+    "2005": {
+      "archivo": "lucide-network.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/network.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "626be730feea1e5ea7539fbf78b4a3fcb927ce5d7dc43364f2216908672ac792",
+      "color": "#52667a"
+    },
+    "2006": {
+      "archivo": "lucide-panels-top-left.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/panels-top-left.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "321a2a5500f2b814a2e62eb73c4b01dc65c7334fe2e6f7d77517239383e26bb1",
+      "color": "#52667a"
+    },
+    "2007": {
+      "archivo": "lucide-database.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/database.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "471eb14bc8d144896a82dfc4aa9daf350f769f0896f4bef33e50aabdbb51130d",
+      "color": "#52667a"
+    },
+    "2008": {
+      "archivo": "lucide-globe.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/globe.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "82c6b8fa0b8e8d775ec9becd86f74a4e50bff7bee4c81f7362de45348504f14d",
+      "color": "#52667a"
+    },
+    "2009": {
+      "archivo": "lucide-hard-drive.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/hard-drive.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "324363c40f54e4ca843de0ad1d023b063b70a26a83bb2e0a9e9f4aad9af37378",
+      "color": "#52667a"
+    },
+    "2010": {
+      "archivo": "lucide-pause.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/pause.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "f122ec4ea7f5693a0b1baafa9c708b53980dc87b4aacb297c6e6f71c1a4c115c",
+      "color": "#52667a"
+    },
+    "2011": {
+      "archivo": "lucide-clock-arrow-left.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/clock-arrow-left.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "3ebfd99b89133920de4081ddc846ed8b1496556abdc74b448734937a22072eb8",
+      "color": "#52667a"
+    },
+    "2012": {
+      "archivo": "lucide-timer.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/timer.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "6771297be65225d462c930865b6f9ee1617aa453885be4c8116a7512a77ac2b6",
+      "color": "#52667a"
+    },
+    "2013": {
+      "archivo": "lucide-archive.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/archive.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "78c732e34e232db63af06a2330b4448045cfdf49b48b59f2d31922df54c7bb17",
+      "color": "#52667a"
+    },
+    "2014": {
+      "archivo": "lucide-repeat-2.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/repeat-2.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "788912bbfdeab0401a36e29cde95ef594b59957a13d3e08a392d10f59c49e7da",
+      "color": "#52667a"
+    },
+    "2015": {
+      "archivo": "lucide-hand.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/hand.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "fe3771fa2f0a9a3c7736164c9a855beefacc02548084ac1d6fc8da8a8a9180b0",
+      "color": "#52667a"
+    },
+    "2016": {
+      "archivo": "lucide-check.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/check.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "7f33acc9a77a61659531044525fc008edebe215bf4dcf1c789c8674ad3277db0",
+      "color": "#52667a"
+    },
+    "2017": {
+      "archivo": "lucide-trash.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/91a1359b5ea235f620ba3a9682015ab8d6ada3af/icons/trash.svg",
+      "autor": "Lucide",
+      "licencia": "ISC",
+      "sha256": "27299f69ad7c6272be64b1b8e2d48cbd6dcf0ef0d4f92827a1affa945c91700e",
+      "color": "#52667a"
+    },
+    "3001": {
+      "archivo": "supabase.svg",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/4bfa9da744e2c06928047314ce30dc5c8d1ad759/icons/supabase.svg",
+      "autor": "Simple Icons",
+      "licencia": "CC0-1.0",
+      "sha256": "61bf16d93be418f723ae1e137e57afdad4f185352fbc6dea9482af1e0a89ccf7",
+      "color": "#3ECF8E"
+    },
+    "3002": {
+      "archivo": "postgresql.svg",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/4bfa9da744e2c06928047314ce30dc5c8d1ad759/icons/postgresql.svg",
+      "autor": "Simple Icons",
+      "licencia": "CC0-1.0",
+      "sha256": "c8ccadbd88c9312c2ad3734c4861b31d3485ce179ee91d64793143f83cfa745c",
+      "color": "#4169E1"
+    }
+  },
+  "uso": "Lucide: conceptos genericos, no servicios gestionados nuevos. Simple Icons: marcas Supabase y PostgreSQL. Se mantiene el SVG original; el render ajusta currentColor y color de marca."
+}

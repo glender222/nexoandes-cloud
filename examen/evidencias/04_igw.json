@@ -1,0 +1,20 @@
+{
+    "InternetGateways": [
+        {
+            "Attachments": [
+                {
+                    "State": "available",
+                    "VpcId": "vpc-0e549a023b818b322"
+                }
+            ],
+            "InternetGatewayId": "igw-0ef3e59c3749996a8",
+            "OwnerId": "849533029543",
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "EXAMEN-GLENDERVARGAS-IGW"
+                }
+            ]
+        }
+    ]
+}

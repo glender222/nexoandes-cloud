@@ -1,0 +1,6 @@
+{
+  "utc": "2026-11-05T02:50:27.050934+00:00",
+  "estado": "0\n1\nenabled\nactive\nsupabase-meta 116.6MiB / 3.742GiB\nsupabase-auth 38.59MiB / 3.742GiB\nsupabase-envoy 81.38MiB / 3.742GiB\nsupabase-rest 24.22MiB / 3.742GiB\nsupabase-db 106.8MiB / 3.742GiB\nsupabase-studio 281MiB / 3.742GiB",
+  "imagenes_digest": "[\"envoyproxy/envoy@sha256:57e14a549d7bd43c8d3f6d03e8cfa653e037d4b38e133acd9b54f38c524401b4\"]\n[\"supabase/gotrue@sha256:1736a63078f5922b198c4cbe50f80ab9a2d3b54fe8b7b6cfb2e9dc5dbbc12c6b\"]\n[\"postgrest/postgrest@sha256:c7cd7e265a85b05248abf53f4473fcec7e327c282d0bd0cf60f1551996d09fcf\"]\n[\"supabase/postgres-meta@sha256:145325b7e39f8ef4931d6e8cfd3f6f4d655de09d72a2ccc96d9513542c2202bd\"]\n[\"supabase/postgres@sha256:f371b5f3f2ac0a05703f33d6e6134515fb2498cab708fb948a0aeb7481467c00\"]\n[\"supabase/studio@sha256:948770ec467f00e6ae34c35018ef7cb23d7b30eb806b42c2cc0d7bcfdcf8a7a8\"]",
+  "verificacion_de_red": "Instancia sin IP publica, SG 8000 solo ALB/app; DB sin ingreso 5432; Studio no publicado en ALB"
+}

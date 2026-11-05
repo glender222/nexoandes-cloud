@@ -1,0 +1,18 @@
+{
+  "utc": "2026-11-04T19:36:11.774495+00:00",
+  "solicitud": "apagar NexoAndes en las tres nubes y dejarlo en espera",
+  "aws": "PostgreSQL detenido; sin ALB, ASG, NAT ni gateway activo",
+  "azure": "red y respaldos conservados; sin computo NexoAndes activo",
+  "gcp": "VM detenida; discos y bucket conservados",
+  "timer_local": "ActiveState=inactive\nUnitFileState=disabled",
+  "datos_y_respaldos_conservados": true,
+  "otras_cargas_sin_modificar": {
+    "aws_examen": [
+      "running"
+    ],
+    "azure_antigravity": [
+      "VM running"
+    ]
+  },
+  "inventario": "infraestructura/evidencias/inventario-pausa-20261104.json"
+}

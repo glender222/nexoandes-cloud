@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+"""Estimacion preliminar reproducible; no consulta cuentas ni modifica recursos."""
+from decimal import Decimal as D, ROUND_HALF_UP
+from pathlib import Path
+import json
+RATES={'t3_micro_h':'0.0104','t3_medium_h':'0.0418','alb_h':'0.0225','lcu_h':'0.008','nat_h':'0.045','ipv4_h':'0.005','gp3_gb_mes':'0.08'}
+SOURCES={'t3':'https://aws.amazon.com/ec2/instance-types/t3/','alb':'https://aws.amazon.com/elasticloadbalancing/pricing/','nat_ipv4':'https://aws.amazon.com/vpc/pricing/','gp3':'https://aws.amazon.com/ebs/pricing/','azure':'https://azure.microsoft.com/en-us/pricing/details/storage/blobs/','gcp_disco':'https://cloud.google.com/compute/disks-image-pricing','gcp_objetos':'https://cloud.google.com/storage/pricing'}
+def money(v):return str(v.quantize(D('.01'),rounding=ROUND_HALF_UP))
+def calculate(hours):
+ h=D(hours);r={k:D(v) for k,v in RATES.items()}
+ rows={'EC2: 4 t3.micro':4*r['t3_micro_h']*h,'EC2: 1 t3.medium (Supabase)':r['t3_medium_h']*h,'ALB: cargo horario':r['alb_h']*h,'ALB: supuesto 1 LCU/h':r['lcu_h']*h,'NAT: cargo horario':r['nat_h']*h,'IPv4: supuesto 4 direcciones':4*r['ipv4_h']*h,'EBS persistente: 80 GB todo el mes':80*r['gp3_gb_mes'],'EBS temporal: 24 GB prorrateados':24*r['gp3_gb_mes']*h/D(730)}
+ return {'horas':hours,'filas':{k:money(v) for k,v in rows.items()},'subtotal_aws':money(sum(rows.values(),D(0))),'subtotal_calculado_sin_redondear':str(sum(rows.values(),D(0)))}
+out={'fecha_fuentes':'2026-11-04','moneda':'USD','tarifas':RATES,'fuentes':SOURCES,'supuestos':['Mes normalizado de 730 h; escenarios hipoteticos de 20 y 730 h, no consumo medido.','AWS Linux us-east-1; tarifa T3 publicada en la pagina oficial (t3.medium 0.0418). gp3 usa el ejemplo publico 0.08/GB-mes, no una cotizacion de la cuenta.','4 t3.micro: dos web, PostgreSQL y strongSwan; 1 t3.medium Supabase.','80 GB persistentes: raiz DB 8 + datos DB 20 + raiz Supabase 12 + datos Supabase 40.','24 GB temporales: dos raices web 8 GB + raiz gateway 8 GB; prorrateo simplificado por horas.','4 IPv4: supuesto minimo ALB dos zonas + NAT + gateway, sujeto a IP reales del balanceador.','1 LCU/h es un supuesto de costo, no una medicion de trafico.','NAT 0.045/h procede del ejemplo publico AWS Ohio; cotizacion exacta us-east-1 pendiente, igual que gp3 del ejemplo publico.'],'exclusiones':['S3, CloudWatch, trafico/NAT por GB, transferencias, impuestos y recursos ajenos.','Azure Blob y GCP Compute/Storage/discos/IP; deben sumarse segun region, horas, GB, operaciones y beneficios efectivamente aplicables.','Creditos, descuentos y Free Tier; no se asume costo cero ni saldo comprobado.'],'escenarios':[calculate(20),calculate(730)]}
+Path(__file__).with_name('estimacion.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');print(json.dumps(out['escenarios'],ensure_ascii=False))

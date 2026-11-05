@@ -1,0 +1,12 @@
+[
+    {
+        "Arn": "arn:aws:elasticloadbalancing:us-east-1:669186512136:loadbalancer/app/AWsAcademy-ALB/2ce697bb3f202c98",
+        "DNS": "AWsAcademy-ALB-1953310462.us-east-1.elb.amazonaws.com",
+        "State": "active",
+        "Scheme": "internet-facing",
+        "Subnets": [
+            "subnet-0531e22c018004601",
+            "subnet-0d1771756ad8bbb5a"
+        ]
+    }
+]

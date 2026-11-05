@@ -1,0 +1,26 @@
+{
+  "utc": "2026-11-05T04:34:51.351392+00:00",
+  "url": "https://nexoandes-alb-409538740.us-east-1.elb.amazonaws.com",
+  "login": "https://nexoandes-alb-409538740.us-east-1.elb.amazonaws.com/acceso/",
+  "checks": {
+    "salud_auth": 200,
+    "cuenta_demo_confirmada": true,
+    "clave_incorrecta": 400,
+    "backend_sin_token": 401,
+    "backend_token_inventado": 401,
+    "login_correcto": 200,
+    "identidad_auth": 200,
+    "backend_con_token": 200,
+    "auth_sobre_http_bloqueado": 403,
+    "autoregistro_deshabilitado": 422,
+    "logout": 204,
+    "token_previo_tras_logout": 401
+  },
+  "token_expira_segundos": 300,
+  "alcance": "Prueba de autenticacion y endpoint de identidad propio; no modulo comercial completo",
+  "tls": "Nombre y certificado verificados con CA academica local, sin desactivar validacion TLS",
+  "correos_sms_enviados": false,
+  "cuenta_demo": "Asignada administrativamente con email .invalid; credenciales solo en privado",
+  "tokens_en_evidencia": false,
+  "completo": true
+}

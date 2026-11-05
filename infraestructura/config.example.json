@@ -1,0 +1,31 @@
+{
+  "aws": {
+    "habilitada": true,
+    "cuenta": "849533029543",
+    "region": "us-east-1",
+    "variables": {
+      "team_number": "XX",
+      "certificate_arn": "",
+      "ami_id": ""
+    }
+  },
+  "azure": {
+    "habilitada": false,
+    "cli_config_dir": "",
+    "suscripcion": "",
+    "tenant": "",
+    "variables": {
+      "location": "eastus",
+      "storage_account_name": "",
+      "enable_vpn_gateway": false,
+      "enable_monitoring": false
+    }
+  },
+  "gcp": {
+    "habilitada": false,
+    "proyecto": "",
+    "region": "us-central1",
+    "service_account_key": "",
+    "variables": {}
+  }
+}

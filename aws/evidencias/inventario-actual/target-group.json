@@ -1,0 +1,12 @@
+[
+    {
+        "Arn": "arn:aws:elasticloadbalancing:us-east-1:669186512136:targetgroup/AWsAcademy-TG/15789ac3fb56cf76",
+        "VpcId": "vpc-02ce46dbb9aa3e25e",
+        "Protocol": "HTTP",
+        "Port": 80,
+        "HealthPath": "/",
+        "LoadBalancers": [
+            "arn:aws:elasticloadbalancing:us-east-1:669186512136:loadbalancer/app/AWsAcademy-ALB/2ce697bb3f202c98"
+        ]
+    }
+]

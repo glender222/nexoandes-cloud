@@ -1,0 +1,6 @@
+{
+    "Status": "Success",
+    "Code": 0,
+    "Out": "\nstatus: done\nactive\n/srv/postgresql is a mountpoint\nterraform-20261022\n",
+    "Error": ""
+}

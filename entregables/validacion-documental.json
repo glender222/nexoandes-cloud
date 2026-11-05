@@ -1,0 +1,18 @@
+{
+  "entregables/entregable-01/INFORME.md": {
+    "titulos_preservados": 20,
+    "palabras": 2635,
+    "reservas_E1_preservadas": true
+  },
+  "entregables/entregable-02/INFORME.md": {
+    "titulos_preservados": 19,
+    "palabras": 4517,
+    "reservas_E2_preservadas_ampliadas": true
+  },
+  "enlaces_locales_correctos": true,
+  "reservas_de_fotos_sin_simular": true,
+  "figura_v2_coincide_con_mapa": true,
+  "patrones_de_secretos_no_detectados": true,
+  "afirmaciones_no_respaldadas_retiradas": true,
+  "cloud_modificado": false
+}

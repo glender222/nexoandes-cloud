@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+if [[ "${1:-}" == "supabase" ]]; then
+  shift
+  exec python3 "$ROOT/integracion/arrancar_supabase.py" "$@"
+fi
+if [[ "${1:-}" == "continuidad" ]]; then
+  shift
+  exec python3 "$ROOT/integracion/arrancar_continuidad.py" "$@"
+fi
+exec python3 "$ROOT/infraestructura/control.py" "$@"

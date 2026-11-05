@@ -1,0 +1,354 @@
+{
+  "source": "/tmp/nexoandes-unidad2-revision/antes.docx",
+  "output": "/home/glender/Proyectos/AWsacademy/entregables/entregable-02/Glender_Vargas_Entregable_2_Cloud_Computing.docx",
+  "removed_instruction_tables": [
+    "INDICACIÓNSegún el sílabo, en esta unidad se trabajan implementación y gestión de servicios, monitor",
+    "INDICACIÓNMáximo una página. Sintetice el punto de partida de esta segunda versión.",
+    "INDICACIÓNInserte nuevamente el diagrama presentado en el Entregable 1.",
+    "INDICACIÓNRegistre las observaciones recibidas en el Entregable 1 y la acción realizada para atender",
+    "INDICACIÓNCompare ambas versiones aspecto por aspecto y explique la mejora obtenida.",
+    "INDICACIÓNPresente la arquitectura mejorada. Ejemplo conceptual:                         INTERNET   ",
+    "INDICACIÓNDesarrolle cada dimensión indicando el control aplicado y el servicio o herramienta que lo",
+    "INDICACIÓNPara cada activo identifique la amenaza, la vulnerabilidad que la hace posible, su impacto",
+    "INDICACIÓNIndique usuarios, grupos, roles, políticas y privilegios. Aplique el principio de mínimo p",
+    "INDICACIÓNDocumente:Subred públicaSubred privadaReglas de entradaReglas de salidaPuertos permitidosS",
+    "INDICACIÓNExplique cómo respondería la arquitectura ante un crecimiento progresivo de usuarios:100 u",
+    "INDICACIÓNResponda cada pregunta con base en la Arquitectura V2.Las buenas prácticas arquitectónicas",
+    "INDICACIÓNCompare los puntos únicos de falla identificados en V1 con la solución implementada en V2.",
+    "INDICACIÓNEspecifique recurso, métrica, umbral, herramienta y acción. Ejemplo:Recurso      Métrica  ",
+    "INDICACIÓNIndique qué se respalda, con qué periodicidad, dónde, por cuánto tiempo y cómo se recupera",
+    "INDICACIÓNRegistre al menos las siguientes pruebas.",
+    "INDICACIÓNIncluya capturas antes y después de cada mejora. Copie y pegue el bloque tantas veces como",
+    "INDICACIÓNNo se busca todavía una estimación financiera exhaustiva, sino demostrar que la arquitectu",
+    "INDICACIÓNIdentifique los riesgos que permanecen después de las mejoras. Probabilidad e impacto: Alt",
+    "INDICACIÓNExplique qué mejoró entre V1 y V2 y qué quedará pendiente para el producto final."
+  ],
+  "images": [
+    {
+      "part": "word/media/nexo-revision-1.png",
+      "source": "/home/glender/Proyectos/AWsacademy/entregables/entregable-02/evidencias/arquitectura-v1-entregada.png",
+      "sha256": "9846286fc139e57b883e8c59de2de34a8689e439ed782dff0f4c7196351fd197",
+      "width_inches": 6.35,
+      "height_inches": 4.22,
+      "description": "Diagrama AWS original de la Unidad 1",
+      "crop": null
+    },
+    {
+      "part": "word/media/nexo-revision-2.png",
+      "source": "/home/glender/Proyectos/AWsacademy/entregables/entregable-02/evidencias/arquitectura-v2.png",
+      "sha256": "80ce23b3f13ea4fe74e8d3622afe8a4905b54580fe32fd66f82497ce4a9f4eab",
+      "width_inches": 8.73,
+      "height_inches": 5.65,
+      "description": "Arquitectura real V2: AWS, Azure y GCP; diagrama ampliado a página horizontal",
+      "crop": null
+    },
+    {
+      "part": "word/media/nexo-revision-3.png",
+      "sha256": "933f8af53ddc1aed07b9dc3f1f3ed0a0d868eaf6d3a0f5a9f6d5d759db244bf7",
+      "width_inches": 2.9,
+      "height_inches": 0.66,
+      "description": "V1: dos destinos saludables. Captura original de la Unidad 1; cuenta histórica AWS. No demuestra escalado 2→4.",
+      "crop": null,
+      "source_document": "entregables/entregable-01/doc_entregale_ofivial_3f4gemu4pndm.docx",
+      "source_part": "word/media/image6.png"
+    },
+    {
+      "part": "word/media/nexo-revision-4.png",
+      "source": "/home/glender/Proyectos/AWsacademy/integracion/evidencias/20261104/portal-aws.png",
+      "sha256": "b35d8fc9da99408311961721d6d075ccd18758b8a7e094abb3175a7c5285f8fe",
+      "width_inches": 2.81,
+      "height_inches": 2.15,
+      "description": "04/11/2026: portal AWS en funcionamiento. El crecimiento y la reposición se acreditan con sus registros de prueba.",
+      "crop": null
+    },
+    {
+      "part": "word/media/nexo-revision-5.png",
+      "sha256": "b97a8882dc7920beb1cfd47b0095e235e094176419475524a6309fccd06f8bcc",
+      "width_inches": 2.9,
+      "height_inches": 0.93,
+      "description": "V1: bucket S3 del laboratorio histórico. El documento inicial aún no acreditaba copias externas ni restauración.",
+      "crop": null,
+      "source_document": "entregables/entregable-01/doc_entregale_ofivial_3f4gemu4pndm.docx",
+      "source_part": "word/media/image14.png"
+    },
+    {
+      "part": "word/media/nexo-revision-6.png",
+      "source": "/home/glender/Proyectos/AWsacademy/integracion/evidencias/20261104/portal-gcp.png",
+      "sha256": "101add7797bb4fa4acebfb88450575a31073bb69276ffc34bf694ec605e1e1be",
+      "width_inches": 2.9,
+      "height_inches": 1.52,
+      "description": "04/11/2026: portal alternativo GCP durante el ensayo. La réplica, los hashes y el retorno tienen registros propios.",
+      "crop": {
+        "b": 76000,
+        "r": 65000
+      }
+    },
+    {
+      "part": "word/media/nexo-revision-7.png",
+      "sha256": "b927e1733f65779c9d624fd8b83b8c56a80e84e589943d7e976685ddd414be00",
+      "width_inches": 2.9,
+      "height_inches": 1.71,
+      "description": "V1: portal informativo sin inicio de sesión. Captura original del primer entregable; URL histórica.",
+      "crop": null,
+      "source_document": "entregables/entregable-01/doc_entregale_ofivial_3f4gemu4pndm.docx",
+      "source_part": "word/media/image10.png"
+    },
+    {
+      "part": "word/media/nexo-revision-8.png",
+      "source": "/home/glender/Proyectos/AWsacademy/integracion/evidencias/20261104/supabase/sesion-validada.png",
+      "sha256": "d9b28f771b88b75db8d83c2448906977b98c03b2229a8b0e950243f27a8b1573",
+      "width_inches": 2.9,
+      "height_inches": 3.22,
+      "description": "04/11/2026: usuario de demostración autenticado y sesión validada por el backend Supabase.",
+      "crop": {
+        "l": 25000,
+        "r": 25000,
+        "t": 3000,
+        "b": 23000
+      }
+    }
+  ],
+  "preserved_headings": 19,
+  "landscape_section": "06 Arquitectura Cloud V2",
+  "existing_capture_photos_inserted": 6,
+  "cloud_operations": false,
+  "pending_photo_evidence": [
+    "Historial ASG del escalado",
+    "Consolas de copias Azure/GCP",
+    "Roles IAM, si se requieren fotos además de JSON"
+  ],
+  "sha256": "56111e5c1319a059706398e56141e09097b3c8cd9fb1cbd4b725d284663f9549",
+  "paginas": 14,
+  "pagina_horizontal": 6,
+  "titulos_preservados": 19,
+  "estilos_y_cabeceras_verticales_sin_cambios": true,
+  "capturas_reales_insertadas": 6,
+  "diagramas": 2,
+  "ejemplo_ascii_eliminado": true,
+  "texto_de_plantilla_eliminado": true,
+  "revision_visual_paginas": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "indice": "Campo TOC original, actualización habilitada en Word",
+  "operaciones_cloud": false,
+  "sha256_docx": "56111e5c1319a059706398e56141e09097b3c8cd9fb1cbd4b725d284663f9549",
+  "actualizacion_20261105_reservas": {
+    "paginas_renderizadas": 20,
+    "paginas_inspeccionadas": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "reservas_capturas": [
+      {
+        "codigo": "R01",
+        "seccion": "07",
+        "titulo": "AWS · Supabase Auth",
+        "descripcion": "Mostrar el acceso autenticado al portal y el rechazo del endpoint privado sin sesión. La captura complementa los resultados HTTP 200/401 registrados."
+      },
+      {
+        "codigo": "R02",
+        "seccion": "07",
+        "titulo": "AWS · Studio externo",
+        "descripcion": "Mostrar Studio cargado por HTTPS 8443 con credenciales de administración. Ocultar contraseñas y claves API; no confundir esta sesión con Supabase Auth."
+      },
+      {
+        "codigo": "R03",
+        "seccion": "09",
+        "titulo": "AWS · IAM y perfil EC2",
+        "descripcion": "Mostrar LabRole, sus políticas y LabInstanceProfile asociado a EC2. Identificar los permisos heredados amplios del laboratorio."
+      },
+      {
+        "codigo": "R04",
+        "seccion": "09",
+        "titulo": "Azure · RBAC del respaldo",
+        "descripcion": "Mostrar Storage Blob Data Contributor aplicado al contenedor postgresql y su ámbito. La copia usa identidad Entra; no mostrar claves de cuenta."
+      },
+      {
+        "codigo": "R05",
+        "seccion": "09",
+        "titulo": "GCP · Identidad y permisos de Storage",
+        "descripcion": "Mostrar la cuenta de servicio utilizada y los permisos visibles del bucket. No presentar la política global como auditada: su consulta estuvo limitada."
+      },
+      {
+        "codigo": "R06",
+        "seccion": "10",
+        "titulo": "AWS · Subredes SG y endpoint S3",
+        "descripcion": "Mostrar las subredes privadas, las reglas de PG15/Supabase y el gateway endpoint S3 asociado a las rutas privadas. Mantener visibles los orígenes permitidos."
+      },
+      {
+        "codigo": "R07",
+        "seccion": "10",
+        "titulo": "Azure · VNet y acceso al almacenamiento",
+        "descripcion": "Mostrar nexoandes-vnet, GatewaySubnet y el contenedor Blob privado. La VPN Gateway está deshabilitada; no representar un túnel Azure activo."
+      },
+      {
+        "codigo": "R08",
+        "seccion": "10",
+        "titulo": "GCP · VPC y firewall",
+        "descripcion": "Mostrar la subred 10.30.1.0/24 y las reglas IPsec/SSH con sus orígenes autorizados. Indicar el estado de pausa de la VM si continúa detenida."
+      },
+      {
+        "codigo": "R09",
+        "seccion": "11",
+        "titulo": "AWS · Escalado por solicitudes",
+        "descripcion": "Mostrar la política del ASG 2–4, su historial y RequestCountPerTarget en la ventana del ensayo del 04/11. Dos destinos saludables por sí solos no demuestran crecimiento 2→4."
+      },
+      {
+        "codigo": "R10",
+        "seccion": "12",
+        "titulo": "AWS · Reposición y dos zonas",
+        "descripcion": "Mostrar destinos del ALB por zona y actividad de reposición del ASG durante el ensayo. Relacionar con 229,79 s y 183 respuestas HTTP 200 del registro."
+      },
+      {
+        "codigo": "R11",
+        "seccion": "12",
+        "titulo": "GCP · Réplica y continuidad PG15",
+        "descripcion": "Mostrar VM, disco de datos y resultado fechado de réplica/promoción/retorno. Una VM detenida acredita pausa; no demuestra streaming activo ni failover automático."
+      },
+      {
+        "codigo": "R12",
+        "seccion": "14",
+        "titulo": "AWS · CloudWatch y salud del portal",
+        "descripcion": "Mostrar las métricas/alarmas realmente configuradas y la ventana temporal del ensayo. Azure y GCP tienen comprobaciones de copias bajo demanda; no hay monitoreo multicloud centralizado."
+      },
+      {
+        "codigo": "R13",
+        "seccion": "15",
+        "titulo": "AWS · Dumps y retención S3",
+        "descripcion": "Mostrar objetos de respaldo PG15/Supabase, fecha, versionado y ciclo de vida de 14 días. No abrir contenido con credenciales."
+      },
+      {
+        "codigo": "R14",
+        "seccion": "15",
+        "titulo": "Azure · Copias en Blob Storage",
+        "descripcion": "Mostrar el contenedor postgresql, los respaldos, versionado y borrado lógico de 7 días. Retención de 14 días no equivale a inmutabilidad WORM."
+      },
+      {
+        "codigo": "R15",
+        "seccion": "15",
+        "titulo": "GCP · Copias en Cloud Storage",
+        "descripcion": "Mostrar el bucket privado, objetos PG15/Supabase y sus fechas. La presencia de objetos no prueba por sí sola una restauración."
+      },
+      {
+        "codigo": "R16",
+        "seccion": "16",
+        "titulo": "AWS Azure y GCP · Integridad y recuperación PG15",
+        "descripcion": "Pegar el resultado fechado de hashes coincidentes y restauración PG15 desde copias externas, con filas verificadas. Identificar el ensayo del 04/11; no afirmar restauración integral Supabase."
+      },
+      {
+        "codigo": "R17",
+        "seccion": "18",
+        "titulo": "AWS · Costos y recursos",
+        "descripcion": "Mostrar consumo o estimación de EC2, ALB, NAT y EBS con período y moneda. Separar el gasto medido del subtotal referencial de US$138,92/mes."
+      },
+      {
+        "codigo": "R18",
+        "seccion": "18",
+        "titulo": "Azure · Consumo y crédito",
+        "descripcion": "Mostrar Cost Management del grupo del proyecto con período y moneda. Anotar el valor observado para completar la cotización pendiente."
+      },
+      {
+        "codigo": "R19",
+        "seccion": "18",
+        "titulo": "GCP · Consumo y crédito de desarrollador",
+        "descripcion": "Mostrar facturación y créditos disponibles con su período, si la cuenta permite consultarlos. El beneficio declarado de US$10 mensuales no equivale al saldo comprobado."
+      }
+    ],
+    "titulos_oficiales_conservados": 19,
+    "capturas_existentes_conservadas": 6,
+    "diagrama_v2_sincronizado": true,
+    "partes_modificadas": [
+      "word/document.xml",
+      "word/media/nexo-revision-2.png"
+    ],
+    "diseno_estilos_encabezados_y_pies": "Partes conservadas byte a byte",
+    "indice": "Campo TOC conservado; actualizar en Word",
+    "sha256_docx": "971c55631e4d6e0960dd8ca08561739790e6f4e1d945afabe835987b529995bc"
+  },
+  "formato_final_con_fotos": {
+    "fecha": "2026-11-05",
+    "fuente_usuario": "/home/glender/Proyectos/AWsacademy/entregables/entregable-01/Glender_Vargas_Entregable_2_Cloud_Computing.docx",
+    "salida": "/home/glender/Proyectos/AWsacademy/entregables/entregable-02/Glender_Vargas_Entregable_2_Cloud_Computing.docx",
+    "paginas": 25,
+    "paginas_inspeccionadas": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "indice_entradas": 22,
+    "indice_numeros_y_anclas_verificados": true,
+    "imagenes_conservadas_byte_a_byte": 33,
+    "titulos_oficiales_conservados": 19,
+    "original_usuario_sin_cambios": true,
+    "partes_modificadas": [
+      "word/header1.xml",
+      "word/header2.xml",
+      "word/header3.xml",
+      "word/footer1.xml",
+      "word/footer2.xml",
+      "word/footer3.xml",
+      "word/settings.xml",
+      "word/document.xml"
+    ],
+    "sha256": "260a56258c90711c2be1b88471e58c5706dc4f980ed38255e80f4257c0d2aec3",
+    "pendientes_contenido": [
+      "Identificación Equipo XX",
+      "R01: sustituir vista Studio por validación de acceso del portal si se requiere esa evidencia específica",
+      "R06: añadir reglas de entrada de PostgreSQL; la foto actual muestra salida"
+    ],
+    "nota": "Formato e índice terminados; no se operó infraestructura ni se generaron pruebas nuevas."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "url_local": "http://127.0.0.1:8800",
+  "sin_credenciales": 401,
+  "con_credenciales": 200,
+  "metodo": "SSM port forwarding, sin abrir Studio a Internet",
+  "sesion_temporal": true
+}

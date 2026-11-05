@@ -1,0 +1,20 @@
+[
+  {
+    "documento_origen": "entregables/entregable-01/doc_entregale_ofivial_3f4gemu4pndm.docx",
+    "parte": "word/media/image6.png",
+    "archivo": "entregables/entregable-02/evidencias/capturas-v1/targets-v1.png",
+    "sha256": "933f8af53ddc1aed07b9dc3f1f3ed0a0d868eaf6d3a0f5a9f6d5d759db244bf7"
+  },
+  {
+    "documento_origen": "entregables/entregable-01/doc_entregale_ofivial_3f4gemu4pndm.docx",
+    "parte": "word/media/image14.png",
+    "archivo": "entregables/entregable-02/evidencias/capturas-v1/bucket-v1.png",
+    "sha256": "b97a8882dc7920beb1cfd47b0095e235e094176419475524a6309fccd06f8bcc"
+  },
+  {
+    "documento_origen": "entregables/entregable-01/doc_entregale_ofivial_3f4gemu4pndm.docx",
+    "parte": "word/media/image10.png",
+    "archivo": "entregables/entregable-02/evidencias/capturas-v1/portal-v1.png",
+    "sha256": "b927e1733f65779c9d624fd8b83b8c56a80e84e589943d7e976685ddd414be00"
+  }
+]

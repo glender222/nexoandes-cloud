@@ -1,0 +1,29 @@
+[
+    {
+        "Name": "AWsAcademy-ASG",
+        "Desired": 2,
+        "Min": 2,
+        "Max": 4,
+        "HealthCheck": "ELB",
+        "Targets": [
+            "arn:aws:elasticloadbalancing:us-east-1:669186512136:targetgroup/AWsAcademy-TG/15789ac3fb56cf76"
+        ],
+        "LaunchTemplate": {
+            "LaunchTemplateId": "lt-03f9c1b47cfa22b8c",
+            "LaunchTemplateName": "AWsAcademy-LT",
+            "Version": "$Latest"
+        },
+        "Instances": [
+            {
+                "Id": "i-025b6d83af569f4cf",
+                "State": "InService",
+                "Health": "Healthy"
+            },
+            {
+                "Id": "i-061c4f52194c018f9",
+                "State": "InService",
+                "Health": "Healthy"
+            }
+        ]
+    }
+]

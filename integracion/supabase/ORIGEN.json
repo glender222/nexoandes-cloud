@@ -1,0 +1,8 @@
+{
+  "repositorio": "https://github.com/supabase/supabase",
+  "tag": "self-hosted/v0.8.3",
+  "commit": "bc27d2661edd09a5d0b8d76ce33da6d4071a756e",
+  "licencia": "Apache-2.0",
+  "uso": "Auth, REST, Postgres, Studio y gateway; servicios restantes deshabilitados en configuracion de despliegue",
+  "env_example_sha256": "d27fb4516702358ac5965fb06d207736abeb3c26c7d949f19b90e88b25e694ef"
+}

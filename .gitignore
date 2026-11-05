@@ -1,0 +1,29 @@
+# Material local de autenticación. No incluir en entregables ni repositorios.
+aws/privado/
+azure/privado/
+gcp/privado/
+oci/privado/
+**/.env
+**/.env.*
+**/__pycache__/
+infraestructura/privado/
+integracion/privado/
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/*.tfplan
+**/crash.log
+**/terraform.tfvars
+**/*.auto.tfvars
+**/*.auto.tfvars.json
+
+# Datos privados en cualquier nube y archivos temporales de oficina
+privado/
+**/privado/
+**/.~lock.*#
+**/~$*
+**/*.pem
+**/*.key
+
+# Configuración local de entorno
+**/*.env

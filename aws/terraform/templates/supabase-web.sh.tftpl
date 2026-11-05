@@ -1,0 +1,11 @@
+# Bootstrap Auth para cada web nueva del ASG; solo contiene clave publicable.
+set -euo pipefail
+systemctl stop httpd
+aws s3api get-object --region us-east-1 --bucket '${bucket}' --key '${object_key}' /tmp/nexoandes-web-auth.tgz >/dev/null
+echo '${sha256}  /tmp/nexoandes-web-auth.tgz' | sha256sum -c - >/dev/null
+install -d -m 755 /opt/nexoandes/auth-bootstrap
+tar -xzf /tmp/nexoandes-web-auth.tgz -C /opt/nexoandes/auth-bootstrap
+rm /tmp/nexoandes-web-auth.tgz
+/usr/bin/python3 /opt/nexoandes/auth-bootstrap/instalar_web.py '${private_ip}' '${public_key}'
+httpd -t
+systemctl start httpd

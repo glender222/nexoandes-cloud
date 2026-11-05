@@ -1,0 +1,16 @@
+{
+  "utc": "2026-11-04T16:49:11.577244+00:00",
+  "origen": "captura real de p\u00e1ginas p\u00fablicas mediante Chromium; complementa, no reemplaza, capturas de consola del usuario",
+  "paginas": [
+    {
+      "nombre": "portal AWS",
+      "url": "http://nexoandes-alb-788113153.us-east-1.elb.amazonaws.com",
+      "archivo": "/home/glender/Proyectos/AWsacademy/integracion/evidencias/20261104/portal-aws.png"
+    },
+    {
+      "nombre": "portal GCP",
+      "url": "http://34.171.103.166/",
+      "archivo": "/home/glender/Proyectos/AWsacademy/integracion/evidencias/20261104/portal-gcp.png"
+    }
+  ]
+}

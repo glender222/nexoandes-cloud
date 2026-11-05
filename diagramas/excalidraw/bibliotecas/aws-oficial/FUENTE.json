@@ -1,0 +1,92 @@
+{
+  "fuente": "https://aws.amazon.com/architecture/icons/",
+  "descarga": "https://d1.awsstatic.com/onedam/marketing-channels/website/public/shared/architecture-icon-release/Icon-package_07312026.5846e92413caa21490223536cc97f1269e44fa92.zip",
+  "release": "2026-07-31",
+  "fecha_descarga": "2026-11-04",
+  "autor": "Amazon Web Services",
+  "uso": "Iconos de arquitectura; permisos de uso segun la pagina oficial de AWS; no cubiertos por licencia MIT de las bibliotecas comunitarias",
+  "iconos": {
+    "78": {
+      "archivo": "Arch_Amazon-EC2_64.svg",
+      "ruta_paquete": "Architecture-Service-Icons_07312026/Arch_Compute/64/Arch_Amazon-EC2_64.svg",
+      "sha256": "5a7a0cef7a9f44ccdd544564ce9076abec3024090be0d6454504c49d149ce9ec"
+    },
+    "229": {
+      "archivo": "Res_Elastic-Load-Balancing_Application-Load-Balancer_48.svg",
+      "ruta_paquete": "Resource-Icons_07312026/Res_Networking-Content-Delivery/Res_Elastic-Load-Balancing_Application-Load-Balancer_48.svg",
+      "sha256": "27bea44fffd83cc42ce68411e659761a114d41d6b89efc556afef969f96414aa"
+    },
+    "217": {
+      "archivo": "Res_Amazon-VPC_NAT-Gateway_48.svg",
+      "ruta_paquete": "Resource-Icons_07312026/Res_Networking-Content-Delivery/Res_Amazon-VPC_NAT-Gateway_48.svg",
+      "sha256": "dcb6c564523dd54b0a7475e99f926d92001b7295413b598f766922efc07bd768"
+    },
+    "215": {
+      "archivo": "Res_Amazon-VPC_Internet-Gateway_48.svg",
+      "ruta_paquete": "Resource-Icons_07312026/Res_Networking-Content-Delivery/Res_Amazon-VPC_Internet-Gateway_48.svg",
+      "sha256": "d31cd837a33508372a7d43a556daa0138b6e2004c94a76e2f7f8b977409659aa"
+    },
+    "74": {
+      "archivo": "Arch_Amazon-Simple-Storage-Service_64.svg",
+      "ruta_paquete": "Architecture-Service-Icons_07312026/Arch_Storage/64/Arch_Amazon-Simple-Storage-Service_64.svg",
+      "sha256": "b92c5101cc6565dd12df37655802279f8fba0c719279f62f93106d26750b36c6"
+    },
+    "155": {
+      "archivo": "Arch_Amazon-CloudWatch_64.svg",
+      "ruta_paquete": "Architecture-Service-Icons_07312026/Arch_Management-Tools/64/Arch_Amazon-CloudWatch_64.svg",
+      "sha256": "a84b5b88172ab39170eaa6154345332d755758a37cda6a5580981cf679e01c0b"
+    },
+    "192": {
+      "archivo": "Arch_AWS-Identity-and-Access-Management_64.svg",
+      "ruta_paquete": "Architecture-Service-Icons_07312026/Arch_Security-Identity/64/Arch_AWS-Identity-and-Access-Management_64.svg",
+      "sha256": "3135793557c065d0481a3985ccc0574b36278d56a2e2c5d59107d0d28f51b827"
+    },
+    "172": {
+      "archivo": "Res_AWS-Systems-Manager_Session-Manager_48.svg",
+      "ruta_paquete": "Resource-Icons_07312026/Res_Management-Governance/Res_AWS-Systems-Manager_Session-Manager_48.svg",
+      "sha256": "8ae4af7f3000f576d5b25fedbb9d631d2ce9f87f7ba7c875813671d848026403"
+    },
+    "219": {
+      "archivo": "Res_Amazon-VPC_Endpoints_48.svg",
+      "ruta_paquete": "Resource-Icons_07312026/Res_Networking-Content-Delivery/Res_Amazon-VPC_Endpoints_48.svg",
+      "sha256": "08ca5b0393a5df5a5342d0d9612ff27df86b413087ed15222530c3add811fbf6"
+    },
+    "88": {
+      "archivo": "Arch_Amazon-EC2-Auto-Scaling_64.svg",
+      "ruta_paquete": "Architecture-Service-Icons_07312026/Arch_Compute/64/Arch_Amazon-EC2-Auto-Scaling_64.svg",
+      "sha256": "5b29692d2607450f8b52bfd0d6d1912e30199d6b7a668487e5fe42355db4e43d"
+    },
+    "68": {
+      "archivo": "Arch_Amazon-Elastic-Block-Store_64.svg",
+      "ruta_paquete": "Architecture-Service-Icons_07312026/Arch_Storage/64/Arch_Amazon-Elastic-Block-Store_64.svg",
+      "sha256": "a8ee0d51f7e2359b0e4d2e6a569941ee4e9888eafd4ec49aaa503934bc70edc0"
+    },
+    "1001": {
+      "archivo": "AWS-Cloud-logo_32.svg",
+      "ruta_paquete": "Architecture-Group-Icons_07312026/AWS-Cloud-logo_32.svg",
+      "sha256": "63d73df1aac59dab323df732f82e196e359fb7b6370c0ca8e51e7b897cd350be"
+    },
+    "1002": {
+      "archivo": "Virtual-private-cloud-VPC_32.svg",
+      "ruta_paquete": "Architecture-Group-Icons_07312026/Virtual-private-cloud-VPC_32.svg",
+      "sha256": "a225286901ea59f74d52c37ccaa2660f9e2728a76cd4ee0892c29c7a386ef98c"
+    },
+    "1003": {
+      "archivo": "Public-subnet_32.svg",
+      "ruta_paquete": "Architecture-Group-Icons_07312026/Public-subnet_32.svg",
+      "sha256": "009342df9afcc20b8c6f0d82ded7620105aaa7e53eb253d74f80a9e7d3beee58"
+    },
+    "1004": {
+      "archivo": "Private-subnet_32.svg",
+      "ruta_paquete": "Architecture-Group-Icons_07312026/Private-subnet_32.svg",
+      "sha256": "0666b2c8784d303a850c7cd1b40236f3d6d97012b4f4d2bad65a28c6ec614ba4"
+    },
+    "1005": {
+      "archivo": "Res_Users_48_Light.svg",
+      "ruta_paquete": "Resource-Icons_07312026/Res_General-Icons/Res_48_Light/Res_Users_48_Light.svg",
+      "sha256": "70a2a73c69e9f21a46133b60a3a07e45b23f35c3f141d572e61a43945cbb4682"
+    }
+  },
+  "origen_local_usuario": "/home/glender/Downloads/Icon-package_07312026.5846e92413caa21490223536cc97f1269e44fa92",
+  "fecha_integracion_local": "2026-11-04"
+}

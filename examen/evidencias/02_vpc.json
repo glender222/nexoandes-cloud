@@ -1,0 +1,35 @@
+{
+    "Vpcs": [
+        {
+            "OwnerId": "849533029543",
+            "InstanceTenancy": "default",
+            "CidrBlockAssociationSet": [
+                {
+                    "AssociationId": "vpc-cidr-assoc-0693ae0de0eec2774",
+                    "CidrBlock": "10.20.0.0/16",
+                    "CidrBlockState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "IsDefault": false,
+            "Tags": [
+                {
+                    "Key": "Evaluacion",
+                    "Value": "ExamenSemana7"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "EXAMEN-GLENDERVARGAS-VPC"
+                }
+            ],
+            "BlockPublicAccessStates": {
+                "InternetGatewayBlockMode": "off"
+            },
+            "VpcId": "vpc-0e549a023b818b322",
+            "State": "available",
+            "CidrBlock": "10.20.0.0/16",
+            "DhcpOptionsId": "dopt-02e67ae921c94a3c8"
+        }
+    ]
+}

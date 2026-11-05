@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-22T22:47:44.986732+00:00",
+  "source_bucket": "nexoandes-backup-849533029543-us-east-1",
+  "source_key": "postgresql/20261022T205410Z.dump",
+  "azure_subscription": "1db87b28-407f-41d3-b532-41942343157c",
+  "azure_storage": "nxa1db87b28407f",
+  "azure_container": "postgresql",
+  "azure_blob": "20261022T205410Z.dump",
+  "size_bytes": 1868,
+  "sha256_source": "d2b3c1b09a45a5e012f72de2290f8ffb50f871caae770977e6dcc2d5beb31ca0",
+  "sha256_download": "d2b3c1b09a45a5e012f72de2290f8ffb50f871caae770977e6dcc2d5beb31ca0",
+  "same_bytes": true,
+  "automatic_copy": false,
+  "procedure": "AWS CLI S3 download; Azure CLI Blob upload and download; SHA256 comparison"
+}

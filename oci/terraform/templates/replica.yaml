@@ -1,0 +1,13 @@
+#cloud-config
+# Seleccionar una imagen oficial Ubuntu 22.04/24.04 para ARM64.
+package_update: true
+packages:
+  - postgresql-common
+  - strongswan
+write_files:
+  - path: /etc/nexoandes/ESTADO.txt
+    permissions: '0644'
+    content: |
+      Host preparado para réplica de PostgreSQL e IPsec.
+      Instalar la misma versión mayor que el primario AWS antes de replicar.
+      No se ha configurado ni validado ningún túnel ni replicación.

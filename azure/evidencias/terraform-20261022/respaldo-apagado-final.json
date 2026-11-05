@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-22T22:52:49.798177+00:00",
+  "storage": "nxa1db87b28407f",
+  "container": "postgresql",
+  "blob": "20261022T205410Z.dump",
+  "size_bytes": 1868,
+  "sha256": "d2b3c1b09a45a5e012f72de2290f8ffb50f871caae770977e6dcc2d5beb31ca0",
+  "matches_s3_before_shutdown": true,
+  "download_after_shutdown": true
+}

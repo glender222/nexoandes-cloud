@@ -1,0 +1,9 @@
+{
+  "utc": "2026-11-05T02:31:44.104849+00:00",
+  "url": "https://nexoandes-alb-409538740.us-east-1.elb.amazonaws.com/",
+  "http_y_verificacion": "200 0",
+  "correcto": true,
+  "certificado": "autofirmado académico, 30 días; no confiable públicamente",
+  "verificacion": "curl verifica nombre y certificado con --cacert; no usa -k",
+  "http_80": "permanece habilitado para las pruebas existentes; riesgo residual"
+}

@@ -1,0 +1,23 @@
+{
+  "fecha": "2026-11-04",
+  "terraform": {
+    "nubes": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "fmt_validate": "correcto",
+    "tests_mock": {
+      "pasados": 6,
+      "fallidos": 0
+    }
+  },
+  "unittest_controlador": {
+    "pasados": 12,
+    "fallidos": 0
+  },
+  "python_py_compile": "correcto",
+  "bash_nexoandes": "correcto",
+  "excalidraw": "exportado por biblioteca nativa a SVG y PNG; inspección visual realizada",
+  "alcance": "Pruebas locales/mocks; los ensayos reales están en sus JSON separados"
+}

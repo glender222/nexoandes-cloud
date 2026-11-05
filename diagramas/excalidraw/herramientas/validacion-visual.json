@@ -1,0 +1,50 @@
+{
+  "fecha": "2026-11-04",
+  "base_palabras": 472,
+  "palabras_finales": 250,
+  "reduccion_porcentaje": 47.0,
+  "elementos": 224,
+  "svg_incrustados": 35,
+  "ids_unicos": true,
+  "svg_xml_validos": true,
+  "fuentes_sha256_correctas": true,
+  "grupos_de_seguridad": [
+    "alb",
+    "vpn",
+    "app",
+    "db",
+    "supabase"
+  ],
+  "desbordamientos_tarjetas": [],
+  "inspeccion_visual": "PNG completo y detalles AWS, S3, Azure y GCP revisados; corregidas rutas, márgenes y etiquetas",
+  "inventario_cloud": "Corte inventario general 23:01; cambio Studio verificado 23:33 con estado Terraform sin deriva",
+  "azure_jerarquia_verificada": [
+    [
+      "Azure Storage Account",
+      "Azure Resource Group"
+    ],
+    [
+      "Azure Blob Container",
+      "Azure Storage Account"
+    ],
+    [
+      "Azure Virtual Network",
+      "Azure Resource Group"
+    ]
+  ],
+  "azure_grupos_editables": [
+    "azure-blob-container",
+    "azure-storage-account",
+    "azure-vnet",
+    "azure-resource-group",
+    "azure-cloud"
+  ],
+  "importacion_excalidraw": "Correcta; 224 elementos y 35 recursos; sin errores JavaScript",
+  "studio_externo": "Entrada HTTPS 8443 y Studio autenticado; publicada y verificada 04/11/2026 23:33",
+  "fecha_revision_visual": "2026-11-05",
+  "endpoint_s3_dentro_vpc": true,
+  "s3_regional_fuera_vpc": true,
+  "salida_endpoint_hacia_s3": "derecha, conectada al destino",
+  "asg_etiqueta_margen_superior_px": 13,
+  "operaciones_cloud_en_revision": false
+}

@@ -1,0 +1,156 @@
+[
+  {
+    "nombre": "identidad",
+    "argumentos": [
+      "sts",
+      "get-caller-identity",
+      "--query",
+      "{Account:Account,Arn:Arn}"
+    ]
+  },
+  {
+    "nombre": "buckets",
+    "argumentos": [
+      "s3api",
+      "list-buckets",
+      "--query",
+      "Buckets[].{Name:Name,CreationDate:CreationDate}"
+    ]
+  },
+  {
+    "nombre": "us-east-1-vpcs",
+    "argumentos": [
+      "ec2",
+      "describe-vpcs",
+      "--query",
+      "Vpcs[].{Id:VpcId,Cidr:CidrBlock,Default:IsDefault,State:State,Name:Tags[?Key==`Name`].Value|[0]}",
+      "--region",
+      "us-east-1"
+    ]
+  },
+  {
+    "nombre": "us-east-1-instancias",
+    "argumentos": [
+      "ec2",
+      "describe-instances",
+      "--filters",
+      "Name=instance-state-name,Values=pending,running,stopping,stopped,shutting-down",
+      "--query",
+      "Reservations[].Instances[].{Id:InstanceId,State:State.Name,Vpc:VpcId,Subnet:SubnetId,Type:InstanceType,AZ:Placement.AvailabilityZone,Name:Tags[?Key==`Name`].Value|[0]}",
+      "--region",
+      "us-east-1"
+    ]
+  },
+  {
+    "nombre": "us-east-1-alb",
+    "argumentos": [
+      "elbv2",
+      "describe-load-balancers",
+      "--query",
+      "LoadBalancers[].{Name:LoadBalancerName,Arn:LoadBalancerArn,Vpc:VpcId,DNS:DNSName,State:State.Code}",
+      "--region",
+      "us-east-1"
+    ]
+  },
+  {
+    "nombre": "us-east-1-asg",
+    "argumentos": [
+      "autoscaling",
+      "describe-auto-scaling-groups",
+      "--query",
+      "AutoScalingGroups[].{Name:AutoScalingGroupName,Min:MinSize,Max:MaxSize,Desired:DesiredCapacity,Instances:Instances[].InstanceId,Subnets:VPCZoneIdentifier}",
+      "--region",
+      "us-east-1"
+    ]
+  },
+  {
+    "nombre": "us-east-1-nat",
+    "argumentos": [
+      "ec2",
+      "describe-nat-gateways",
+      "--query",
+      "NatGateways[].{Id:NatGatewayId,Vpc:VpcId,State:State,Subnet:SubnetId}",
+      "--region",
+      "us-east-1"
+    ]
+  },
+  {
+    "nombre": "us-east-1-vgw",
+    "argumentos": [
+      "ec2",
+      "describe-vpn-gateways",
+      "--query",
+      "VpnGateways[].{Id:VpnGatewayId,State:State,Attachments:VpcAttachments}",
+      "--region",
+      "us-east-1"
+    ]
+  },
+  {
+    "nombre": "us-west-2-vpcs",
+    "argumentos": [
+      "ec2",
+      "describe-vpcs",
+      "--query",
+      "Vpcs[].{Id:VpcId,Cidr:CidrBlock,Default:IsDefault,State:State,Name:Tags[?Key==`Name`].Value|[0]}",
+      "--region",
+      "us-west-2"
+    ]
+  },
+  {
+    "nombre": "us-west-2-instancias",
+    "argumentos": [
+      "ec2",
+      "describe-instances",
+      "--filters",
+      "Name=instance-state-name,Values=pending,running,stopping,stopped,shutting-down",
+      "--query",
+      "Reservations[].Instances[].{Id:InstanceId,State:State.Name,Vpc:VpcId,Subnet:SubnetId,Type:InstanceType,AZ:Placement.AvailabilityZone,Name:Tags[?Key==`Name`].Value|[0]}",
+      "--region",
+      "us-west-2"
+    ]
+  },
+  {
+    "nombre": "us-west-2-alb",
+    "argumentos": [
+      "elbv2",
+      "describe-load-balancers",
+      "--query",
+      "LoadBalancers[].{Name:LoadBalancerName,Arn:LoadBalancerArn,Vpc:VpcId,DNS:DNSName,State:State.Code}",
+      "--region",
+      "us-west-2"
+    ]
+  },
+  {
+    "nombre": "us-west-2-asg",
+    "argumentos": [
+      "autoscaling",
+      "describe-auto-scaling-groups",
+      "--query",
+      "AutoScalingGroups[].{Name:AutoScalingGroupName,Min:MinSize,Max:MaxSize,Desired:DesiredCapacity,Instances:Instances[].InstanceId,Subnets:VPCZoneIdentifier}",
+      "--region",
+      "us-west-2"
+    ]
+  },
+  {
+    "nombre": "us-west-2-nat",
+    "argumentos": [
+      "ec2",
+      "describe-nat-gateways",
+      "--query",
+      "NatGateways[].{Id:NatGatewayId,Vpc:VpcId,State:State,Subnet:SubnetId}",
+      "--region",
+      "us-west-2"
+    ]
+  },
+  {
+    "nombre": "us-west-2-vgw",
+    "argumentos": [
+      "ec2",
+      "describe-vpn-gateways",
+      "--query",
+      "VpnGateways[].{Id:VpnGatewayId,State:State,Attachments:VpcAttachments}",
+      "--region",
+      "us-west-2"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "displayName": "Allowed resource deployment regions",
+    "parameters": {
+      "listOfAllowedLocations": {
+        "value": [
+          "northcentralus",
+          "westus3",
+          "chilecentral",
+          "brazilsouth",
+          "westus"
+        ]
+      }
+    }
+  }
+]

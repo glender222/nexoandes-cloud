@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-04T19:18:24.767208+00:00",
+  "nexoandes_apagado": true,
+  "datos_aws_y_gcp_conservados": true,
+  "aws_sin_alb_asg_nat_activos": true,
+  "gcp_misma_vm_y_discos": true,
+  "gcp_sin_ipv4_publica_asignada": true,
+  "otras_cargas_conservadas": {
+    "aws_examen": "running",
+    "azure_antigravity": "VM running"
+  },
+  "nota": "Almacenamiento y cargas ajenas todavía pueden consumir crédito; timer local continúa habilitado y no enciende recursos."
+}

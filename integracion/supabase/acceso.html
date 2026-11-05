@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Acceso · NexoAndes</title><link rel="stylesheet" href="estilo.css"></head>
+<body><main><a href="/">← Volver al catálogo</a><p class="marca">NEXOANDES</p><h1>Acceso al portal</h1>
+<p>Ingresa con tu cuenta asignada para comprobar el acceso privado.</p>
+<form id="login"><label>Correo electrónico<input id="email" type="email" autocomplete="username" required></label>
+<label>Contraseña<input id="password" type="password" autocomplete="current-password" required minlength="8"></label>
+<button type="submit">Iniciar sesión</button></form>
+<section id="cuenta" hidden><h2>Sesión iniciada</h2><p id="identidad"></p><button id="comprobar">Comprobar acceso privado</button><button class="secundario" id="salir">Cerrar sesión</button></section>
+<p id="estado" role="status" aria-live="polite"></p><p class="nota">Demostración académica. Las cuentas se asignan por administración.</p>
+</main><script src="config.js"></script><script src="acceso.js"></script></body></html>

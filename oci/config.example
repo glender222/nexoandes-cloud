@@ -1,0 +1,6 @@
+[DEFAULT]
+user=ocid1.user.oc1..REEMPLAZAR
+fingerprint=REEMPLAZAR_CON_HUELLA_DE_LA_CLAVE_API_REGISTRADA
+key_file=/ruta/absoluta/a/oci/privado/api_key.pem
+tenancy=ocid1.tenancy.oc1..REEMPLAZAR
+region=REEMPLAZAR_CON_REGION_HOME

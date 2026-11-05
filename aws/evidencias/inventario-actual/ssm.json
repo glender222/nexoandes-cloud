@@ -1,0 +1,17 @@
+[
+    {
+        "Id": "i-061c4f52194c018f9",
+        "Status": "Online",
+        "Platform": "Amazon Linux"
+    },
+    {
+        "Id": "i-0992f21ddb48ccea8",
+        "Status": "Online",
+        "Platform": "Amazon Linux"
+    },
+    {
+        "Id": "i-025b6d83af569f4cf",
+        "Status": "Online",
+        "Platform": "Amazon Linux"
+    }
+]

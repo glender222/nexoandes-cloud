@@ -1,0 +1,365 @@
+{
+  "utc": "2026-11-04T16:20:52.814052+00:00",
+  "metrica": "ALBRequestCountPerTarget",
+  "objetivo_por_destino_minuto": 30,
+  "umbral_de_demostracion": true,
+  "inicial": [
+    "i-03dd4d3328aa5f1ed",
+    "i-051db10475e595fc3"
+  ],
+  "muestras": [
+    {
+      "segundos": 1.1,
+      "deseado": 2,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 27.1,
+      "deseado": 2,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 53.2,
+      "deseado": 2,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 79.1,
+      "deseado": 2,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 105.2,
+      "deseado": 2,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 131.3,
+      "deseado": 2,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 157.2,
+      "deseado": 2,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 183.2,
+      "deseado": 2,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 209.2,
+      "deseado": 2,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 235.4,
+      "deseado": 2,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 261.4,
+      "deseado": 2,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 287.5,
+      "deseado": 2,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 313.7,
+      "deseado": 2,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 339.7,
+      "deseado": 2,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 365.7,
+      "deseado": 4,
+      "instancias": [
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "segundos": 391.7,
+      "deseado": 4,
+      "instancias": [
+        {
+          "InstanceId": "i-03c430ded8192a8fa",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-03dd4d3328aa5f1ed",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-051db10475e595fc3",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        },
+        {
+          "InstanceId": "i-0bccd5a4152b65b03",
+          "LifecycleState": "InService",
+          "HealthStatus": "Healthy"
+        }
+      ]
+    }
+  ],
+  "http": {
+    "ok": 2137,
+    "errores": 0
+  },
+  "aumento_automatico_observado": true,
+  "actividades": [
+    {
+      "fecha": "2026-11-04T16:27:00.409000+00:00",
+      "estado": "WaitingForInstanceWarmup",
+      "causa": "At 2026-11-04T16:26:47Z a monitor alarm TargetTracking-nexoandes-web-AlarmHigh-154e8cda-ab7c-4963-bf06-b7adff88fc9d in state ALARM triggered policy nexoandes-solicitudes changing the desired capacity from 2 to 4.  At 2026-11-04T16:26:58Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 2 to 4.",
+      "descripcion": "Launching a new EC2 instance: i-0bccd5a4152b65b03"
+    },
+    {
+      "fecha": "2026-11-04T16:27:00.260000+00:00",
+      "estado": "WaitingForInstanceWarmup",
+      "causa": "At 2026-11-04T16:26:47Z a monitor alarm TargetTracking-nexoandes-web-AlarmHigh-154e8cda-ab7c-4963-bf06-b7adff88fc9d in state ALARM triggered policy nexoandes-solicitudes changing the desired capacity from 2 to 4.  At 2026-11-04T16:26:58Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 2 to 4.",
+      "descripcion": "Launching a new EC2 instance: i-03c430ded8192a8fa"
+    },
+    {
+      "fecha": "2026-11-04T15:46:44.179000+00:00",
+      "estado": "Successful",
+      "causa": "At 2026-11-04T15:46:42Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 2.",
+      "descripcion": "Launching a new EC2 instance: i-051db10475e595fc3"
+    },
+    {
+      "fecha": "2026-11-04T15:46:44.069000+00:00",
+      "estado": "Successful",
+      "causa": "At 2026-11-04T15:46:42Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 2.",
+      "descripcion": "Launching a new EC2 instance: i-03dd4d3328aa5f1ed"
+    },
+    {
+      "fecha": "2026-11-02T20:13:11.822000+00:00",
+      "estado": "Cancelled",
+      "causa": "At 2026-11-02T20:13:09Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 2.",
+      "descripcion": "Launching a new EC2 instance: i-01f86091a754a228c.  Status Reason: Instance became unhealthy while waiting for instance to be in InService state. Termination Reason: Client.InternalError: Client error on launch"
+    },
+    {
+      "fecha": "2026-11-02T20:13:11.765000+00:00",
+      "estado": "Cancelled",
+      "causa": "At 2026-11-02T20:13:09Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 2.",
+      "descripcion": "Launching a new EC2 instance: i-058cb3fe5bb7c8a83.  Status Reason: Instance became unhealthy while waiting for instance to be in InService state. Termination Reason: Client.InternalError: Client error on launch"
+    },
+    {
+      "fecha": "2026-11-01T03:52:31.760000+00:00",
+      "estado": "Cancelled",
+      "causa": "At 2026-11-01T03:52:29Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 2.",
+      "descripcion": "Launching a new EC2 instance: i-0f738a4bad95eceab.  Status Reason: Instance became unhealthy while waiting for instance to be in InService state. Termination Reason: Client.InternalError: Client error on launch"
+    },
+    {
+      "fecha": "2026-11-01T03:52:31.541000+00:00",
+      "estado": "Cancelled",
+      "causa": "At 2026-11-01T03:52:29Z an instance was started in response to a difference between desired and actual capacity, increasing the capacity from 0 to 2.",
+      "descripcion": "Launching a new EC2 instance: i-0e83090aef65f853a.  Status Reason: Instance became unhealthy while waiting for instance to be in InService state. Termination Reason: Client.InternalError: Client error on launch"
+    }
+  ],
+  "alarmas": [
+    {
+      "nombre": "TargetTracking-nexoandes-web-AlarmHigh-154e8cda-ab7c-4963-bf06-b7adff88fc9d",
+      "estado": "ALARM",
+      "metrica": "RequestCountPerTarget"
+    },
+    {
+      "nombre": "TargetTracking-nexoandes-web-AlarmHigh-f6a07680-8288-4a70-89c2-46a5735a6180",
+      "estado": "OK",
+      "metrica": "CPUUtilization"
+    },
+    {
+      "nombre": "TargetTracking-nexoandes-web-AlarmLow-4f3c7ae7-cd8b-4a59-9c68-918786516a80",
+      "estado": "OK",
+      "metrica": "RequestCountPerTarget"
+    },
+    {
+      "nombre": "TargetTracking-nexoandes-web-AlarmLow-9d184bb5-9827-4c2a-b387-a9b86a6c9ccb",
+      "estado": "OK",
+      "metrica": "CPUUtilization"
+    },
+    {
+      "nombre": "nexoandes-cpu-alta",
+      "estado": "OK",
+      "metrica": "CPUUtilization"
+    },
+    {
+      "nombre": "nexoandes-http5xx",
+      "estado": "OK",
+      "metrica": "HTTPCode_Target_5XX_Count"
+    }
+  ]
+}

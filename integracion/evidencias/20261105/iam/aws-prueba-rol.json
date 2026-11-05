@@ -1,0 +1,9 @@
+{
+  "command_id": "a92a7198-29ac-4489-a0c4-8b0f65ff4ff4",
+  "status": "Success",
+  "out": "{\n    \"Account\": \"849533029543\",\n    \"Arn\": \"arn:aws:sts::849533029543:assumed-role/LabRole/i-0ceea48d268d2cb83\"\n}\n{\n    \"BucketArn\": \"arn:aws:s3:::nexoandes-backup-849533029543-us-east-1\",\n    \"BucketRegion\": \"us-east-1\",\n    \"AccessPointAlias\": false\n}\nS3_HEAD_OK",
+  "utc": "2026-11-05T05:12:17.011162+00:00",
+  "instancia": "i-0ceea48d268d2cb83",
+  "accion": "STS y S3 HeadBucket desde EC2 usando perfil existente",
+  "bucket": "nexoandes-backup-849533029543-us-east-1"
+}

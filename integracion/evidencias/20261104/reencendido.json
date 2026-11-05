@@ -1,0 +1,37 @@
+{
+  "utc": "2026-11-04T19:11:21.638784+00:00",
+  "aws": {
+    "http": 200,
+    "datos": {
+      "ok": true,
+      "site": "aws",
+      "database": {
+        "recovery": false,
+        "probe": 39
+      }
+    }
+  },
+  "gcp": {
+    "http": 200,
+    "datos": {
+      "ok": true,
+      "site": "gcp",
+      "database": {
+        "recovery": true,
+        "probe": 39
+      }
+    },
+    "origen": "gateway AWS"
+  },
+  "acceso_gcp_desde_equipo_local": {
+    "http": 403,
+    "error": "HTTPError"
+  },
+  "identificadores": {
+    "db_aws": "i-01ae7353f82b8daa5",
+    "volumen_aws": "vol-0641bf3d4c25b6b34",
+    "vm_gcp": "projects/gen-lang-client-0623826791/zones/us-central1-a/instances/nexoandes-gcp-standby",
+    "disco_gcp": "projects/gen-lang-client-0623826791/zones/us-central1-a/disks/nexoandes-gcp-postgresql"
+  },
+  "completo": true
+}

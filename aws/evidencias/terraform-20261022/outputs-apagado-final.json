@@ -1,0 +1,13 @@
+{
+  "bucket": "nexoandes-backup-849533029543-us-east-1",
+  "cuenta": "849533029543",
+  "db_instance": "i-01ae7353f82b8daa5",
+  "db_ip": "10.10.20.35",
+  "db_volume": "vol-0641bf3d4c25b6b34",
+  "encendido": false,
+  "https_url": null,
+  "region": "us-east-1",
+  "target_group": null,
+  "url": null,
+  "vpc_id": "vpc-0ab83bf4a2b225c41"
+}

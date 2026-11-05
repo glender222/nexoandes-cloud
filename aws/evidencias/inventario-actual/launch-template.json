@@ -1,0 +1,11 @@
+[
+    {
+        "Version": 2,
+        "Created": "2026-09-30T17:17:08+00:00",
+        "Image": "ami-05dee78f58650ed2c",
+        "Type": "t3.micro",
+        "Metadata": {
+            "HttpTokens": "required"
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "Id": "i-025b6d83af569f4cf",
+        "State": "running",
+        "Name": "AWsAcademy-App",
+        "AZ": "us-east-1a",
+        "PrivateIP": "10.10.11.222",
+        "Type": "t3.micro"
+    },
+    {
+        "Id": "i-0992f21ddb48ccea8",
+        "State": "running",
+        "Name": "AWsAcademy-DB",
+        "AZ": "us-east-1a",
+        "PrivateIP": "10.10.20.125",
+        "Type": "t3.micro"
+    },
+    {
+        "Id": "i-061c4f52194c018f9",
+        "State": "running",
+        "Name": "AWsAcademy-App",
+        "AZ": "us-east-1b",
+        "PrivateIP": "10.10.12.65",
+        "Type": "t3.micro"
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "Id": "i-01ae7353f82b8daa5",
+        "State": "running",
+        "Name": "nexoandes-postgresql",
+        "IP": "10.10.20.35"
+    },
+    {
+        "Id": "i-0d70bed29dd00389e",
+        "State": "running",
+        "Name": "nexoandes-web",
+        "IP": "10.10.11.190"
+    },
+    {
+        "Id": "i-09f4baa1c4d22e65b",
+        "State": "running",
+        "Name": "nexoandes-web",
+        "IP": "10.10.12.197"
+    }
+]

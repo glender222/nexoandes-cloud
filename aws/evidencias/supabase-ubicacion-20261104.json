@@ -1,0 +1,10 @@
+{
+  "utc": "2026-11-05T02:10:13.259124+00:00",
+  "cuenta_esperada": "849533029543",
+  "region": "us-east-1",
+  "sts": "ExpiredToken",
+  "recurso_creado": false,
+  "ubicacion_propuesta": "EC2 dedicada t3.medium en AWS Academy para demostracion; pendiente validar permisos cuota y presupuesto",
+  "requisitos_supabase": "4 GB RAM, 2 cores, 40 GB SSD minimo para la pila completa",
+  "naturaleza": "propuesta, sin despliegue"
+}

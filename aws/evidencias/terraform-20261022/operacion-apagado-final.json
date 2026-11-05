@@ -1,0 +1,13 @@
+{
+  "accion": "apagar",
+  "fase": "completada",
+  "nubes": [
+    "aws",
+    "azure"
+  ],
+  "completadas": [
+    "azure",
+    "aws"
+  ],
+  "errores": {}
+}

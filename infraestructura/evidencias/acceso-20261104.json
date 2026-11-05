@@ -1,0 +1,89 @@
+{
+  "verificado_utc": "2026-11-04T15:33:49.072797+00:00",
+  "consultas_solo_lectura": true,
+  "resultados": [
+    {
+      "nube": "aws",
+      "region": "us-east-1",
+      "cuenta_esperada": "849533029543",
+      "comprobacion": {
+        "ok": true,
+        "datos": {
+          "Account": "849533029543",
+          "Role": "voclabs"
+        },
+        "cuenta_esperada_coincide": true
+      },
+      "verificado_utc": "2026-11-04T15:41:19.812055+00:00",
+      "consulta": "aws/infraestructura/academy-aws sts get-caller-identity"
+    },
+    {
+      "nube": "azure",
+      "suscripcion_esperada": "1db87b28-407f-41d3-b532-41942343157c",
+      "sesion_local": {
+        "ok": true,
+        "datos": {
+          "id": "1db87b28-407f-41d3-b532-41942343157c",
+          "name": "Azure for Students",
+          "state": "Enabled",
+          "tenantId": "cfbd88b4-94bc-4fba-98bd-64d0726394a3"
+        }
+      },
+      "consulta_remota": {
+        "ok": true,
+        "datos": {
+          "displayName": "Azure for Students",
+          "state": "Enabled",
+          "subscriptionId": "1db87b28-407f-41d3-b532-41942343157c"
+        }
+      }
+    },
+    {
+      "nube": "gcp",
+      "proyecto_esperado": "gen-lang-client-0623826791",
+      "region": "us-central1",
+      "identidad": "gen-lang-client-0623826791@gen-lang-client-0623826791.iam.gserviceaccount.com",
+      "proyecto_clave": "gen-lang-client-0623826791",
+      "proyecto_clave_coincide": true,
+      "autenticacion": {
+        "ok": true,
+        "expiracion_utc": "2026-11-04T16:33:47.140352"
+      },
+      "compute": {
+        "ok": true,
+        "http": 200
+      },
+      "storage": {
+        "ok": true,
+        "http": 200,
+        "recurso": {
+          "name": "nexoandes-backup-gen-lang-client-0623826791",
+          "location": "US-CENTRAL1"
+        }
+      }
+    }
+  ],
+  "nota_gcp": "La primera consulta Compute uso un scope no admitido por esa API; se corrigio a compute.readonly y devstorage.read_only, sin cambios de IAM ni recursos.",
+  "consultas": {
+    "aws": "aws/infraestructura/academy-aws sts get-caller-identity (us-east-1)",
+    "azure": "az account show para la suscripcion configurada; GET management.azure.com/subscriptions/{id}?api-version=2022-12-01",
+    "gcp": "Autenticacion con cuenta de servicio existente; GET Compute instances.aggregatedList y GET de metadatos del bucket del proyecto; scopes compute.readonly y devstorage.read_only"
+  },
+  "limites": "Comprueba autenticacion y las lecturas indicadas. No demuestra permisos de escritura, salud de aplicaciones, saldo ni credito disponible. No se modificaron recursos, roles, claves ni configuracion de autenticacion.",
+  "historial_comprobaciones": [
+    {
+      "verificado_utc": "2026-11-04T15:33:49.072797+00:00",
+      "resultado": {
+        "nube": "aws",
+        "region": "us-east-1",
+        "cuenta_esperada": "849533029543",
+        "comprobacion": {
+          "ok": false,
+          "codigo": 254,
+          "error": "\naws: [ERROR]: An error occurred (InvalidClientTokenId) when calling the GetCallerIdentity operation (reached max retries: 0): The security token included in the request is invalid\n"
+        }
+      }
+    }
+  ],
+  "ultima_recomprobacion_utc": "2026-11-04T15:41:19.812055+00:00"
+}

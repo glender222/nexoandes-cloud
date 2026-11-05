@@ -1,0 +1,12 @@
+{
+  "nube": "azure",
+  "accion": "encender",
+  "cambios": [
+    {
+      "recurso": "azurerm_role_assignment.backup_operator[0]",
+      "acciones": [
+        "create"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "utc": "2026-11-04T16:17:00.634575+00:00",
+  "bloqueo_fuente_no_autorizada": {
+    "instance_id": "i-0a23d6e5ad74f67c0",
+    "command_id": "bf7194a9-5eb8-4aaf-8a41-9fde07839c39",
+    "destino": "10.10.20.35:5432",
+    "resultado": "timeout de 4 segundos, c\u00f3digo 124"
+  },
+  "consulta_autorizada": "Ver sondas-iniciales.json: HTTP 200 y lectura SQL desde AWS y GCP"
+}

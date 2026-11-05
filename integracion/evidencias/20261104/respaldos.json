@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-04T19:12:06.749222+00:00",
+  "objeto": "postgresql/20261104T191151Z.dump",
+  "bytes": 4922,
+  "sha256": {
+    "aws": "85aa6cfae99806183c3dc928cdf956c7b42af1ce42e2c392c0ffe58e4200e401",
+    "azure": "85aa6cfae99806183c3dc928cdf956c7b42af1ce42e2c392c0ffe58e4200e401",
+    "gcp": "85aa6cfae99806183c3dc928cdf956c7b42af1ce42e2c392c0ffe58e4200e401"
+  },
+  "coinciden": true,
+  "mecanismo": "S3 API; Azure Blob HTTPS y Google Cloud Storage HTTPS autenticados; sin VPN para objetos",
+  "ejecutor": "equipo local; requiere equipo encendido y credenciales vigentes",
+  "generacion_solicitada": true,
+  "restauracion": "se acredita por separado"
+}

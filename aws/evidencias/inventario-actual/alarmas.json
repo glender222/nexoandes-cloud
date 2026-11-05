@@ -1,0 +1,14 @@
+[
+    {
+        "Name": "AWsAcademy-ALB-5XX",
+        "State": "INSUFFICIENT_DATA",
+        "Metric": "HTTPCode_Target_5XX_Count",
+        "Actions": true
+    },
+    {
+        "Name": "AWsAcademy-HighCPU",
+        "State": "OK",
+        "Metric": "CPUUtilization",
+        "Actions": true
+    }
+]

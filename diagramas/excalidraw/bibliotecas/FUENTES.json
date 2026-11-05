@@ -1,0 +1,130 @@
+{
+  "catalogo": "https://libraries.excalidraw.com/",
+  "repositorio": "https://github.com/excalidraw/excalidraw-libraries",
+  "bibliotecas": [
+    {
+      "archivo": "aws-arquitectura.excalidrawlib",
+      "nombre": "AWS Architecture Icons",
+      "autores": [
+        {
+          "name": "Anna Pastushko",
+          "github": "https://github.com/ChildishGirl",
+          "twitter": "",
+          "url": "https://www.linkedin.com/in/annpastushko"
+        }
+      ],
+      "url": "https://raw.githubusercontent.com/excalidraw/excalidraw-libraries/main/libraries/childishgirl/aws-architecture-icons.excalidrawlib",
+      "licencia": "MIT",
+      "fecha_descarga": "2026-11-04",
+      "elementos_biblioteca": 249,
+      "bytes": 3939023,
+      "sha256": "8925477215064db0594e8f44c85da9de05958c18fbb4fd56d6d56988a4de2f29"
+    },
+    {
+      "archivo": "azure-servicios.excalidrawlib",
+      "nombre": "Microsoft Azure cloud icons",
+      "autores": [
+        {
+          "name": "Suresh Sethuramaswamy",
+          "github": "rockssk",
+          "twitter": "rocksskNYC",
+          "url": "https://www.linkedin.com/in/sureshsethu/"
+        }
+      ],
+      "url": "https://raw.githubusercontent.com/excalidraw/excalidraw-libraries/main/libraries/rockssk/microsoft-azure-cloud-icons.excalidrawlib",
+      "licencia": "MIT",
+      "fecha_descarga": "2026-11-04",
+      "elementos_biblioteca": 19,
+      "bytes": 754841,
+      "sha256": "33256eb86faa9f9df8240dbff1998b376918edb5324ce71c4ddccdeb1b03b9a0"
+    },
+    {
+      "archivo": "azure-redes.excalidrawlib",
+      "nombre": "Azure Network",
+      "autores": [
+        {
+          "name": "Gordon Howes",
+          "github": "",
+          "twitter": "https://twitter.com/@7demonsrising",
+          "url": "https://twitter.com/@7demonsrising"
+        }
+      ],
+      "url": "https://raw.githubusercontent.com/excalidraw/excalidraw-libraries/main/libraries/7demonsrising/azure-network.excalidrawlib",
+      "licencia": "MIT",
+      "fecha_descarga": "2026-11-04",
+      "elementos_biblioteca": 29,
+      "bytes": 537402,
+      "sha256": "354edf60294b55222fc2220690027df8eca57be1b8380dd2a73f0487a45493b9"
+    },
+    {
+      "archivo": "azure-almacenamiento.excalidrawlib",
+      "nombre": "Azure Storage",
+      "autores": [
+        {
+          "name": "Go",
+          "github": "",
+          "twitter": "https://twitter.com/@7demonsrising",
+          "url": "https://twitter.com/@7demonsrising"
+        }
+      ],
+      "url": "https://raw.githubusercontent.com/excalidraw/excalidraw-libraries/main/libraries/7demonsrising/azure-storage.excalidrawlib",
+      "licencia": "MIT",
+      "fecha_descarga": "2026-11-04",
+      "elementos_biblioteca": 13,
+      "bytes": 589585,
+      "sha256": "19564877a8cee7af46db8c60bb1833cb6dc7a2de172af0bde6e938bfa3273f86"
+    },
+    {
+      "archivo": "gcp-servicios.excalidrawlib",
+      "nombre": "GCP Icons",
+      "autores": [
+        {
+          "name": "Clément Bosc",
+          "github": "https://github.com/clementbosc",
+          "twitter": "https://twitter.com/clementbosc_",
+          "url": "https://github.com/clementbosc"
+        }
+      ],
+      "url": "https://raw.githubusercontent.com/excalidraw/excalidraw-libraries/main/libraries/clementbosc/gcp-icons.excalidrawlib",
+      "licencia": "MIT",
+      "fecha_descarga": "2026-11-04",
+      "elementos_biblioteca": 83,
+      "bytes": 796220,
+      "sha256": "6e19f89b718e7837be5af6e1b02de45908a4da49964c1a66d115e8eac56a5be2"
+    },
+    {
+      "archivo": "redes-topologia.excalidrawlib",
+      "nombre": "Network topology icons",
+      "autores": [
+        {
+          "name": "dwelle",
+          "github": "https://github.com/dwelle",
+          "twitter": "https://twitter.com/dluzar",
+          "url": "https://twitter.com/dluzar"
+        }
+      ],
+      "url": "https://raw.githubusercontent.com/excalidraw/excalidraw-libraries/main/libraries/dwelle/network-topology-icons.excalidrawlib",
+      "licencia": "MIT",
+      "fecha_descarga": "2026-11-04",
+      "elementos_biblioteca": 10,
+      "bytes": 142936,
+      "sha256": "3775004a854b9b1bee92babe6b3783c8f7881556efa342eb336bd08afc227fb7"
+    },
+    {
+      "archivo": "arquitectura-software.excalidrawlib",
+      "nombre": "Software Architecture",
+      "autores": [
+        {
+          "name": "Youri Tjang",
+          "url": "https://github.com/youritjang"
+        }
+      ],
+      "url": "https://raw.githubusercontent.com/excalidraw/excalidraw-libraries/main/libraries/youritjang/software-architecture.excalidrawlib",
+      "licencia": "MIT",
+      "fecha_descarga": "2026-11-04",
+      "elementos_biblioteca": 7,
+      "bytes": 44591,
+      "sha256": "5dead109b7569066a5fd3c2bcfe5f045c156f27a391eed71e6dd640b4317ce65"
+    }
+  ]
+}

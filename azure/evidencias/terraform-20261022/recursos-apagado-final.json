@@ -1,0 +1,12 @@
+[
+  {
+    "location": "northcentralus",
+    "name": "nxa1db87b28407f",
+    "type": "Microsoft.Storage/storageAccounts"
+  },
+  {
+    "location": "northcentralus",
+    "name": "nexoandes-vnet",
+    "type": "Microsoft.Network/virtualNetworks"
+  }
+]

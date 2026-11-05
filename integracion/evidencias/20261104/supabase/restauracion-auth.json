@@ -1,0 +1,10 @@
+{
+  "utc": "2026-11-05T02:43:34.918456+00:00",
+  "objeto": "supabase/20261105T023835Z.tgz",
+  "fuente": "Respaldo real S3 con hash idéntico a las copias Azure/GCP",
+  "alcance": "Restauracion selectiva de auth.users en BD temporal, no restauracion integral de toda la pila",
+  "consulta_origen": "1|a99f332df8b080260f6e6703d3f8c4d5",
+  "consulta_restaurada": "1|a99f332df8b080260f6e6703d3f8c4d5",
+  "coinciden": true,
+  "temporal_eliminada_por_trap": true
+}

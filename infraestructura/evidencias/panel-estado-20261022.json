@@ -1,0 +1,13 @@
+{
+  "buttons_locked_during_command": true,
+  "exit_code": 0,
+  "status": "Operación completada.",
+  "buttons_restored": true,
+  "utc": "2026-10-22T22:54:07.391090+00:00",
+  "action": "Ver estado guardado",
+  "clouds": [
+    "aws",
+    "azure"
+  ],
+  "mutates_cloud": false
+}

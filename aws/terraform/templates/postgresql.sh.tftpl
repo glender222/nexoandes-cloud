@@ -1,0 +1,67 @@
+#!/bin/bash
+set -euo pipefail
+dnf install -y postgresql15-server postgresql15 openssl
+DEVICE="/dev/disk/by-id/nvme-Amazon_Elastic_Block_Store_${volume_id}"
+for attempt in $(seq 1 180); do
+  [[ -b "$DEVICE" ]] && break
+  [[ -b /dev/xvdf ]] && DEVICE=/dev/xvdf && break
+  sleep 2
+done
+[[ -b "$DEVICE" ]] || { echo 'No se encontró el volumen persistente'; exit 1; }
+if ! blkid "$DEVICE"; then mkfs.xfs "$DEVICE"; fi
+mkdir -p /srv/postgresql
+UUID=$(blkid -s UUID -o value "$DEVICE")
+grep -q "$UUID" /etc/fstab || echo "UUID=$UUID /srv/postgresql xfs defaults,nofail 0 2" >> /etc/fstab
+mountpoint -q /srv/postgresql || mount /srv/postgresql
+chown postgres:postgres /srv/postgresql
+mkdir -p /etc/systemd/system/postgresql.service.d
+cat > /etc/systemd/system/postgresql.service.d/datos.conf <<'UNIT'
+[Unit]
+RequiresMountsFor=/srv/postgresql
+[Service]
+Environment=PGDATA=/srv/postgresql/data
+UNIT
+systemctl daemon-reload
+if [[ ! -f /srv/postgresql/data/PG_VERSION ]]; then
+  sudo -u postgres /usr/bin/initdb -D /srv/postgresql/data
+  echo "listen_addresses = '*'" >> /srv/postgresql/data/postgresql.conf
+  echo "password_encryption = 'scram-sha-256'" >> /srv/postgresql/data/postgresql.conf
+  echo 'host all all 10.10.0.0/16 scram-sha-256' >> /srv/postgresql/data/pg_hba.conf
+fi
+systemctl enable --now postgresql
+if ! sudo -u postgres psql -tAc "SELECT 1 FROM pg_database WHERE datname='awsacademydb'" | grep -q 1; then
+  sudo -u postgres createdb awsacademydb
+fi
+# El portal es informativo. No se crea ni publica una contraseña de aplicación.
+# La autenticación de aplicación se configura cuando exista ese componente.
+cat > /usr/local/sbin/nexoandes-backup <<'BACKUP'
+#!/bin/bash
+set -euo pipefail
+umask 077
+WORK=$(mktemp -d)
+trap 'rm -rf "$WORK"' EXIT
+sudo -u postgres pg_dump -Fc awsacademydb > "$WORK/awsacademydb.dump"
+aws s3 cp "$WORK/awsacademydb.dump" "s3://${bucket}/postgresql/$(date -u +%Y%m%dT%H%M%SZ).dump" --region ${region} --only-show-errors
+BACKUP
+chmod 700 /usr/local/sbin/nexoandes-backup
+cat > /etc/systemd/system/nexoandes-backup.service <<'UNIT'
+[Unit]
+Description=Respaldo PostgreSQL a S3
+After=postgresql.service network-online.target
+Requires=postgresql.service
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/nexoandes-backup
+UNIT
+cat > /etc/systemd/system/nexoandes-backup.timer <<'UNIT'
+[Unit]
+Description=Respaldar PostgreSQL cada hora durante actividad
+[Timer]
+OnBootSec=10min
+OnUnitActiveSec=1h
+Persistent=true
+[Install]
+WantedBy=timers.target
+UNIT
+systemctl daemon-reload
+systemctl enable --now nexoandes-backup.timer

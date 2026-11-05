@@ -1,0 +1,634 @@
+{
+  "utc": "2026-11-05T05:07:13.305042+00:00",
+  "modo": "lectura",
+  "nubes": {
+    "gcp": {
+      "identidad": {
+        "proyecto": "gen-lang-client-0623826791",
+        "cuenta_servicio": "gen-lang-client-0623826791@gen-lang-client-0623826791.iam.gserviceaccount.com"
+      },
+      "politica_proyecto": {
+        "ok": false,
+        "http": 403,
+        "datos": null,
+        "error": "Cloud Resource Manager API has not been used in project 816654945610 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=816654945610 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+      },
+      "politica_bucket": {
+        "ok": true,
+        "http": 200,
+        "datos": {
+          "kind": "storage#policy",
+          "resourceId": "projects/_/buckets/nexoandes-backup-gen-lang-client-0623826791",
+          "version": 1,
+          "etag": "CAI=",
+          "bindings": [
+            {
+              "role": "roles/storage.legacyBucketOwner",
+              "members": [
+                "projectEditor:gen-lang-client-0623826791",
+                "projectOwner:gen-lang-client-0623826791"
+              ]
+            },
+            {
+              "role": "roles/storage.legacyBucketReader",
+              "members": [
+                "projectViewer:gen-lang-client-0623826791"
+              ]
+            },
+            {
+              "role": "roles/storage.legacyObjectOwner",
+              "members": [
+                "projectEditor:gen-lang-client-0623826791",
+                "projectOwner:gen-lang-client-0623826791"
+              ]
+            },
+            {
+              "role": "roles/storage.legacyObjectReader",
+              "members": [
+                "projectViewer:gen-lang-client-0623826791"
+              ]
+            }
+          ]
+        },
+        "error": null
+      },
+      "permisos_bucket": {
+        "ok": true,
+        "http": 200,
+        "datos": {
+          "kind": "storage#testIamPermissionsResponse",
+          "permissions": [
+            "storage.buckets.get",
+            "storage.buckets.getIamPolicy",
+            "storage.objects.create",
+            "storage.objects.delete",
+            "storage.objects.get",
+            "storage.objects.list"
+          ]
+        },
+        "error": null
+      },
+      "vm": {
+        "ok": true,
+        "http": 200,
+        "datos": {
+          "name": "nexoandes-gcp-standby",
+          "status": "TERMINATED"
+        },
+        "error": null
+      }
+    },
+    "azure": {
+      "identidad": {
+        "ok": true,
+        "datos": {
+          "suscripcion": "1db87b28-407f-41d3-b532-41942343157c",
+          "tenant": "cfbd88b4-94bc-4fba-98bd-64d0726394a3",
+          "tipo": "user"
+        },
+        "error": null
+      },
+      "principal": {
+        "ok": true,
+        "datos": {
+          "object_id": "3dea043f-f19f-4575-aa57-93db1f8ec20f"
+        },
+        "error": null
+      },
+      "scope_storage": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/resourceGroups/nexoandes-lab/providers/Microsoft.Storage/storageAccounts/nxa1db87b28407f",
+      "asignaciones": {
+        "ok": true,
+        "datos": [
+          {
+            "id": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/providers/Microsoft.Authorization/roleAssignments/2def627f-1ec0-44ef-a8c1-5eb5d31f35f4",
+            "nombre": "Owner",
+            "principal": "3dea043f-f19f-4575-aa57-93db1f8ec20f",
+            "scope": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c",
+            "tipo": "User"
+          },
+          {
+            "id": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c/providers/Microsoft.Authorization/roleAssignments/448c9355-30e9-4186-b8d1-85ddd1afd154",
+            "nombre": "Owner",
+            "principal": "3dea043f-f19f-4575-aa57-93db1f8ec20f",
+            "scope": "/subscriptions/1db87b28-407f-41d3-b532-41942343157c",
+            "tipo": "User"
+          }
+        ],
+        "error": null
+      },
+      "acceso_entra": {
+        "ok": false,
+        "datos": null,
+        "error": "ERROR: \nYou do not have the required permissions needed to perform this operation.\nDepending on your operation, you may need to be assigned one of the following roles:\n    \"Storage Blob Data Owner\"\n    \"Storage Blob Data Contributor\"\n    \"Storage Blob Data Reader\"\n    \"Storage Queue Data Contributor\"\n    \"Storage Queue Data Reader\"\n    \"Storage Table Data Contributor\"\n    \"Storage Table Data Reader\"\n\nIf you want to use the old authentication method and allow querying for the right account key, please use the \"--auth-mode\" parameter and \"key\" value."
+      }
+    },
+    "aws": {
+      "identidad": {
+        "UserId": "AROA4LTA5JST47ZAYZY5M:user5367530=Glender_Vargas",
+        "Account": "849533029543",
+        "Arn": "arn:aws:sts::849533029543:assumed-role/voclabs/user5367530=Glender_Vargas"
+      },
+      "adjuntas": {
+        "ok": true,
+        "datos": {
+          "AttachedPolicies": [
+            {
+              "PolicyName": "c237389a5957093l17806640t1w849533029543-VocLabPolicy3-to4HkOpjTNXc",
+              "PolicyArn": "arn:aws:iam::849533029543:policy/c237389a5957093l17806640t1w849533029543-VocLabPolicy3-to4HkOpjTNXc"
+            },
+            {
+              "PolicyName": "c237389a5957093l17806640t1w849533029543-VocLabPolicy1-Ej3PfcWZsVQX",
+              "PolicyArn": "arn:aws:iam::849533029543:policy/c237389a5957093l17806640t1w849533029543-VocLabPolicy1-Ej3PfcWZsVQX"
+            },
+            {
+              "PolicyName": "c237389a5957093l17806640t1w849533029543-VocLabPolicy2-JKAkjUd0OssV",
+              "PolicyArn": "arn:aws:iam::849533029543:policy/c237389a5957093l17806640t1w849533029543-VocLabPolicy2-JKAkjUd0OssV"
+            },
+            {
+              "PolicyName": "AmazonSSMManagedInstanceCore",
+              "PolicyArn": "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+            },
+            {
+              "PolicyName": "AmazonEKSClusterPolicy",
+              "PolicyArn": "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+            },
+            {
+              "PolicyName": "AmazonEC2ContainerRegistryReadOnly",
+              "PolicyArn": "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+            },
+            {
+              "PolicyName": "AmazonEKSWorkerNodePolicy",
+              "PolicyArn": "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
+            }
+          ]
+        }
+      },
+      "rol": {
+        "ok": true,
+        "datos": {
+          "Role": {
+            "Path": "/",
+            "RoleName": "LabRole",
+            "RoleId": "AROA4LTA5JSTZGWFTPABI",
+            "Arn": "arn:aws:iam::849533029543:role/LabRole",
+            "CreateDate": "2026-10-22T19:37:46+00:00",
+            "AssumeRolePolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Principal": {
+                    "AWS": "arn:aws:iam::849533029543:role/LabRole",
+                    "Service": [
+                      "codedeploy.amazonaws.com",
+                      "sqs.amazonaws.com",
+                      "secretsmanager.amazonaws.com",
+                      "logs.amazonaws.com",
+                      "elasticbeanstalk.amazonaws.com",
+                      "redshift.amazonaws.com",
+                      "eks.amazonaws.com",
+                      "cloudformation.amazonaws.com",
+                      "ecs.amazonaws.com",
+                      "resource-groups.amazonaws.com",
+                      "ec2.application-autoscaling.amazonaws.com",
+                      "elasticfilesystem.amazonaws.com",
+                      "ecs-tasks.amazonaws.com",
+                      "apigateway.amazonaws.com",
+                      "scheduler.amazonaws.com",
+                      "autoscaling.amazonaws.com",
+                      "batch.amazonaws.com",
+                      "credentials.iot.amazonaws.com",
+                      "ec2.amazonaws.com",
+                      "athena.amazonaws.com",
+                      "lambda.amazonaws.com",
+                      "forecast.amazonaws.com",
+                      "iot.amazonaws.com",
+                      "codewhisperer.amazonaws.com",
+                      "rds.amazonaws.com",
+                      "servicecatalog.amazonaws.com",
+                      "kinesis.amazonaws.com",
+                      "backup.amazonaws.com",
+                      "events.amazonaws.com",
+                      "databrew.amazonaws.com",
+                      "pipes.amazonaws.com",
+                      "firehose.amazonaws.com",
+                      "s3.amazonaws.com",
+                      "rekognition.amazonaws.com",
+                      "states.amazonaws.com",
+                      "elasticloadbalancing.amazonaws.com",
+                      "application-autoscaling.amazonaws.com",
+                      "elasticmapreduce.amazonaws.com",
+                      "iotanalytics.amazonaws.com",
+                      "sns.amazonaws.com",
+                      "codecommit.amazonaws.com",
+                      "kms.amazonaws.com",
+                      "sagemaker.amazonaws.com",
+                      "iotevents.amazonaws.com",
+                      "glue.amazonaws.com",
+                      "ssm.amazonaws.com",
+                      "dynamodb.amazonaws.com",
+                      "cognito-idp.amazonaws.com",
+                      "eks-fargate-pods.amazonaws.com",
+                      "cloudtrail.amazonaws.com",
+                      "kinesisanalytics.amazonaws.com",
+                      "deepracer.amazonaws.com"
+                    ]
+                  },
+                  "Action": "sts:AssumeRole"
+                }
+              ]
+            },
+            "Description": "",
+            "MaxSessionDuration": 3600,
+            "Tags": [
+              {
+                "Key": "cloudlab",
+                "Value": "c237389a5957093l17806640t1w849533029543"
+              }
+            ],
+            "RoleLastUsed": {
+              "LastUsedDate": "2026-11-05T04:52:32+00:00",
+              "Region": "us-east-1"
+            }
+          }
+        }
+      },
+      "perfil": {
+        "ok": true,
+        "datos": {
+          "InstanceProfile": {
+            "Path": "/",
+            "InstanceProfileName": "LabInstanceProfile",
+            "InstanceProfileId": "AIPA4LTA5JSTR3N6DKWLD",
+            "Arn": "arn:aws:iam::849533029543:instance-profile/LabInstanceProfile",
+            "CreateDate": "2026-10-22T19:38:05+00:00",
+            "Roles": [
+              {
+                "Path": "/",
+                "RoleName": "LabRole",
+                "RoleId": "AROA4LTA5JSTZGWFTPABI",
+                "Arn": "arn:aws:iam::849533029543:role/LabRole",
+                "CreateDate": "2026-10-22T19:37:46+00:00",
+                "AssumeRolePolicyDocument": {
+                  "Version": "2012-10-17",
+                  "Statement": [
+                    {
+                      "Effect": "Allow",
+                      "Principal": {
+                        "AWS": "arn:aws:iam::849533029543:role/LabRole",
+                        "Service": [
+                          "backup.amazonaws.com",
+                          "kinesisanalytics.amazonaws.com",
+                          "pipes.amazonaws.com",
+                          "kinesis.amazonaws.com",
+                          "servicecatalog.amazonaws.com",
+                          "events.amazonaws.com",
+                          "firehose.amazonaws.com",
+                          "databrew.amazonaws.com",
+                          "s3.amazonaws.com",
+                          "apigateway.amazonaws.com",
+                          "states.amazonaws.com",
+                          "application-autoscaling.amazonaws.com",
+                          "elasticfilesystem.amazonaws.com",
+                          "ecs-tasks.amazonaws.com",
+                          "ec2.application-autoscaling.amazonaws.com",
+                          "rekognition.amazonaws.com",
+                          "resource-groups.amazonaws.com",
+                          "lambda.amazonaws.com",
+                          "autoscaling.amazonaws.com",
+                          "batch.amazonaws.com",
+                          "scheduler.amazonaws.com",
+                          "ec2.amazonaws.com",
+                          "athena.amazonaws.com",
+                          "credentials.iot.amazonaws.com",
+                          "rds.amazonaws.com",
+                          "forecast.amazonaws.com",
+                          "iot.amazonaws.com",
+                          "codewhisperer.amazonaws.com",
+                          "sqs.amazonaws.com",
+                          "logs.amazonaws.com",
+                          "secretsmanager.amazonaws.com",
+                          "ecs.amazonaws.com",
+                          "redshift.amazonaws.com",
+                          "elasticbeanstalk.amazonaws.com",
+                          "eks.amazonaws.com",
+                          "codedeploy.amazonaws.com",
+                          "elasticloadbalancing.amazonaws.com",
+                          "iotanalytics.amazonaws.com",
+                          "sns.amazonaws.com",
+                          "cloudformation.amazonaws.com",
+                          "elasticmapreduce.amazonaws.com",
+                          "kms.amazonaws.com",
+                          "sagemaker.amazonaws.com",
+                          "iotevents.amazonaws.com",
+                          "codecommit.amazonaws.com",
+                          "cloudtrail.amazonaws.com",
+                          "eks-fargate-pods.amazonaws.com",
+                          "dynamodb.amazonaws.com",
+                          "glue.amazonaws.com",
+                          "ssm.amazonaws.com",
+                          "cognito-idp.amazonaws.com",
+                          "deepracer.amazonaws.com"
+                        ]
+                      },
+                      "Action": "sts:AssumeRole"
+                    }
+                  ]
+                }
+              }
+            ],
+            "Tags": []
+          }
+        }
+      },
+      "inline": {
+        "ok": true,
+        "datos": {
+          "PolicyNames": []
+        }
+      },
+      "instancias": {
+        "ok": true,
+        "datos": [
+          {
+            "id": "i-01ae7353f82b8daa5",
+            "nombre": "nexoandes-postgresql",
+            "perfil": "arn:aws:iam::849533029543:instance-profile/LabInstanceProfile",
+            "estado": "running",
+            "imds": "required"
+          },
+          {
+            "id": "i-0ceea48d268d2cb83",
+            "nombre": "nexoandes-supabase",
+            "perfil": "arn:aws:iam::849533029543:instance-profile/LabInstanceProfile",
+            "estado": "running",
+            "imds": "required"
+          },
+          {
+            "id": "i-0e91e65928d2f3596",
+            "nombre": "nexoandes-web",
+            "perfil": "arn:aws:iam::849533029543:instance-profile/LabInstanceProfile",
+            "estado": "running",
+            "imds": "required"
+          },
+          {
+            "id": "i-0f1495429ee5f8459",
+            "nombre": "nexoandes-web",
+            "perfil": "arn:aws:iam::849533029543:instance-profile/LabInstanceProfile",
+            "estado": "running",
+            "imds": "required"
+          },
+          {
+            "id": "i-0afbfc0f2766af28c",
+            "nombre": "nexoandes-ipsec",
+            "perfil": "arn:aws:iam::849533029543:instance-profile/LabInstanceProfile",
+            "estado": "running",
+            "imds": "required"
+          }
+        ]
+      },
+      "politicas": {
+        "c237389a5957093l17806640t1w849533029543-VocLabPolicy3-to4HkOpjTNXc": {
+          "ok": false,
+          "error": "aws: [ERROR]: An error occurred (AccessDenied) when calling the GetPolicy operation: User: arn:aws:sts::849533029543:assumed-role/voclabs/user5367530=Glender_Vargas is not authorized to perform: iam:GetPolicy on resource: policy arn:aws:iam::849533029543:policy/c237389a5957093l17806640t1w849533029543-VocLabPolicy3-to4HkOpjTNXc with an explicit deny in an identity-based policy: arn:aws:iam::849533029543:policy/Pvoclabs1. Go to https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/authorization-details/7l9xm69zf3zkzp7j6ve5910ke for complete details, or call the GetRequestAuthorizationDetails API with the following authorization id: 7l9xm69zf3zkzp7j6ve5910ke"
+        },
+        "c237389a5957093l17806640t1w849533029543-VocLabPolicy1-Ej3PfcWZsVQX": {
+          "ok": false,
+          "error": "aws: [ERROR]: An error occurred (AccessDenied) when calling the GetPolicy operation: User: arn:aws:sts::849533029543:assumed-role/voclabs/user5367530=Glender_Vargas is not authorized to perform: iam:GetPolicy on resource: policy arn:aws:iam::849533029543:policy/c237389a5957093l17806640t1w849533029543-VocLabPolicy1-Ej3PfcWZsVQX with an explicit deny in an identity-based policy: arn:aws:iam::849533029543:policy/Pvoclabs1. Go to https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/authorization-details/5ukqdkv6k8rycdfg9l6omf41f for complete details, or call the GetRequestAuthorizationDetails API with the following authorization id: 5ukqdkv6k8rycdfg9l6omf41f"
+        },
+        "c237389a5957093l17806640t1w849533029543-VocLabPolicy2-JKAkjUd0OssV": {
+          "ok": false,
+          "error": "aws: [ERROR]: An error occurred (AccessDenied) when calling the GetPolicy operation: User: arn:aws:sts::849533029543:assumed-role/voclabs/user5367530=Glender_Vargas is not authorized to perform: iam:GetPolicy on resource: policy arn:aws:iam::849533029543:policy/c237389a5957093l17806640t1w849533029543-VocLabPolicy2-JKAkjUd0OssV with an explicit deny in an identity-based policy: arn:aws:iam::849533029543:policy/Pvoclabs1. Go to https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/authorization-details/5eclkdmihkhyptmr8i4dnnuk for complete details, or call the GetRequestAuthorizationDetails API with the following authorization id: 5eclkdmihkhyptmr8i4dnnuk"
+        },
+        "AmazonSSMManagedInstanceCore": {
+          "ok": true,
+          "datos": {
+            "PolicyVersion": {
+              "Document": {
+                "Version": "2012-10-17",
+                "Statement": [
+                  {
+                    "Effect": "Allow",
+                    "Action": [
+                      "ssm:DescribeAssociation",
+                      "ssm:GetDeployablePatchSnapshotForInstance",
+                      "ssm:GetDocument",
+                      "ssm:DescribeDocument",
+                      "ssm:GetManifest",
+                      "ssm:GetParameter",
+                      "ssm:GetParameters",
+                      "ssm:ListAssociations",
+                      "ssm:ListInstanceAssociations",
+                      "ssm:PutInventory",
+                      "ssm:PutComplianceItems",
+                      "ssm:PutConfigurePackageResult",
+                      "ssm:UpdateAssociationStatus",
+                      "ssm:UpdateInstanceAssociationStatus",
+                      "ssm:UpdateInstanceInformation"
+                    ],
+                    "Resource": "*"
+                  },
+                  {
+                    "Effect": "Allow",
+                    "Action": [
+                      "ssmmessages:CreateControlChannel",
+                      "ssmmessages:CreateDataChannel",
+                      "ssmmessages:OpenControlChannel",
+                      "ssmmessages:OpenDataChannel"
+                    ],
+                    "Resource": "*"
+                  },
+                  {
+                    "Effect": "Allow",
+                    "Action": [
+                      "ec2messages:AcknowledgeMessage",
+                      "ec2messages:DeleteMessage",
+                      "ec2messages:FailMessage",
+                      "ec2messages:GetEndpoint",
+                      "ec2messages:GetMessages",
+                      "ec2messages:SendReply"
+                    ],
+                    "Resource": "*"
+                  }
+                ]
+              },
+              "VersionId": "v2",
+              "IsDefaultVersion": true,
+              "CreateDate": "2019-05-23T16:54:21+00:00"
+            }
+          }
+        },
+        "AmazonEKSClusterPolicy": {
+          "ok": true,
+          "datos": {
+            "PolicyVersion": {
+              "Document": {
+                "Version": "2012-10-17",
+                "Statement": [
+                  {
+                    "Sid": "AmazonEKSClusterPolicy",
+                    "Effect": "Allow",
+                    "Action": [
+                      "autoscaling:DescribeAutoScalingGroups",
+                      "autoscaling:UpdateAutoScalingGroup",
+                      "ec2:AttachVolume",
+                      "ec2:AuthorizeSecurityGroupIngress",
+                      "ec2:CreateRoute",
+                      "ec2:CreateSecurityGroup",
+                      "ec2:CreateTags",
+                      "ec2:CreateVolume",
+                      "ec2:DeleteRoute",
+                      "ec2:DeleteSecurityGroup",
+                      "ec2:DeleteVolume",
+                      "ec2:DescribeInstances",
+                      "ec2:DescribeRouteTables",
+                      "ec2:DescribeSecurityGroups",
+                      "ec2:DescribeSubnets",
+                      "ec2:DescribeVolumes",
+                      "ec2:DescribeVolumesModifications",
+                      "ec2:DescribeVpcs",
+                      "ec2:DescribeDhcpOptions",
+                      "ec2:DescribeNetworkInterfaces",
+                      "ec2:DescribeAvailabilityZones",
+                      "ec2:DetachVolume",
+                      "ec2:ModifyInstanceAttribute",
+                      "ec2:ModifyVolume",
+                      "ec2:RevokeSecurityGroupIngress",
+                      "ec2:DescribeAccountAttributes",
+                      "ec2:DescribeAddresses",
+                      "ec2:DescribeInternetGateways",
+                      "ec2:DescribeInstanceTopology",
+                      "elasticloadbalancing:AddTags",
+                      "elasticloadbalancing:ApplySecurityGroupsToLoadBalancer",
+                      "elasticloadbalancing:AttachLoadBalancerToSubnets",
+                      "elasticloadbalancing:ConfigureHealthCheck",
+                      "elasticloadbalancing:CreateListener",
+                      "elasticloadbalancing:CreateLoadBalancer",
+                      "elasticloadbalancing:CreateLoadBalancerListeners",
+                      "elasticloadbalancing:CreateLoadBalancerPolicy",
+                      "elasticloadbalancing:CreateTargetGroup",
+                      "elasticloadbalancing:DeleteListener",
+                      "elasticloadbalancing:DeleteLoadBalancer",
+                      "elasticloadbalancing:DeleteLoadBalancerListeners",
+                      "elasticloadbalancing:DeleteTargetGroup",
+                      "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
+                      "elasticloadbalancing:DeregisterTargets",
+                      "elasticloadbalancing:DescribeListeners",
+                      "elasticloadbalancing:DescribeLoadBalancerAttributes",
+                      "elasticloadbalancing:DescribeLoadBalancerPolicies",
+                      "elasticloadbalancing:DescribeLoadBalancers",
+                      "elasticloadbalancing:DescribeTargetGroupAttributes",
+                      "elasticloadbalancing:DescribeTargetGroups",
+                      "elasticloadbalancing:DescribeTargetHealth",
+                      "elasticloadbalancing:DetachLoadBalancerFromSubnets",
+                      "elasticloadbalancing:ModifyListener",
+                      "elasticloadbalancing:ModifyLoadBalancerAttributes",
+                      "elasticloadbalancing:ModifyTargetGroup",
+                      "elasticloadbalancing:ModifyTargetGroupAttributes",
+                      "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
+                      "elasticloadbalancing:RegisterTargets",
+                      "elasticloadbalancing:SetLoadBalancerPoliciesForBackendServer",
+                      "elasticloadbalancing:SetLoadBalancerPoliciesOfListener",
+                      "kms:DescribeKey"
+                    ],
+                    "Resource": "*"
+                  },
+                  {
+                    "Sid": "AmazonEKSClusterPolicySLRCreate",
+                    "Effect": "Allow",
+                    "Action": "iam:CreateServiceLinkedRole",
+                    "Resource": "*",
+                    "Condition": {
+                      "StringEquals": {
+                        "iam:AWSServiceName": "elasticloadbalancing.amazonaws.com"
+                      }
+                    }
+                  },
+                  {
+                    "Sid": "AmazonEKSClusterPolicyENIDelete",
+                    "Effect": "Allow",
+                    "Action": "ec2:DeleteNetworkInterface",
+                    "Resource": "*",
+                    "Condition": {
+                      "StringEquals": {
+                        "ec2:ResourceTag/eks:eni:owner": "amazon-vpc-cni"
+                      }
+                    }
+                  }
+                ]
+              },
+              "VersionId": "v10",
+              "IsDefaultVersion": true,
+              "CreateDate": "2026-02-12T17:58:15+00:00"
+            }
+          }
+        },
+        "AmazonEC2ContainerRegistryReadOnly": {
+          "ok": true,
+          "datos": {
+            "PolicyVersion": {
+              "Document": {
+                "Version": "2012-10-17",
+                "Statement": [
+                  {
+                    "Effect": "Allow",
+                    "Action": [
+                      "ecr:GetAuthorizationToken",
+                      "ecr:BatchCheckLayerAvailability",
+                      "ecr:GetDownloadUrlForLayer",
+                      "ecr:GetRepositoryPolicy",
+                      "ecr:DescribeRepositories",
+                      "ecr:ListImages",
+                      "ecr:DescribeImages",
+                      "ecr:BatchGetImage",
+                      "ecr:GetLifecyclePolicy",
+                      "ecr:GetLifecyclePolicyPreview",
+                      "ecr:ListTagsForResource",
+                      "ecr:DescribeImageScanFindings"
+                    ],
+                    "Resource": "*"
+                  }
+                ]
+              },
+              "VersionId": "v3",
+              "IsDefaultVersion": true,
+              "CreateDate": "2019-12-10T20:56:32+00:00"
+            }
+          }
+        },
+        "AmazonEKSWorkerNodePolicy": {
+          "ok": true,
+          "datos": {
+            "PolicyVersion": {
+              "Document": {
+                "Version": "2012-10-17",
+                "Statement": [
+                  {
+                    "Sid": "WorkerNodePermissions",
+                    "Effect": "Allow",
+                    "Action": [
+                      "ec2:DescribeInstances",
+                      "ec2:DescribeInstanceTypes",
+                      "ec2:DescribeRouteTables",
+                      "ec2:DescribeSecurityGroups",
+                      "ec2:DescribeSubnets",
+                      "ec2:DescribeVolumes",
+                      "ec2:DescribeVolumesModifications",
+                      "ec2:DescribeVpcs",
+                      "eks:DescribeCluster",
+                      "eks-auth:AssumeRoleForPodIdentity"
+                    ],
+                    "Resource": "*"
+                  }
+                ]
+              },
+              "VersionId": "v3",
+              "IsDefaultVersion": true,
+              "CreateDate": "2023-11-27T00:06:13+00:00"
+            }
+          }
+        }
+      }
+    }
+  }
+}

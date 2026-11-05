@@ -1,0 +1,74 @@
+{
+  "utc": "2026-11-04T19:11:47.498953+00:00",
+  "aws": [
+    {
+      "id": 1,
+      "etiqueta": "preparacion-20261104"
+    },
+    {
+      "id": 2,
+      "etiqueta": "preparacion-20261104"
+    },
+    {
+      "id": 3,
+      "etiqueta": "preparacion-20261104"
+    },
+    {
+      "id": 4,
+      "etiqueta": "antes-failover-20261104"
+    },
+    {
+      "id": 37,
+      "etiqueta": "escrito-en-gcp-20261104"
+    },
+    {
+      "id": 38,
+      "etiqueta": "preparacion-20261104"
+    },
+    {
+      "id": 39,
+      "etiqueta": "preparacion-20261104"
+    }
+  ],
+  "gcp": [
+    {
+      "id": 1,
+      "etiqueta": "preparacion-20261104"
+    },
+    {
+      "id": 2,
+      "etiqueta": "preparacion-20261104"
+    },
+    {
+      "id": 3,
+      "etiqueta": "preparacion-20261104"
+    },
+    {
+      "id": 4,
+      "etiqueta": "antes-failover-20261104"
+    },
+    {
+      "id": 37,
+      "etiqueta": "escrito-en-gcp-20261104"
+    },
+    {
+      "id": 38,
+      "etiqueta": "preparacion-20261104"
+    },
+    {
+      "id": 39,
+      "etiqueta": "preparacion-20261104"
+    }
+  ],
+  "coinciden": true,
+  "filas": 7,
+  "filas_previas_preservadas": 5,
+  "vm_y_discos_gcp_sin_recrear": true,
+  "gcp_ids": {
+    "nexoandes-gcp-standby": "6889337204637100633",
+    "nexoandes-gcp-postgresql": "4142628206354557535"
+  },
+  "db_aws": "i-01ae7353f82b8daa5",
+  "volumen_aws": "vol-0641bf3d4c25b6b34",
+  "nota": "El primer reencendido necesitó corregir la reconciliación de IP; después se reejecutó el flujo completo."
+}

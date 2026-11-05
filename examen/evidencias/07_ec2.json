@@ -1,0 +1,166 @@
+{
+    "Reservations": [
+        {
+            "ReservationId": "r-0e5b718d0dd9bbd30",
+            "OwnerId": "849533029543",
+            "Groups": [],
+            "Instances": [
+                {
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2026-10-22T21:24:52+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-04aa95f74f5f98727",
+                                "EbsCardIndex": 0
+                            }
+                        }
+                    ],
+                    "ClientToken": "b51e2720-ef28-42a5-b181-5fa81ffbc606",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "amazon",
+                                "PublicDnsName": "ec2-44-204-139-138.compute-1.amazonaws.com",
+                                "PublicIp": "44.204.139.138"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2026-10-22T21:24:51+00:00",
+                                "AttachmentId": "eni-attach-06902ecfff72ec500",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "NetworkCardIndex": 0
+                            },
+                            "Description": "",
+                            "Groups": [
+                                {
+                                    "GroupId": "sg-082c010b7e988d4f5",
+                                    "GroupName": "EXAMEN-GLENDERVARGAS-SG"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:ff:e6:d6:ca:13",
+                            "NetworkInterfaceId": "eni-0115739a22b87c835",
+                            "OwnerId": "849533029543",
+                            "PrivateDnsName": "ip-10-20-10-6.ec2.internal",
+                            "PrivateIpAddress": "10.20.10.6",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "amazon",
+                                        "PublicDnsName": "ec2-44-204-139-138.compute-1.amazonaws.com",
+                                        "PublicIp": "44.204.139.138"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-20-10-6.ec2.internal",
+                                    "PrivateIpAddress": "10.20.10.6"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-0d4b5ad045ac91b41",
+                            "VpcId": "vpc-0e549a023b818b322",
+                            "InterfaceType": "interface",
+                            "Operator": {
+                                "Managed": false
+                            }
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupId": "sg-082c010b7e988d4f5",
+                            "GroupName": "EXAMEN-GLENDERVARGAS-SG"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Name",
+                            "Value": "EXAMEN-GLENDERVARGAS-WEB"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 2
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "required",
+                        "HttpPutResponseHopLimit": 2,
+                        "HttpEndpoint": "enabled",
+                        "HttpProtocolIpv6": "disabled",
+                        "InstanceMetadataTags": "disabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    },
+                    "BootMode": "uefi-preferred",
+                    "PlatformDetails": "Linux/UNIX",
+                    "UsageOperation": "RunInstances",
+                    "UsageOperationUpdateTime": "2026-10-22T21:24:51+00:00",
+                    "PrivateDnsNameOptions": {
+                        "HostnameType": "ip-name",
+                        "EnableResourceNameDnsARecord": false,
+                        "EnableResourceNameDnsAAAARecord": false
+                    },
+                    "MaintenanceOptions": {
+                        "AutoRecovery": "default",
+                        "RebootMigration": "default"
+                    },
+                    "CurrentInstanceBootMode": "uefi",
+                    "NetworkPerformanceOptions": {
+                        "BandwidthWeighting": "default"
+                    },
+                    "Operator": {
+                        "Managed": false,
+                        "HiddenByDefault": false
+                    },
+                    "SecondaryInterfaces": [],
+                    "InstanceId": "i-00dcab0a251d51e69",
+                    "ImageId": "ami-08c46876c64a927b8",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "PrivateDnsName": "ip-10-20-10-6.ec2.internal",
+                    "PublicDnsName": "ec2-44-204-139-138.compute-1.amazonaws.com",
+                    "StateTransitionReason": "",
+                    "KeyName": "vockey",
+                    "AmiLaunchIndex": 0,
+                    "ProductCodes": [],
+                    "InstanceType": "t3.micro",
+                    "LaunchTime": "2026-10-22T21:24:51+00:00",
+                    "Placement": {
+                        "AvailabilityZoneId": "use1-az1",
+                        "GroupName": "",
+                        "Tenancy": "default",
+                        "AvailabilityZone": "us-east-1a"
+                    },
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "SubnetId": "subnet-0d4b5ad045ac91b41",
+                    "VpcId": "vpc-0e549a023b818b322",
+                    "PrivateIpAddress": "10.20.10.6",
+                    "PublicIpAddress": "44.204.139.138"
+                }
+            ]
+        }
+    ]
+}
