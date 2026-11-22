@@ -1,0 +1,16 @@
+NEXOANDES | Validación de Terraform | U3-04
+Fecha y hora   19/11/2026 18:16:11 (America/Lima)
+
+AWS Academy  ·  aws/terraform
+$ terraform -chdir=aws/terraform validate -no-color
+Success! The configuration is valid.
+
+Microsoft Azure  ·  azure/terraform
+$ terraform -chdir=azure/terraform validate -no-color
+Success! The configuration is valid.
+
+Google Cloud  ·  gcp/terraform
+$ terraform -chdir=gcp/terraform validate -no-color
+Success! The configuration is valid.
+
+Resultado: 3 de 3 configuraciones válidas.

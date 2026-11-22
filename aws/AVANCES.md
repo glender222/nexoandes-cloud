@@ -165,3 +165,34 @@ Se contrastaron las plantillas y rúbricas con Terraform y evidencias existentes
 Se comprobó identidad 849533029543/us-east-1 y se exportó LabRole (confianza, siete políticas adjuntas, cero inline). Las cinco EC2 NexoAndes tienen LabInstanceProfile e IMDSv2 required. `SSM AWS-RunShellScript` ejecutó STS y HeadBucket desde Supabase: assumed-role/LabRole y S3 correctos. No se alteraron políticas ni confianza Academy. Copias descargadas de S3 y hashes contrastados con Azure/GCP.
 
 Comandos: `./nexoandes comprobar`, `python3 integracion/auditar_iam.py`, consultas CLI/API y `python3 integracion/respaldos.py --tipo postgresql` / `--tipo supabase`. [Alcance, identidades y evidencia](../integracion/IAM.md). Credenciales y planes completos se mantienen privados; no se modificó cómputo ni la configuración del portal.
+
+## Apagado solicitado — 05/11/2026 18:30 (America/Lima)
+
+Identidad confirmada: cuenta 849533029543, us-east-1. Se revisó `./nexoandes plan apagar --nube aws` (24 cambios, sin creación ni eliminación de datos persistentes) y se ejecutó `./nexoandes apagar --nube aws`. Terraform terminó correctamente: PostgreSQL y Supabase stopped; web e IPsec terminados; ALB, ASG y NAT retirados. Se conservan discos, VPC y S3. Por la solicitud explícita de apagar todo salvo Antigravity, también se detuvo la VM EXAMEN-GLENDERVARGAS-WEB (i-00dcab0a251d51e69), ajena al estado Terraform de NexoAndes, mediante `ec2 stop-instances`; comprobada stopped. Ninguna EC2 activa en us-east-1. [Verificación final por API](../integracion/evidencias/20261105/apagado-final/verificacion.json). No se borraron bases de datos ni respaldos.
+
+Operación Terraform: `infraestructura/privado/operaciones/20261105T232524015857Z-apagar/`. El timer local de copias ya estaba inactive/disabled y no se reactivó.
+
+## Consulta de estado — 18/11/2026 (America/Lima)
+
+`./aws/infraestructura/academy-aws sts get-caller-identity --query Account --output text` devolvió `ExpiredToken` con las credenciales temporales del laboratorio (INC-001). La cuenta esperada es `849533029543`, región `us-east-1`. El inventario más reciente sigue siendo la verificación del 05/11. `systemctl --user is-active nexoandes-respaldos.timer` devolvió `inactive`.
+
+## Verificación de AWS — 19/11/2026 (America/Lima)
+
+- `academy-aws sts get-caller-identity` confirmó acceso a la cuenta `849533029543`. Las consultas de recursos se hicieron en `us-east-1`.
+- `ec2 describe-instances` y `ec2 describe-instance-status` confirmaron `nexoandes-postgresql`, `nexoandes-supabase` y `EXAMEN-GLENDERVARGAS-WEB` en `running`. Los chequeos de sistema, instancia y EBS pasaron tras la inicialización. Ambas EC2 de NexoAndes tienen sus dos discos adjuntos y carecen de IP pública.
+- `elbv2 describe-load-balancers`, `autoscaling describe-auto-scaling-groups` y `ec2 describe-nat-gateways` confirmaron la ausencia de ALB, ASG y NAT activos. La capa web NexoAndes sigue apagada. `s3api list-objects-v2` confirmó que el bucket de respaldos contiene objetos.
+- `ssm describe-instance-information` devolvió una lista vacía. Las subredes de PostgreSQL y Supabase carecen de ruta por defecto y la VPC solo tiene el endpoint de S3. Quedó pendiente la prueba interna de los servicios. La consulta HTTP al examen recibió un 403 del filtro de red local (INC-032). Se hicieron consultas de solo lectura.
+
+- Reprueba HTTP del examen el mismo día, con Proton VPN ya conectado por el usuario. `ec2 describe-instances` confirmó la IP pública vigente `3.239.18.234`, `ip route get 3.239.18.234` mostró salida por `proton0` y `curl http://3.239.18.234/` devolvió HTTP 200 con título `EXAMEN CLOUD COMPUTING` (INC-032).
+
+### Preparación de la Unidad 3 — 19/11/2026
+
+Consultas de solo lectura en `849533029543/us-east-1`. Se reconfirmaron las tres EC2 encendidas, la ausencia de ALB y ASG y el inventario SSM vacío. `ec2 describe-security-groups` confirmó TCP 5432 desde el grupo de aplicación y `10.30.1.0/24`, sin origen público. `s3api list-objects-v2` con prefijo `postgresql/` devolvió 19 objetos, entre ellos `postgresql/20261119T223612Z.dump`. El temporizador local `nexoandes-respaldos.timer` estaba inactivo. La comprobación simultánea de Azure y GCP no encontró un dump vigente común a las tres nubes (INC-033).
+
+### Arranque de la Unidad 3 — 19/11/2026 18:05 (America/Lima)
+
+Se revisó `./nexoandes plan encender` y se ejecutó `./nexoandes continuidad`. El apply inicial AWS añadió 22 recursos sin destruir recursos. Se levantaron ALB, NAT, gateway y ASG. PostgreSQL y Supabase conservaron sus EC2 y discos persistentes. El ALB mostró dos destinos saludables en `us-east-1a` y `us-east-1b`. El catálogo y `/health` respondieron HTTP 200, con marcador 40 y rol primario. `integracion/supabase/verificar.py` verificó login y acceso autenticado HTTP 200, y el endpoint sin token HTTP 401. `verificar_studio.py` comprobó 401 sin credenciales y 200 autenticado. [Inventario y pruebas](../integracion/evidencias/20261119/arranque-unidad3/inventario-pruebas.json) · [Auth](../integracion/evidencias/20261119/arranque-unidad3/supabase/pruebas-auth.json) · [Studio](../integracion/evidencias/20261119/arranque-unidad3/supabase/studio-externo.json).
+
+El arranque generó un respaldo de PG15 y `integracion/respaldos.py` copió `postgresql/20261119T230221Z.dump` a Azure y GCP con SHA-256 coincidente (INC-033). La réplica GCP pasó a `streaming` tras el reinicio del servicio (INC-034). [Evidencia de respaldos](../integracion/evidencias/20261119/respaldos.json).
+
+Revalidación de U3-02 a las 18:10. `elbv2 describe-load-balancers` devolvió el ALB `active`. `curl` devolvió `/health` con `recovery: false` y `probe: 40` tras un reintento por timeout DNS local (síntoma relacionado con INC-010).

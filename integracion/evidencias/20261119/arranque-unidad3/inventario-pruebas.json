@@ -1,0 +1,66 @@
+{
+  "utc": "2026-11-19T23:04:55.052730+00:00",
+  "portal": "http://nexoandes-alb-1568276985.us-east-1.elb.amazonaws.com",
+  "login": "https://nexoandes-alb-1568276985.us-east-1.elb.amazonaws.com/acceso/",
+  "login_pagina_http": 200,
+  "aws_health_http": {
+    "http": 200,
+    "datos": {
+      "ok": true,
+      "site": "aws",
+      "database": {
+        "recovery": false,
+        "probe": 40
+      }
+    }
+  },
+  "aws_health_https": {
+    "http": 200,
+    "datos": {
+      "ok": true,
+      "site": "aws",
+      "database": {
+        "recovery": false,
+        "probe": 40
+      }
+    }
+  },
+  "gcp": {
+    "portal": "http://136.115.82.168",
+    "salud_desde_aws": {
+      "ok": true,
+      "site": "gcp",
+      "database": {
+        "recovery": true,
+        "probe": 40
+      }
+    },
+    "salud_desde_equipo": {
+      "http": 200,
+      "datos": {
+        "ok": true,
+        "site": "gcp",
+        "database": {
+          "recovery": true,
+          "probe": 40
+        }
+      }
+    }
+  },
+  "balanceo": {
+    "destinos_saludables": 2,
+    "zonas": [
+      "us-east-1a",
+      "us-east-1b"
+    ]
+  },
+  "persistencia": {
+    "aws_postgresql": "i-01ae7353f82b8daa5",
+    "aws_disco_pg": "vol-0641bf3d4c25b6b34",
+    "aws_supabase": "i-0ceea48d268d2cb83",
+    "aws_disco_supabase": "vol-01e8a5e9f98ce1bac",
+    "vm_gcp": "projects/gen-lang-client-0623826791/zones/us-central1-a/instances/nexoandes-gcp-standby",
+    "disco_gcp": "projects/gen-lang-client-0623826791/zones/us-central1-a/disks/nexoandes-gcp-postgresql"
+  },
+  "completo": true
+}

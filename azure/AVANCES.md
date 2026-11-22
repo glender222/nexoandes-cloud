@@ -88,3 +88,19 @@ Se reorganizó el [Excalidraw detallado](../diagramas/excalidraw/nexoandes-multi
 Se comprobó suscripción 1db87b28-407f-41d3-b532-41942343157c/tenant y región northcentralus. Plan Terraform revisado: solo azurerm_role_assignment.backup_operator[0] create. Apply: 1 añadido, 0 cambiados, 0 destruidos; plan posterior sin cambios. Storage Blob Data Contributor al usuario existente, ámbito único contenedor postgresql. `integracion/respaldos.py` usa --auth-mode login, sin listKeys ni claves/SAS heredadas. Primera denegación por propagación, posterior upload/download y SHA256 coincidentes. INC-030 resuelta.
 
 Comandos: `./nexoandes comprobar`, `python3 integracion/auditar_iam.py`, consultas CLI/API y `python3 integracion/respaldos.py --tipo postgresql` / `--tipo supabase`. [Alcance, identidades y evidencia](../integracion/IAM.md). Credenciales y planes completos se mantienen privados; no se modificó cómputo ni la configuración del portal.
+
+## Exclusión del apagado — 05/11/2026 18:30 (America/Lima)
+
+Suscripción 1db87b28-407f-41d3-b532-41942343157c confirmada. El usuario excluyó expresamente Azure por su VM de Antigravity. Solo se consultó identidad y listado de VMs; agy-docker-vm en AGY-DOCKER-RG sigue VM running. No se ejecutó Terraform ni ninguna mutación Azure; almacenamiento y red del proyecto permanecen sin cambios por esta operación. [Verificación final por API](../integracion/evidencias/20261105/apagado-final/verificacion.json). No se borraron bases de datos ni respaldos.
+
+## Consulta de estado — 18/11/2026 (America/Lima)
+
+`az account show` confirmó la suscripción `1db87b28-407f-41d3-b532-41942343157c` habilitada. `az vm list --show-details` devolvió únicamente `agy-docker-vm` (`VM running`, `northcentralus`), ajena al proyecto. `az resource list --resource-group nexoandes-lab` confirmó `nexoandes-vnet` y `nxa1db87b28407f`. `az storage container show` y `az storage blob list --auth-mode login --num-results 1` confirmaron el contenedor `postgresql` y la presencia de al menos un objeto. Consultas de solo lectura.
+
+## Preparación de la Unidad 3 — 19/11/2026 (America/Lima)
+
+`az storage blob list --auth-mode login` para el contenedor `postgresql` de `nxa1db87b28407f` devolvió cero blobs vigentes, tanto con el prefijo `postgresql/` como en la consulta general. El registro del 18/11 conserva su valor histórico. Consulta de solo lectura (INC-033).
+
+### Respaldo de demostración — 19/11/2026 18:03 (America/Lima)
+
+`./nexoandes plan encender` encontró cero cambios de infraestructura Azure. Durante `./nexoandes continuidad`, `integracion/respaldos.py` copió `postgresql/20261119T230221Z.dump` a Blob con Entra ID, descargó la copia y verificó el mismo SHA-256 de S3 y Cloud Storage. INC-033 resuelta para esta demostración. [Verificación de las tres copias](../integracion/evidencias/20261119/respaldos.json).

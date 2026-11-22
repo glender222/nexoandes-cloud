@@ -1,5 +1,9 @@
 # Proyecto multicloud: AWS Academy, Azure y Google Cloud (GCP)
 
+**Demostración de la Unidad 3 operativa — 19/11/2026 18:05 (America/Lima).** Portal AWS y Supabase Auth comprobados. Hay dos destinos web saludables y las sondas AWS/GCP muestran el mismo marcador de PostgreSQL. El último respaldo copiado a Azure y GCP coincide con S3 por SHA-256. [Inventario y pruebas del arranque](integracion/evidencias/20261119/arranque-unidad3/inventario-pruebas.json) · [Integridad de las copias](integracion/evidencias/20261119/respaldos.json).
+
+**Pausa verificada — 05/11/2026 18:30 (America/Lima):** AWS NexoAndes y la VM del examen detenidos; ALB/ASG/NAT temporales retirados. GCP continúa detenido con sus discos. Azure no se modificó: Antigravity permanece encendida. Datos y respaldos conservados. [Evidencia del cierre](integracion/evidencias/20261105/apagado-final/verificacion.json). Las menciones de actividad anteriores conservan su fecha histórica.
+
 Este espacio reúne el desarrollo técnico del proyecto de Cloud Computing en AWS Academy, Azure y Google Cloud (GCP). Las tres nubes forman parte del objetivo final (GCP reemplaza a OCI por decisión del 28/10/2026; su acceso se verificó el 04/11/2026). El Entregable 1 trata del diseño y la implementación inicial de una arquitectura Cloud V1.
 
 El [mapa editable y las bibliotecas de Excalidraw](diagramas/excalidraw/README.md) se mantienen en `diagramas/excalidraw/` para revisar juntos la arquitectura y su avance por entregable.

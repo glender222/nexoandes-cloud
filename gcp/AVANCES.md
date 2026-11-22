@@ -77,3 +77,21 @@ El [mapa detallado](../diagramas/excalidraw/nexoandes-multicloud-detallado.excal
 Se comprobó proyecto gen-lang-client-0623826791/us-central1 y cuenta de servicio existente. GET IAM del bucket y testPermissions correctos (get/list/create/delete de objetos); cargas/descargas y SHA256 contrastados con S3/Azure. projects:getIamPolicy bloqueado por Cloud Resource Manager API deshabilitada (INC-031); no se habilitó ni se modificaron roles globales. La VM sigue TERMINATED y no tiene SA adjunta; no se arrancó cómputo.
 
 Comandos: `./nexoandes comprobar`, `python3 integracion/auditar_iam.py`, consultas CLI/API y `python3 integracion/respaldos.py --tipo postgresql` / `--tipo supabase`. [Alcance, identidades y evidencia](../integracion/IAM.md). Credenciales y planes completos se mantienen privados; no se modificó cómputo ni la configuración del portal.
+
+## Pausa confirmada — 05/11/2026 18:30 (America/Lima)
+
+Identidad/proyecto gen-lang-client-0623826791 comprobados con la cuenta de servicio existente. VM nexoandes-gcp-standby ya estaba TERMINATED (detenida, no eliminada); `./nexoandes plan apagar --nube gcp` dio cero cambios. Consulta final Compute confirma VM detenida, discos de arranque/datos conservados y bucket de respaldos presente. No se arrancó ni se eliminó ningún recurso GCP. [Verificación final por API](../integracion/evidencias/20261105/apagado-final/verificacion.json). No se borraron bases de datos ni respaldos.
+
+## Consulta de estado — 18/11/2026 (America/Lima)
+
+`./nexoandes comprobar --nube gcp` confirmó acceso al proyecto `gen-lang-client-0623826791` en `us-central1`. Consultas GET de Compute en `us-central1-a` devolvieron `nexoandes-gcp-standby` en `TERMINATED` y sus discos de arranque (10 GB) y datos (20 GB) en `READY`. Cloud Storage confirmó el bucket versionado `nexoandes-backup-gen-lang-client-0623826791` y la presencia de al menos un objeto. Consultas de solo lectura.
+
+## Preparación de la Unidad 3 — 19/11/2026 (America/Lima)
+
+Se reconfirmó acceso con `./nexoandes comprobar --nube gcp`. El GET de Compute devolvió `nexoandes-gcp-standby` en `TERMINATED`. El listado de Cloud Storage con prefijo `postgresql/` devolvió un objeto vigente, `postgresql/20261105T042345Z.dump`. La comprobación simultánea de AWS y Azure no encontró un respaldo vigente común a las tres nubes (INC-033). Consultas de solo lectura.
+
+### Arranque de la Unidad 3 — 19/11/2026 18:05 (America/Lima)
+
+`./nexoandes continuidad` encendió la misma VM y conservó su disco de datos. Se reconciliaron IPs y reglas acotadas al gateway AWS. IPsec instaló `CHILD_SA`. Tras confirmar que la base estaba en recuperación, se reinició `nexoandes-postgresql` para cargar el binario actualizado (INC-034). El receptor WAL pasó a `streaming`, `pg_is_in_recovery()` devolvió `true` y `/health` devolvió HTTP 200 con marcador 40, igual a AWS. Cloud Storage recibió y verificó el respaldo nuevo (INC-033). [Prueba de operación](../integracion/evidencias/20261119/arranque-unidad3/inventario-pruebas.json) · [Integridad de las copias](../integracion/evidencias/20261119/respaldos.json).
+
+Revalidación de U3-02 a las 18:10. `curl` devolvió `/health` con `recovery: true` y `probe: 40`.

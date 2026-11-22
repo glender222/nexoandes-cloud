@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-19T23:02:19.928471+00:00",
+  "primary": {
+    "command_id": "48127794-c4f2-4064-bae7-589ffa072ff3",
+    "status": "Success",
+    "out": "DO\nALTER ROLE\nALTER ROLE\nALTER SYSTEM\nALTER SYSTEM\nALTER SYSTEM\nCREATE TABLE\nGRANT\nGRANT\nGRANT\nINSERT 0 1\n8|40"
+  },
+  "replica": "t|7|39",
+  "web": {
+    "i-0fb96eabd812ef2c9": {
+      "command_id": "9a92c5ef-43bc-426a-800b-a1bfff7fcfae",
+      "status": "Success",
+      "out": "{\"ok\": true, \"site\": \"aws\", \"database\": {\"recovery\": false, \"probe\": 40}}"
+    },
+    "i-0ceebb0073adec0db": {
+      "command_id": "4adcf825-d196-4abf-8951-5b635c375786",
+      "status": "Success",
+      "out": "{\"ok\": true, \"site\": \"aws\", \"database\": {\"recovery\": false, \"probe\": 40}}"
+    }
+  }
+}

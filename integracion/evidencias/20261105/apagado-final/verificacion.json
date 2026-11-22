@@ -1,0 +1,137 @@
+{
+  "utc": "2026-11-05T23:30:37.849028+00:00",
+  "alcance": "AWS us-east-1 cuenta 849533029543 y proyecto GCP; Azure sin modificaciones, Antigravity excluida",
+  "aws": {
+    "instancias": [
+      {
+        "id": "i-00dcab0a251d51e69",
+        "nombre": "EXAMEN-GLENDERVARGAS-WEB",
+        "estado": "stopped"
+      },
+      {
+        "id": "i-01ae7353f82b8daa5",
+        "nombre": "nexoandes-postgresql",
+        "estado": "stopped"
+      },
+      {
+        "id": "i-0ceea48d268d2cb83",
+        "nombre": "nexoandes-supabase",
+        "estado": "stopped"
+      },
+      {
+        "id": "i-0d78036c6d0b1190a",
+        "nombre": "nexoandes-web",
+        "estado": "terminated"
+      },
+      {
+        "id": "i-0afbfc0f2766af28c",
+        "nombre": "nexoandes-ipsec",
+        "estado": "terminated"
+      },
+      {
+        "id": "i-09fc45f1f17e95863",
+        "nombre": "nexoandes-web",
+        "estado": "terminated"
+      }
+    ],
+    "alb": [],
+    "asg": [],
+    "nat": [
+      {
+        "id": "nat-0fdf5ee625f95df09",
+        "estado": "deleted"
+      }
+    ],
+    "volumenes": [
+      {
+        "id": "vol-0641bf3d4c25b6b34",
+        "gb": 20,
+        "estado": "in-use",
+        "instancias": [
+          "i-01ae7353f82b8daa5"
+        ]
+      },
+      {
+        "id": "vol-04aa95f74f5f98727",
+        "gb": 8,
+        "estado": "in-use",
+        "instancias": [
+          "i-00dcab0a251d51e69"
+        ]
+      },
+      {
+        "id": "vol-0f8aa7db385f6d1f8",
+        "gb": 8,
+        "estado": "in-use",
+        "instancias": [
+          "i-01ae7353f82b8daa5"
+        ]
+      },
+      {
+        "id": "vol-0823953f20341285d",
+        "gb": 12,
+        "estado": "in-use",
+        "instancias": [
+          "i-0ceea48d268d2cb83"
+        ]
+      },
+      {
+        "id": "vol-01e8a5e9f98ce1bac",
+        "gb": 40,
+        "estado": "in-use",
+        "instancias": [
+          "i-0ceea48d268d2cb83"
+        ]
+      }
+    ],
+    "respaldos_s3": {
+      "cantidad": 57
+    }
+  },
+  "gcp": {
+    "instancias": [
+      {
+        "nombre": "nexoandes-gcp-standby",
+        "estado": "TERMINATED",
+        "zona": "us-central1-a"
+      }
+    ],
+    "discos": [
+      {
+        "nombre": "nexoandes-gcp-postgresql",
+        "gb": "20",
+        "estado": "READY"
+      },
+      {
+        "nombre": "nexoandes-gcp-standby",
+        "gb": "10",
+        "estado": "READY"
+      }
+    ],
+    "buckets": [
+      {
+        "name": "nexoandes-backup-gen-lang-client-0623826791"
+      }
+    ]
+  },
+  "azure_vm_sin_cambios": [
+    {
+      "estado": "VM running",
+      "grupo": "AGY-DOCKER-RG",
+      "nombre": "agy-docker-vm"
+    }
+  ],
+  "timer_local": "inactive",
+  "verificaciones": {
+    "aws_sin_instancias_activas": true,
+    "aws_sin_alb": true,
+    "aws_sin_asg": true,
+    "aws_nat_retirados": true,
+    "gcp_detenido": true,
+    "antigravity_encendida": true,
+    "respaldos_aws_presentes": true,
+    "respaldos_gcp_presentes": true,
+    "timer_local_inactivo": true
+  },
+  "completo": true
+}
